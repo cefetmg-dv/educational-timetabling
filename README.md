@@ -3,7 +3,7 @@
 > Aplicação desenvolvida a partir do projeto de pesquisa "Formulação e métodos de otimização para programação de horários educacionais considerando aspectos pedagógicos, organizacionais e preferências de professores no contexto do CEFET-MG".
 
 
-## 🔍 Sore a programação de horários educacionais
+## 🔍 Sobre a programação de horários educacionais
 
 O Problema de Programação de Horários Educacionais consiste em alocar disciplinas a horários considerando restrições obrigatórias e desejáveis relacionadas aos recursos disponíveis, a aspectos pedagógicos e organizacionais da instituição. A construção automática de horários escolares tem sido estudada por diversos pesquisadores na Ciência da Computação e Pesquisa Operacional. No entanto, as restrições obrigatórias e desejáveis se diferem entre instituições de diferentes níveis de ensino e países.
 
