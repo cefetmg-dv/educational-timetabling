@@ -1,0 +1,26 @@
+{
+  "name": "educational-timetabling",
+  "version": "1.0.0",
+  "description": "An educational timetabling application",
+  "main": "main.js",
+  "keywords": [
+    "timetabling",
+    "optimization"
+  ],
+  "contributors": [
+    "André L. Maravilha <andre.maravilha@cefetmg.br> (https://andremaravilha.github.io)",
+    "Wallace Ketler Melo de Morais <> ()"
+  ],
+  "license": "MIT",
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "prestart": "npm run build --workspace app",
+    "start": "electron ."
+
+  },
+  "devDependencies": {
+    "electron": "^24.1.3"
+  }
+}
