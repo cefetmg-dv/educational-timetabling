@@ -18,9 +18,11 @@
   "scripts": {
     "prestart": "npm run build --workspace app",
     "start": "electron ."
-
   },
   "devDependencies": {
     "electron": "^24.1.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
   }
 }

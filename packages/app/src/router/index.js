@@ -10,12 +10,64 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/Professores',
+      name: 'professores',
+      component: () => import("../components/Teachers.vue")
+    },
+    {
+      path: '/Salas',
+      name: 'salas',
+      component: () => import("../components/Rooms.vue")
+    },
+    {
+      path: '/Disciplinas',
+      name: 'disciplinas',
+      component: () => import("../components/Disciplines.vue")
+    },
+    {
+      path: '/Turmas',
+      name: 'turmas',
+      component: () => import("../components/Classes.vue") 
+    },
+    {
+      path: '/Horarios',
+      name: 'horarios',
+      component: () => import("../components/Time.vue")
+    },
+    {
+      path: '/Cursos',
+      name: 'cursos',
+      component: () => import("../components/Courses.vue")
+    },
+    {
+      path: '/Cadastrar-Turma',
+      name: 'cadastrar-turma',
+      component: () => import("../components/registrations/RegisterClass.vue")
+    },
+    {
+      path: '/Cadastrar-Disciplina',
+      name: 'cadastrar-disciplina',
+      component: () => import("../components/registrations/RegisterDiscipline.vue")
+    },
+    {
+      path: '/Cadastrar-Sala',
+      name: 'cadastrar-sala',
+      component: () => import("../components/registrations/RegisterRoom.vue")
+    },
+    {
+      path: '/Cadastrar-Professor',
+      name: 'cadastrar-professor',
+      component: () => import("../components/registrations/RegisterTeacher.vue")
+    },
+    {
+      path: '/Cadastrar-Curso',
+      name: 'cadastrar-curso',
+      component: () => import("../components/registrations/RegisterCourse.vue")
+    },
+    {
+      path: '/Tutorial',
+      name: 'tutorial',
+      component: () => import("../components/Tutorial.vue")
     }
   ]
 })
