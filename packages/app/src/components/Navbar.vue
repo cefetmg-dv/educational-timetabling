@@ -92,9 +92,7 @@
 .navbar-container{
     background-color: #72BA75;
     min-height: 100px;
-    font-family: Poppins, sans-serif;
-    margin: 0%;
-    width: 100%;
+    font-family: Poppins, sans-serif;    
 }
 
 .navbar-textAndImage{

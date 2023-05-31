@@ -1,15 +1,20 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HomePage from './views/HomePage.vue';
 import Navbar from './components/Navbar.vue';
+import HomePage from './views/HomePage.vue'
 </script>
 
-<template>
-    <Navbar />
-
-
+<template>  
+  <div id="#app">
+    <header>
+      <Navbar/>
+    </header>
+    <main>
+      <HomePage/>
+      <RouterView/>
+    </main>
     
-    <RouterView />
+  </div>
 </template>
 
 
@@ -18,6 +23,7 @@ import Navbar from './components/Navbar.vue';
   div#app{
     padding: 0;
     margin: 0;
+    min-width: 100%;
   }
 
 </style>
