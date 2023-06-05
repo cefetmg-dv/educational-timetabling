@@ -8,7 +8,8 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      sandbox: false
     }
   });
 
@@ -18,7 +19,7 @@ const createWindow = () => {
   //   protocol: 'file',
   //   slashes: true
   // }));
-  mainWindow.loadFile(path.join(__dirname, 'packages', 'app', 'dist', 'index.html'));
+    mainWindow.loadFile(path.join(__dirname, 'packages', 'app', 'dist', 'index.html'));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

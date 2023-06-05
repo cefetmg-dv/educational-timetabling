@@ -4,13 +4,14 @@
         methods: {
             HandleSubmit(e) {
                 e.preventDefault();
-                console.log(this.name)
-                console.log(this.abbreviation)
-                data = {
-                    name : this.name,
-                    abbreviation : this.abbreviation
-                 }
-                window.salvarArquivo(data)
+                //console.log(this.name)
+                //console.log(this.abbreviation)
+                //data = {
+                //    name : this.name,
+                //    abbreviation : this.abbreviation
+                //}
+
+                window.salvarPalavra(this.name)
             }
         }
     }
