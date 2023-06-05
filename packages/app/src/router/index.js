@@ -11,32 +11,32 @@ const router = createRouter({
     {
       path: '/Professores',
       name: 'professores',
-      component: () => import("../components/Teachers.vue")
+      component: () => import("../components/initials/Teachers.vue")
     },
     {
       path: '/Salas',
       name: 'salas',
-      component: () => import("../components/Rooms.vue")
+      component: () => import("../components/initials/Rooms.vue")
     },
     {
       path: '/Disciplinas',
       name: 'disciplinas',
-      component: () => import("../components/Disciplines.vue")
+      component: () => import("../components/initials/Disciplines.vue")
     },
     {
       path: '/Turmas',
       name: 'turmas',
-      component: () => import("../components/Classes.vue") 
+      component: () => import("../components/initials/Classes.vue") 
     },
     {
       path: '/Horarios',
       name: 'horarios',
-      component: () => import("../components/Time.vue")
+      component: () => import("../components/initials/Time.vue")
     },
     {
       path: '/Cursos',
       name: 'cursos',
-      component: () => import("../components/Courses.vue")
+      component: () => import("../components/initials/Courses.vue")
     },
     {
       path: '/Cadastrar-Turma',
@@ -66,7 +66,7 @@ const router = createRouter({
     {
       path: '/Tutorial',
       name: 'tutorial',
-      component: () => import("../components/Tutorial.vue")
+      component: () => import("../components/initials/Tutorial.vue")
     }
   ]
 })

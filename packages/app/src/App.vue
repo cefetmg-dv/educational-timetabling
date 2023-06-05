@@ -24,6 +24,10 @@ import HomePage from './views/HomePage.vue'
     padding: 0;
     margin: 0;
     min-width: 100%;
+    
+  }
+  *{
+    font-family: Poppins, "Open sans", sans-serif;
   }
 
 </style>
