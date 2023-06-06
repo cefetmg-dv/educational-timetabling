@@ -11,7 +11,7 @@
                 //    abbreviation : this.abbreviation
                 //}
 
-                window.salvarPalavra(this.name)
+                window.salvarPalavra(this.name) 
             }
         }
     }
