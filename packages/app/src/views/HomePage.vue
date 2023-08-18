@@ -15,6 +15,8 @@
 
 
 <style>
+
+
 .homepage-container{
    margin: 0 auto;
    margin-top: 10%;
@@ -22,6 +24,7 @@
    font-size: 25px;
    font-weight: 400;
    color: black;
+   min-height: 100%;
 }
 
 .homepage-image{

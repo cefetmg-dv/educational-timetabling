@@ -25,10 +25,10 @@
                         <div class="navbar-nav ms-auto">
                         <ul class="navbar-nav">
                             <li class='nav-item'>
-                                <router-link class="nav-link" to="/Horarios">
+                                <router-link class="nav-link" to="/Grade">
                                     <div class="navbar-textAndImage">
                                         <img src = "../assets/novo-horario.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Horários</p>
+                                        <p>Grade</p>
                                     </div>
                                 </router-link>
 
@@ -113,6 +113,7 @@
 
 .navbar-textAndImage:hover{
     transform: translateY(-5px);
+    background-color: #72BA75;
 }
 
 </style>

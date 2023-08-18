@@ -10,15 +10,6 @@
             };
         },
 
-        methods: {
-            HandleSubmit(e) {
-                e.preventDefault();
-                var data = JSON.stringify(this.formData)
-                console.log(data)
-                
-                window.salvarArquivo(data)
-            }
-        }
     }
 
 </script>

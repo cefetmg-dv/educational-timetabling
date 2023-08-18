@@ -1,32 +1,24 @@
 <script>
     import GreenButton from '../GreenButton.vue'
-
     export default {
         components: {
             GreenButton
         }
     }
-
-    methods:{
-        
-    }
 </script>
+
 
 <template>
 
-    <div class="classes-container">
-        <GreenButton link="/Cadastrar-Turma">Cadastrar Turma</GreenButton>
+    <div class="departments-container">
+        <GreenButton link="/Cadastrar-Departamento">Cadastrar Departamento</GreenButton>
     </div>
 
 </template>
 
-<style>
-    .classes-container{
-        margin-top: 50px;
-        font-family: Poppins, sans-serif;
-    }
 
-    .classes-links{
+<style>
+    .departments-links{
         width: 200px;
         border-style: solid;
         border-radius: 5px;
@@ -41,8 +33,20 @@
         font-weight: 400;
     }
 
-    .classes-links:hover{
+    .departments-links:hover{
         background-color: #72BA75;
         color: white;
+        
+    }
+
+    .departments-container{
+        margin-top: 50px;
+        font-family: Poppins, sans-serif;
+    }
+
+    .departments-infos-title{
+        font-size: 20px;
+        
+        text-align: center;
     }
 </style>

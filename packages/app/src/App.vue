@@ -12,6 +12,7 @@ import Navbar from './components/Navbar.vue';
   
   <div id="#app">
   
+    
     <Navbar/>
   
     <RouterView/>
@@ -26,10 +27,18 @@ import Navbar from './components/Navbar.vue';
     padding: 0;
     margin: 0;
     min-width: 100%;
-    
+    min-height: 100%;
+    display: block;
+  }
+  @media (min-width: 0px){
+    div#app{
+      display: block;
+     
+    }
   }
   *{
     font-family: Poppins, "Open sans", sans-serif;
+
   }
 
 </style>
