@@ -42,10 +42,7 @@
             <p v-if="item.day == 4">  Quinta-feira</p>
             <p v-if="item.day == 5">  Sexta-feira</p>
             <p v-if="item.day == 6">  Sábado</p>
-            <button type="button" class="btn btn-danger" onclick="removeTimeslot(item.id)">Excluir</button>
-
-        </div>
-
+        </div> 
     </div>
 
 </template>

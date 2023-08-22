@@ -11,7 +11,6 @@
 
 </script>
 
-
 <template>
 
     <router-link :to="link" class="greenButton-links">
