@@ -1,6 +1,6 @@
 <script>
-    import { onMounted } from 'vue';
-import GreenButton from '../GreenButton.vue'
+
+    import GreenButton from '../GreenButton.vue'
 
     export default {
         components: {
@@ -13,8 +13,9 @@ import GreenButton from '../GreenButton.vue'
             }
         },
 
-        Mounted(){
+        mounted(){
             this.instanceTeachers = JSON.parse(window.buscarArquivo()).teachers
+            console.log(this.instanceTeachers)
         }
     }  
 
@@ -46,7 +47,9 @@ import GreenButton from '../GreenButton.vue'
     }
 
     .teachers-for{
-        
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;        
     }
 
     .teachers-container{

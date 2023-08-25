@@ -4,6 +4,17 @@
     export default {
         components: {
             GreenButton
+        },
+
+        data(){
+            return{
+                instanceRooms: []
+            }
+        },
+
+        mounted(){
+            this.instanceRooms = JSON.parse(window.buscarArquivo()).rooms
+            console.log(this.instanceRooms)
         }
     }  
 </script>
@@ -11,13 +22,41 @@
 <template>
 
     <div class="rooms-container">
-        <GreenButton link="/Cadastrar-Sala">Cadastrar Sala</GreenButton>
+        <div class="rooms-button-container">
+            <GreenButton link="/Cadastrar-Sala">Cadastrar Sala</GreenButton>
+            <GreenButton link="/Cadastrar-Categoria-de-Sala">Cadastrar Categoria</GreenButton>
+        </div>
+        <hr>
+        <div class="rooms-title">Salas cadastradas:</div>
+        <div class="rooms-for" v-for="item in this.instanceRooms" :key="item.id">
+            <p>{{ item.name }}</p>
+        </div>
     </div>
 
 
 </template>
 
 <style>
+
+    .rooms-button-container {
+        display: flex; /* Exibe os botões em uma linha */
+        gap: 5px; /* Espaço entre os botões */
+    }
+    .rooms-title{
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .rooms-for{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;        
+    }
+
     .rooms-container{
         margin-top: 50px;
         font-family: Poppins, sans-serif;

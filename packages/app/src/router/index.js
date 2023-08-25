@@ -64,6 +64,11 @@ const router = createRouter({
       component: () => import("../components/registrations/RegisterRoom.vue")
     },
     {
+      path: '/Cadastrar-Categoria-de-Sala',
+      name: 'cadastrar-categoria-de-sala',
+      component: () => import("../components/registrations/RegisterRoomCategory.vue")
+    },
+    {
       path: '/Cadastrar-Professor',
       name: 'cadastrar-professor',
       component: () => import("../components/registrations/RegisterTeacher.vue")
@@ -88,6 +93,7 @@ const router = createRouter({
       name: 'tutorial',
       component: () => import("../components/initials/Tutorial.vue")
     }
+
   ]
 })
 
