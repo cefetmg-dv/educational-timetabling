@@ -14,7 +14,7 @@
         },       
 
         mounted(){
-            this.instanceClasses = JSON.parse(window.buscarArquivo()).classes
+            this.instanceClasses = JSON.parse(window.searchFile()).classes
             console.log(this.instanceClasses)
         },
 

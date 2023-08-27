@@ -86,7 +86,7 @@
                 e.preventDefault()
 
                 //verifica qual o id atual
-                this.instanceRooms = JSON.parse(window.buscarArquivo()).rooms
+                this.instanceRooms = JSON.parse(window.searchFile()).rooms
                 
                 this.dados = {
                     id: this.instanceRooms.length++,
@@ -95,7 +95,7 @@
                     unavailability: []
                 }
                 console.log(this.dados)
-                atualizarListaDeSalas(JSON.stringify(this.dados))
+                window.registerRoom(JSON.stringify(this.dados))
             },
             addTag (newTag) {
                 const tag = {
@@ -128,7 +128,7 @@
             </div>
 
             <div class="mb-3">
-                <label class="typo__label">Indisponibilidades</label>
+                <label class="typo_label">Indisponibilidades</label>
                 <multiselect v-model="value" :options="options" tag-placeholder="Add this as new tag" placeholder="Search or add a tag" label="name" track-by="code" :multiple="true" :taggable="true" @tag="addTag"></multiselect>
             </div>
 

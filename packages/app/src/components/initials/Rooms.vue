@@ -13,7 +13,7 @@
         },
 
         mounted(){
-            this.instanceRooms = JSON.parse(window.buscarArquivo()).rooms
+            this.instanceRooms = JSON.parse(window.searchFile()).rooms
             console.log(this.instanceRooms)
         }
     }  

@@ -3,13 +3,7 @@
 
         data(){
             return{
-                formData: {
-                    id: '',
-                    day: '',
-                    shift: '',
-                    slot: '',
-                    description: ''
-                }
+                data: {}
             }
         },
 
@@ -34,7 +28,7 @@
             
             <div class="mb-3">
                 <label class="form-label">Dia</label>
-                <select required class="form-select" aria-label="Default select example">
+                <select v-model="dia" required class="form-select" aria-label="Default select example">
                     <option selected>Escolha um dia da semana</option>
                     <option value="1">Segunda-feira</option>
                     <option value="2">Terça-feira</option>
@@ -46,7 +40,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Turno</label>
-                <select required class="form-select" aria-label="Default select example">
+                <select v-model="turno" required class="form-select" aria-label="Default select example">
                     <option selected>Escolha um turno</option>
                     <option value="0">Matutino</option>
                     <option value="1">Vespertino</option>
@@ -56,7 +50,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Intervalo</label>
-                <select required class="form-select" aria-label="Default select example">
+                <select v-model="intervalo" required class="form-select" aria-label="Default select example">
                     <option selected>Escolha um intervalo</option>
                     <option value="1">Primeiro horário</option>
                     <option value="2">Segundo horário</option>

@@ -16,7 +16,7 @@ import Multiselect from 'vue-multiselect';
                 e.preventDefault()
 
                 //verifica id
-                classesInstance = JSON.parse(window.buscarArquivo()).classes
+                this.classesInstance = JSON.parse(window.searchFile()).classes
 
                 this.data = {
                     id: this.classesInstance.length++,
@@ -24,7 +24,9 @@ import Multiselect from 'vue-multiselect';
                     subjects: []
                 }
 
-                window.AtualizarListaDeMaterias(this.data)
+                console.log(this.data)
+                window.registerClasses(JSON.stringify(this.data));
+
             }
         }
 }

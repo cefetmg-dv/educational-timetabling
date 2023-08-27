@@ -4,7 +4,7 @@
         methods: {
             HandleSubmit(e){
                 e.preventDefault()
-                atualizarListaDeCategoriasDeSalas(this.roomCategory)
+                window.registerRoomsCategories(this.roomCategory)
             }
         }
     }

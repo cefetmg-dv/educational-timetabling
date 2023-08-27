@@ -14,7 +14,7 @@
         },
 
         mounted(){
-            this.instanceTeachers = JSON.parse(window.buscarArquivo()).teachers
+            this.instanceTeachers = JSON.parse(window.searchFile()).teachers
             console.log(this.instanceTeachers)
         },
 

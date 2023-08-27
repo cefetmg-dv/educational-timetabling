@@ -3,12 +3,12 @@ var fs = require('fs')
 
 //REESCREVER ISSO COM APENAS UMA FUNÇÃO DE ATUALIZAR
 
-const buscarArquivo = () => {
+const searchFile = () => {
   var instance = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8');
   return instance;
 }
 
-const atualizarListaDeCategoriasDeSalas = (dataFromApp) =>{
+const registerRoomsCategories = (dataFromApp) =>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
@@ -16,7 +16,7 @@ const atualizarListaDeCategoriasDeSalas = (dataFromApp) =>{
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 2), 'utf-8')
 }
 
-const atualizarListaDeSalas = (dataFromApp) =>{
+const registerRooms = (dataFromApp) =>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
@@ -24,7 +24,7 @@ const atualizarListaDeSalas = (dataFromApp) =>{
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
-const atualizarListaDeProfessores = (dataFromApp) =>{
+const registerTeachers = (dataFromApp) =>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
@@ -32,7 +32,15 @@ const atualizarListaDeProfessores = (dataFromApp) =>{
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
-const atualizarListaDeMaterias = (dataFromApp) =>{
+const registerSubjects = (dataFromApp) =>{
+  console.log(dataFromApp)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  instance.classes.subjects.push(JSON.parse(dataFromApp))
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+}
+
+const registerClasses = (dataFromApp) =>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
@@ -41,11 +49,12 @@ const atualizarListaDeMaterias = (dataFromApp) =>{
 }
 
 // Expor a função no objeto window
-contextBridge.exposeInMainWorld('buscarArquivo', buscarArquivo);
-contextBridge.exposeInMainWorld('atualizarListaDeCategoriasDeSalas', atualizarListaDeCategoriasDeSalas);
-contextBridge.exposeInMainWorld('atualizarListaDeSalas', atualizarListaDeSalas);
-contextBridge.exposeInMainWorld('atualizarListaDeProfessores', atualizarListaDeProfessores);
-contextBridge.exposeInMainWorld('atualizarListaDeMaterias', atualizarListaDeMaterias);
+contextBridge.exposeInMainWorld('searchFile', searchFile);
+contextBridge.exposeInMainWorld('registerRoomsCategories', registerRoomsCategories);
+contextBridge.exposeInMainWorld('registerRooms', registerRooms);
+contextBridge.exposeInMainWorld('registerTeachers', registerTeachers);
+contextBridge.exposeInMainWorld('registerSubjects', registerSubjects);
+contextBridge.exposeInMainWorld('registerClasses', registerClasses);
 
 
   

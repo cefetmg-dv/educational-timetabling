@@ -12,7 +12,7 @@
                 e.preventDefault()
 
                 //verifica qual o id atual
-                this.instanceTeachers = JSON.parse(window.buscarArquivo()).teachers
+                this.instanceTeachers = JSON.parse(window.searchFile()).teachers
                 
                 this.dados = {
                     id : this.instanceTeachers.length++,
@@ -21,7 +21,7 @@
                     preferences: []
                 }
 
-                window.atualizarListaDeProfessores(JSON.stringify(this.dados))
+                window.registerTeacher(JSON.stringify(this.dados))
                 
             }
         },

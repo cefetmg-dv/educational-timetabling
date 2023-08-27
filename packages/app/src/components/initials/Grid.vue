@@ -15,7 +15,7 @@
         },
 
         mounted(){
-            this.instanceGrids = JSON.parse(window.buscarArquivo()).timeslots
+            this.instanceGrids = JSON.parse(window.searchFile()).timeslots
             console.log(this.instanceGrids)
         },
 
