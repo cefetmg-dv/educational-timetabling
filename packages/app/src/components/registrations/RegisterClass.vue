@@ -5,13 +5,28 @@ import Multiselect from 'vue-multiselect';
     export default {
     data() {
         return {
-            formData: {
-                name: '',
-                abbreviation: ''
-            }
+            classesInstance : [],
+            data: {},
         };
     },
-    components: { Multiselect }
+    components: { Multiselect },
+
+    methods:{
+            HandleSubmit(e){
+                e.preventDefault()
+
+                //verifica id
+                classesInstance = JSON.parse(window.buscarArquivo()).classes
+
+                this.data = {
+                    id: this.classesInstance.length++,
+                    name: this.name,
+                    subjects: []
+                }
+
+                window.AtualizarListaDeMaterias(this.data)
+            }
+        }
 }
 
 </script>
@@ -21,11 +36,7 @@ import Multiselect from 'vue-multiselect';
         <form class="registerClass-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome da turma</label>
-                <input required v-model="formData.name" type="text" class="form-control" aria-describedby="emailHelp"/>
-            </div>
-            <div class="mb-3">
-                <label class="typo_label">Disciplinas</label>
-                <multiselect v-model="value" :options="options" tag-placeholder="Add this as new tag" placeholder="Search or add a tag" label="name" track-by="code" :multiple="true" :taggable="true" @tag="addTag"></multiselect>
+                <input required v-model="name" type="text" class="form-control" aria-describedby="emailHelp"/>
             </div>
 
             <button type="submit" class="btn btn-primary">Cadastrar</button>

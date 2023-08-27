@@ -9,7 +9,7 @@
     
         data(){
             return{
-                instanceClasses : []    
+                instanceClasses : [],    
             }
         },       
 
@@ -18,13 +18,6 @@
             console.log(this.instanceClasses)
         },
 
-
-        methods:{
-            HandleSubmit(e){
-                e.preventDefault()
-
-            }
-        }
 
     }
 </script>
