@@ -345,6 +345,12 @@
          "name": "Professor 2",
          "unavailability": [],
          "preferences": []
+      },
+      {
+         "id": 2,
+         "name": "Alberto",
+         "unavailability": [],
+         "preferences": []
       }
    ],
    "classes": [

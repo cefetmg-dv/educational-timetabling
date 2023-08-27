@@ -83,16 +83,16 @@
 
         methods: {
             HandleSubmit(e){
+                e.preventDefault()
 
                 //verifica qual o id atual
                 this.instanceRooms = JSON.parse(window.buscarArquivo()).rooms
                 
-                e.preventDefault()
                 this.dados = {
                     id: this.instanceRooms.length++,
                     name: this.number,
                     category: this.category,
-                    unavaibility: []
+                    unavailability: []
                 }
                 console.log(this.dados)
                 atualizarListaDeSalas(JSON.stringify(this.dados))

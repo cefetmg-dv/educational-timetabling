@@ -7,8 +7,22 @@
         },
 
         methods: {
+        
             HandleSubmit(e){
                 e.preventDefault()
+
+                //verifica qual o id atual
+                this.instanceTeachers = JSON.parse(window.buscarArquivo()).teachers
+                
+                this.dados = {
+                    id : this.instanceTeachers.length++,
+                    name : this.name,
+                    unavailability : [],
+                    preferences: []
+                }
+
+                window.atualizarListaDeProfessores(JSON.stringify(this.dados))
+                
             }
         },
         data(){

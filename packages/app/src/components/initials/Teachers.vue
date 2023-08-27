@@ -16,7 +16,11 @@
         mounted(){
             this.instanceTeachers = JSON.parse(window.buscarArquivo()).teachers
             console.log(this.instanceTeachers)
-        }
+        },
+
+
+
+
     }  
 
 
