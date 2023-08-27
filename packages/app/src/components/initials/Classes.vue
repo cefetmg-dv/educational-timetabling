@@ -4,23 +4,70 @@
     export default {
         components: {
             GreenButton
-        }
-    }
+        },
+    
+    
+        data(){
+            return{
+                instanceClasses : []    
+            }
+        },       
 
-    methods:{
-        
+        mounted(){
+            this.instanceClasses = JSON.parse(window.buscarArquivo()).classes
+            console.log(this.instanceClasses)
+        },
+
+
+        methods:{
+            HandleSubmit(e){
+                e.preventDefault()
+
+            }
+        }
+
     }
 </script>
 
 <template>
 
     <div class="classes-container">
-        <GreenButton link="/Cadastrar-Turma">Cadastrar Turma</GreenButton>
+        <div class="classes-button-container">
+            <GreenButton link="/Cadastrar-Turma">Cadastrar Turma</GreenButton>
+            <GreenButton link="/Disciplinas">Disciplinas</GreenButton>
+        </div>
+        <hr>
+        <div class="classes-title">Classes Cadastradas:</div>
+        <div class="classes-for" v-for="item in this.instanceClasses" :key="item.id">
+            <p>{{ item.name }}</p>
+        </div>
+
     </div>
 
 </template>
 
 <style>
+
+    .classes-title{
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .classes-for{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .classes-button-container{
+        display: flex;
+        gap: 5px;
+    }
+
     .classes-container{
         margin-top: 50px;
         font-family: Poppins, sans-serif;

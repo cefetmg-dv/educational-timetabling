@@ -37,26 +37,17 @@
                             <li class='nav-item'>
                                 <router-link class ="nav-link" to="/Professores">
                                     <div class="navbar-textAndImage">
-                                        <img src = "../assets/professor.png" style = "width: 50px" alt="novo-horario"/>
+                                        <img src = "../assets/professor.png" style = "width: 50px" alt="professor"/>
                                         <p>Professores</p>
                                     </div>
                                 </router-link>
                             </li>
 
                             <li class='nav-item'>
-                                <router-link class="nav-link" to="/Disciplinas">
+                                <router-link class="nav-link" to="/Classes">
                                     <div class="navbar-textAndImage">
-                                        <img src = "../assets/disciplina.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Disciplinas</p>
-                                    </div>
-                                </router-link>
-                            </li>
-
-                            <li class='nav-item'>
-                                <router-link class="nav-link" to="/Cursos">
-                                    <div class="navbar-textAndImage">
-                                        <img src = "../assets/curso.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Cursos</p>
+                                        <img src = "../assets/curso.png" style = "width: 50px" alt="classes"/>
+                                        <p>Classes</p>
                                     </div>
                                 </router-link>
                             </li>
@@ -66,15 +57,6 @@
                                     <div class="navbar-textAndImage">
                                         <img src = "../assets/sala.png" style = "width: 50px" alt="novo-horario"/>
                                         <p>Salas</p>
-                                    </div>
-                                </router-link>
-                            </li>
-
-                            <li class='nav-item'>
-                                <router-link class="nav-link" to="/Turmas">
-                                    <div class="navbar-textAndImage">
-                                        <img src = "../assets/turma.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Turmas</p>
                                     </div>
                                 </router-link>
                             </li>

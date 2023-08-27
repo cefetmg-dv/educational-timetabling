@@ -24,8 +24,8 @@ const router = createRouter({
       component: () => import("../components/initials/Disciplines.vue")
     },
     {
-      path: '/Turmas',
-      name: 'turmas',
+      path: '/Classes',
+      name: 'classes',
       component: () => import("../components/initials/Classes.vue") 
     },
     {
@@ -37,16 +37,6 @@ const router = createRouter({
       path: '/Grade',
       name: 'grade',
       component: () => import("../components/initials/Grid.vue")
-    },
-    {
-      path: '/Cursos',
-      name: 'cursos',
-      component: () => import("../components/initials/Courses.vue")
-    },
-    {
-      path: '/Departamentos',
-      name: 'departamentos',
-      component: () => import("../components/initials/Departments.vue")
     },
     {
       path: '/Cadastrar-Turma',
@@ -72,16 +62,6 @@ const router = createRouter({
       path: '/Cadastrar-Professor',
       name: 'cadastrar-professor',
       component: () => import("../components/registrations/RegisterTeacher.vue")
-    },
-    {
-      path: '/Cadastrar-Curso',
-      name: 'cadastrar-curso',
-      component: () => import("../components/registrations/RegisterCourse.vue")
-    },
-    {
-      path: '/Cadastrar-Departamento',
-      name: 'cadastrar-departamento',
-      component: () => import("../components/registrations/RegisterDepartment.vue")
     },
     {
       path: '/Cadastrar-Timeslot',

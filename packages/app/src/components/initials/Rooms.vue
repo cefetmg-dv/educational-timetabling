@@ -39,8 +39,8 @@
 <style>
 
     .rooms-button-container {
-        display: flex; /* Exibe os botões em uma linha */
-        gap: 5px; /* Espaço entre os botões */
+        display: flex; 
+        gap: 5px; 
     }
     .rooms-title{
         font-size: 16px;
