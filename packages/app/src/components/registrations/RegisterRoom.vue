@@ -1,8 +1,15 @@
 <script>
 
     import Multiselect from 'vue-multiselect'
+    //import 'vue-multiselect/dist/vue-multiselect.min.css'
 
     export default{
+
+        build: {
+            rollupOptions: {
+                external: ['vue-multiselect/dist/vue-multiselect.min.css'],
+            },
+        },
 
         components:{
             Multiselect
@@ -11,6 +18,8 @@
         data(){
             return{
                 instanceRoomsCategories : [],
+                instanceRooms : [],
+                dados : {},
                 optionValue : 0,
                 value: [
                     { name: '07h00 - 08h40, Segunda-feira', code: '0' }
@@ -74,7 +83,19 @@
 
         methods: {
             HandleSubmit(e){
+
+                //verifica qual o id atual
+                this.instanceRooms = JSON.parse(window.buscarArquivo()).rooms
+                
                 e.preventDefault()
+                this.dados = {
+                    id: this.instanceRooms.length++,
+                    name: this.number,
+                    category: this.category,
+                    unavaibility: []
+                }
+                console.log(this.dados)
+                atualizarListaDeSalas(JSON.stringify(this.dados))
             },
             addTag (newTag) {
                 const tag = {
@@ -90,6 +111,7 @@
 </script>
 
 
+
 <template>
     <div class="registerRoom-container">
         <form class="registerRoom-form" @submit="HandleSubmit">
@@ -100,16 +122,15 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Categoria</label>
-                <select required class="form-select" aria-label="Default select example">
-                    <option value="{{optionValue++}}" v-for="item in this.instanceRoomsCategories" :key="item.id">{{item}}</option>
+                <select v-model="category" required class="form-select" aria-label="Default select example">
+                    <option v-for="item in this.instanceRoomsCategories" :key="item.id">{{item}}</option>
                 </select>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Indisponibilidades</label>
+                <label class="typo__label">Indisponibilidades</label>
                 <multiselect v-model="value" :options="options" tag-placeholder="Add this as new tag" placeholder="Search or add a tag" label="name" track-by="code" :multiple="true" :taggable="true" @tag="addTag"></multiselect>
             </div>
-
 
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
