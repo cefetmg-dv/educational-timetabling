@@ -72,8 +72,37 @@ const router = createRouter({
       path: '/Tutorial',
       name: 'tutorial',
       component: () => import("../components/initials/Tutorial.vue")
+    },
+    {
+      path: '/Atualizar-Classe/:id',
+      name: 'atualizar-classe',
+      component: () => import("../components/updates/UpdateClass.vue") 
+    },
+    {
+      path: '/Atualizar-Disciplina/:id',
+      name: 'atualizar-disciplina',
+      component: () => import("../components/updates/UpdateDiscipline.vue")
+    },
+    {
+      path: '/Atualizar-Sala/:id',
+      name: 'atualizar-sala',
+      component: () => import("../components/updates/UpdateRoom.vue")
+    },
+    {
+      path: '/Atualizar-Categoria-de-Sala/:id',
+      name: 'atualizar-categoria-de-sala',
+      component: () => import("../components/updates/UpdateRoomCategory.vue")
+    },
+    {
+      path: '/Atualizar-Professor/:id',
+      name: 'atualizar-professor',
+      component: () => import("../components/updates/UpdateTeacher.vue")
+    },
+    {
+      path: '/Atualizar-Tempo/:id',
+      name: 'atualizar-tempo',
+      component: () => import("../components/updates/UpdateTimeslot.vue")
     }
-
   ]
 })
 

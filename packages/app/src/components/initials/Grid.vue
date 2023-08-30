@@ -1,12 +1,14 @@
 <script>
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
+    import RemoveButton from '../RemoveButton.vue';
 
     export default {
         components: {
-            GreenButton,
-            EditButton
-        },
+    GreenButton,
+    EditButton,
+    RemoveButton
+},
 
         data(){
             return {
@@ -35,6 +37,7 @@
 
         <div class="grid-title">Intervalos Cadastrados:</div>
         <div class="grid-for" v-for="item in this.instanceGrids" :key="item.id">
+
             <p>{{item.description}}, </p>
             <p v-if="item.day == 1">  Segunda-feira</p>
             <p v-if="item.day == 2">  Terça-feira</p>
@@ -42,13 +45,31 @@
             <p v-if="item.day == 4">  Quinta-feira</p>
             <p v-if="item.day == 5">  Sexta-feira</p>
             <p v-if="item.day == 6">  Sábado</p>
+
+            <div class="grid-buttons">
+                <EditButton class = "grid-buttons-edit" :to="'/Atualizar-Tempo/' + item.id">Editar</EditButton>
+                <RemoveButton onclick="removeTimeslot()">Apagar</RemoveButton>
+            </div>
         </div> 
     </div>
 
 </template>
 
-
 <style>
+
+
+    .grid-buttons{
+        margin-left: 50px;
+        color: blue;
+        float: right;
+        display: flex; /* Usando flexbox para alinhar os itens lado a lado */
+        justify-content: space-between; /* Espaço entre os itens */
+        align-items: center; /* Alinhar verticalmente no centro */
+    }
+
+    .grid-buttons-edit{
+        margin-right: 20px;
+    }
 
     .grid-container{
         margin-top: 50px;
