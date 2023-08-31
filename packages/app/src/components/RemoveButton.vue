@@ -19,7 +19,7 @@
         border-style: solid;
         border-radius: 5px;
         border-width: 1px;
-        border-color: red;
+        border-color: #FF6961;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -27,7 +27,7 @@
         text-decoration: none;
         color:white;
         font-weight: 400;
-        background-color: red;
+        background-color: #FF6961;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 

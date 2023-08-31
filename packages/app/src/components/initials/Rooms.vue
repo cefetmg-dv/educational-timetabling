@@ -1,9 +1,13 @@
 <script>
     import GreenButton from '../GreenButton.vue'
+    import EditButton from '../EditButton.vue'
+    import RemoveButton from '../RemoveButton.vue';
 
     export default {
         components: {
-            GreenButton
+            GreenButton,
+            EditButton,
+            RemoveButton
         },
 
         data(){
@@ -15,6 +19,12 @@
         mounted(){
             this.instanceRooms = JSON.parse(window.searchFile()).rooms
             console.log(this.instanceRooms)
+        },
+
+        methods:{
+            removeRoom(item){
+                console.log(item)
+            }
         }
     }  
 </script>
@@ -29,7 +39,19 @@
         <hr>
         <div class="rooms-title">Salas cadastradas:</div>
         <div class="rooms-for" v-for="item in this.instanceRooms" :key="item.id">
-            <p>{{ item.name }}</p>
+            <div class="rooms-left">
+                
+                <p class="description">{{ item.name }}  </p>
+            
+            </div>
+
+            <div class="rooms-right">
+                <div class="rooms-buttons">
+                    <EditButton class="rooms-buttons-edit" :to="'/Atualizar-Sala/' + item.id">Editar</EditButton>
+                    <RemoveButton @click="removeRoom(item.id)">Apagar</RemoveButton>
+                </div>
+            </div>
+        
         </div>
     </div>
 
@@ -37,6 +59,55 @@
 </template>
 
 <style>
+
+    .rooms-for {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rooms-left {
+        flex: 1;
+        margin-left: 20%;
+    }
+
+
+    .rooms {
+        display: inline;
+        margin-right: 5px; 
+    }
+
+
+    .rooms-right {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+        margin-right: 20%;
+    }
+
+
+    .rooms-title{
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .rooms-buttons{
+        margin-left: 50px;
+        color: blue;
+        float: right;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        margin-top: 10px;
+    }
+
+    .rooms-buttons-edit{
+        margin-right: 20px;
+    }
 
     .rooms-button-container {
         display: flex; 

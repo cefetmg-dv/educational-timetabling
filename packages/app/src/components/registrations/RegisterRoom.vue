@@ -77,7 +77,7 @@
         },
 
         mounted(){
-            this.instanceRoomsCategories = JSON.parse(window.buscarArquivo()).rooms_category
+            this.instanceRoomsCategories = JSON.parse(window.searchFile()).rooms_category
             console.log(this.instanceRoomsCategories)
         },
 

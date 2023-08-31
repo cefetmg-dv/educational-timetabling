@@ -79,6 +79,21 @@ const router = createRouter({
       component: () => import("../components/updates/UpdateClass.vue") 
     },
     {
+      path: '/Atualizar-Nome-Classe/:id',
+      name: 'atualizar-nome-classe',
+      component: () => import("../components/updates/UpdateClassName.vue")
+    },
+    {
+      path: '/Atualizar-Materia-Classe/:id',
+      name: 'atualizar-materia-classe',
+      component: () => import("../components/updates/UpdateClassSubject.vue")
+    },
+    {
+      path: '/Cadastrar-Materia-Classe/:id',
+      name: 'cadastrar-materia-classe',
+      component: () => import("../components/registrations/RegisterClassSubject.vue")
+    },
+    {
       path: '/Atualizar-Disciplina/:id',
       name: 'atualizar-disciplina',
       component: () => import("../components/updates/UpdateDiscipline.vue")

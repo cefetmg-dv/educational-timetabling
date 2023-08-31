@@ -5,9 +5,9 @@
 
     export default {
         components: {
-    GreenButton,
-    EditButton,
-    RemoveButton
+            GreenButton,
+            EditButton,
+            RemoveButton
 },
 
         data(){
@@ -37,34 +37,70 @@
 
         <div class="grid-title">Intervalos Cadastrados:</div>
         <div class="grid-for" v-for="item in this.instanceGrids" :key="item.id">
-
-            <p>{{item.description}}, </p>
-            <p v-if="item.day == 1">  Segunda-feira</p>
-            <p v-if="item.day == 2">  Terça-feira</p>
-            <p v-if="item.day == 3">  Quarta-feira</p>
-            <p v-if="item.day == 4">  Quinta-feira</p>
-            <p v-if="item.day == 5">  Sexta-feira</p>
-            <p v-if="item.day == 6">  Sábado</p>
-
-            <div class="grid-buttons">
-                <EditButton class = "grid-buttons-edit" :to="'/Atualizar-Tempo/' + item.id">Editar</EditButton>
-                <RemoveButton onclick="removeTimeslot()">Apagar</RemoveButton>
+            <div class="grid-left">
+                <div class="description-and-day">
+                    <p class="description">{{ item.description }},</p>
+                    <p class="day" v-if="item.day == 1">Segunda-feira</p>
+                    <p class="day" v-if="item.day == 2">Terça-feira</p>
+                    <p class="day" v-if="item.day == 3">Quarta-feira</p>
+                    <p class="day" v-if="item.day == 4">Quinta-feira</p>
+                    <p class="day" v-if="item.day == 5">Sexta-feira</p>
+                    <p class="day" v-if="item.day == 6">Sábado</p>
+                </div>
             </div>
-        </div> 
+
+            <div class="grid-right">
+                <div class="grid-buttons">
+                <EditButton class="grid-buttons-edit" :to="'/Atualizar-Tempo/' + item.id">Editar</EditButton>
+                <RemoveButton @click="removeTimeslot(item.id)">Apagar</RemoveButton>
+                </div>
+            </div>
+        </div>
     </div>
 
 </template>
 
 <style>
 
+    .grid-for {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .grid-left {
+    flex: 1;
+    margin-left: 20%;
+    }
+
+    .description-and-day {
+    display: flex;
+    align-items: baseline; 
+    }
+
+    .description {
+    display: inline;
+    margin-right: 5px; 
+    }
+
+    .day {
+    display: inline;
+    }
+
+    .grid-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-right: 20%;
+    }
 
     .grid-buttons{
         margin-left: 50px;
         color: blue;
         float: right;
-        display: flex; /* Usando flexbox para alinhar os itens lado a lado */
-        justify-content: space-between; /* Espaço entre os itens */
-        align-items: center; /* Alinhar verticalmente no centro */
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
     }
 
     .grid-buttons-edit{

@@ -11,13 +11,8 @@
             HandleSubmit(e){
                 e.preventDefault()
 
-
             },
         },
-
-       
-
-        
 
     }
 </script>
