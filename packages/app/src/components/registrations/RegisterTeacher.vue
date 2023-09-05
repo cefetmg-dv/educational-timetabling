@@ -98,8 +98,6 @@
                 <multiselect :options="options" :multiple="true"></multiselect>
             </div>
 
-
-
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>

@@ -37,7 +37,7 @@ import Multiselect from 'vue-multiselect';
     <div class="registerClass-container">
         <form class="registerClass-form" @submit="HandleSubmit">
             <div class="mb-3">
-                <label class="form-label">Nome da turma</label>
+                <label class="form-label">Nome da classe</label>
                 <input required v-model="name" type="text" class="form-control" aria-describedby="emailHelp"/>
             </div>
 

@@ -328,15 +328,16 @@
       },
       {
          "id": 4,
-         "name": "Sala 306",
+         "name": "Sala 504",
          "category": "Sala de Aula",
-         "unavaibility": []
+         "unavaibility": [],
+         "unavailability": []
       }
    ],
    "teachers": [
       {
          "id": 0,
-         "name": "Professor 1",
+         "name": "Guilherme",
          "unavailability": [],
          "preferences": []
       },
@@ -398,6 +399,21 @@
          "id": 1,
          "name": "aksjfjisadjfadf",
          "subjects": []
+      },
+      {
+         "id": 2,
+         "name": "novo nome",
+         "subjects": [
+            {
+               "id": 2,
+               "name": "PROGRAMAÇÃO 1",
+               "acronym": "prog1",
+               "events": "2",
+               "divided": "false",
+               "subgroups": "2",
+               "rooms": []
+            }
+         ]
       }
    ],
    "events": [

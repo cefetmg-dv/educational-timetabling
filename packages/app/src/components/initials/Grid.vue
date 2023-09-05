@@ -63,35 +63,35 @@
 <style>
 
     .grid-for {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .grid-left {
-    flex: 1;
-    margin-left: 20%;
+        flex: 1;
+        margin-left: 20%;
     }
 
     .description-and-day {
-    display: flex;
-    align-items: baseline; 
+        display: flex;
+        align-items: baseline; 
     }
 
     .description {
-    display: inline;
-    margin-right: 5px; 
+        display: inline;
+        margin-right: 5px; 
     }
 
     .day {
-    display: inline;
+        display: inline;
     }
 
     .grid-right {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    margin-right: 20%;
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+        margin-right: 20%;
     }
 
     .grid-buttons{

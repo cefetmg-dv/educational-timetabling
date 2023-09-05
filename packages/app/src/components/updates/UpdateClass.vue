@@ -1,19 +1,21 @@
 <script>
 
     import GreenButton from '../GreenButton.vue'
+    import EditButton from '../EditButton.vue'
+    import RemoveButton from '../RemoveButton.vue';
 
     export default {
-        components:{GreenButton},
+        components:{
+            GreenButton,
+            EditButton,
+            RemoveButton
+        },
 
         data(){
             return{
-                instanceClasses: []
+                instanceClasses: [],
+                instanceSubjects: [],
             }
-        },
-
-        mounted(){
-            this.instanceClasses = JSON.parse(window.searchFile()).classes
-            console.log(this.instanceClasses)
         },
 
         //pega dados passados pela url
@@ -21,7 +23,20 @@
             classID() {
                 return this.$route.params.id;
             }
+        },
+
+        mounted(){
+            this.instanceClasses = JSON.parse(window.searchFile()).classes
+            this.instanceSubjects = JSON.parse(window.searchFile()).classes[this.classID].subjects
+        },
+
+        methods:{
+            removeClassSubject(itemID){
+                console.log(itemID)
+            }
         }
+
+
     }
 
 </script>
@@ -34,15 +49,81 @@
         </div>
 
         <div class="updateClass-button-container">
-            <GreenButton link="/Atualizar">Editar Nome</GreenButton>
-            <GreenButton link="/Cadastrar-Categoria-de-Sala">Adicionar Matéria</GreenButton>
+            <GreenButton :to="'/Atualizar-Nome-Classe/' + this.classID">Editar Nome</GreenButton>
+            <GreenButton :to="'/Cadastrar-Materia-Classe/' + this.classID">Adicionar Matéria</GreenButton>
         </div>
         <hr>
+
+        <div class="updateClass-subjects-title">
+            Matérias cadastradas na Classe:
+        </div>
+
+        <div class="updateClass-for" v-for="item in this.instanceSubjects" :key="item.id">
+            <div class="updateClass-left">
+                <p class="description">{{ item.name }} </p>
+            </div>
+
+            <div class="updateClass-right">
+                <div class="updateClass-buttons">
+                    <EditButton class="updateClass-buttons-edit" :to="'/Atualizar-Materia-Classe/' + item.id">Editar</EditButton>
+                    <RemoveButton @click="removeClassSubject(item.id)">Apagar</RemoveButton>
+                </div>
+            </div>
+        
+        </div>
+
     </div>
 
 </template>
 
 <style>
+
+    .updateClass-for {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .updateClass-left {
+        flex: 1;
+        margin-left: 20%;
+    }
+
+
+    .description {
+        display: inline;
+        margin-right: 5px; 
+    }
+
+
+    .updateClass-right {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+        margin-right: 20%;
+    }
+
+    .updateClass-buttons{
+        margin-left: 50px;
+        color: blue;
+        float: right;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        margin-top: 10px;
+    }
+
+    .updateClass-buttons-edit{
+        margin-right: 20px;
+    }
+
+    .updateClass-subjects-title{
+        font-family: Poppins, sans-serif;
+        font-weight: bold;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
 
     .updateClass-name>p{
         margin: 0;
