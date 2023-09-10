@@ -24,7 +24,7 @@
 
         methods:{
             removeClass(item){
-                console.log(item)
+                window.removeClass(item)
             }
         }
 

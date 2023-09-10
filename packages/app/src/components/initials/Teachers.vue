@@ -4,7 +4,6 @@
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
 
-
     export default {
         components: {
             GreenButton,
@@ -25,10 +24,9 @@
 
         methods:{
             removeTeacher(item){
-                console.log(item)
+                window.removeTeacher(item)
             }
         }
-
 
     }  
 

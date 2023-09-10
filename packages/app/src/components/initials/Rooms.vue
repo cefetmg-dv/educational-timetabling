@@ -23,7 +23,7 @@
 
         methods:{
             removeRoom(item){
-                console.log(item)
+                window.removeRoom(item)
             }
         }
     }  

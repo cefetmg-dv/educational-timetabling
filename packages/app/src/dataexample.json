@@ -15,13 +15,6 @@
          "description": "08h55 - 10h35"
       },
       {
-         "id": 2,
-         "day": 1,
-         "shift": 0,
-         "slot": 2,
-         "description": "10h50 - 12h30"
-      },
-      {
          "id": 3,
          "day": 1,
          "shift": 1,
@@ -319,37 +312,12 @@
          "name": "Sala 621",
          "category": "Sala de Aula",
          "unavailability": []
-      },
-      {
-         "id": 3,
-         "name": "Sala 305",
-         "category": "Sala de Aula",
-         "unavaibility": []
-      },
-      {
-         "id": 4,
-         "name": "Sala 504",
-         "category": "Sala de Aula",
-         "unavaibility": [],
-         "unavailability": []
       }
    ],
    "teachers": [
       {
          "id": 0,
          "name": "Guilherme",
-         "unavailability": [],
-         "preferences": []
-      },
-      {
-         "id": 1,
-         "name": "Professor 2",
-         "unavailability": [],
-         "preferences": []
-      },
-      {
-         "id": 2,
-         "name": "Alberto",
          "unavailability": [],
          "preferences": []
       }
@@ -399,21 +367,6 @@
          "id": 1,
          "name": "aksjfjisadjfadf",
          "subjects": []
-      },
-      {
-         "id": 2,
-         "name": "novo nome",
-         "subjects": [
-            {
-               "id": 2,
-               "name": "PROGRAMAÇÃO 1",
-               "acronym": "prog1",
-               "events": "2",
-               "divided": "false",
-               "subgroups": "2",
-               "rooms": []
-            }
-         ]
       }
    ],
    "events": [

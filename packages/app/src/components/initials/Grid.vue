@@ -23,7 +23,7 @@
 
         methods:{
             removeTimeslot(item){
-                console.log(item)
+                window.removeGrid(item)
             }
         }
     }

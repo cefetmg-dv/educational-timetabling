@@ -66,8 +66,6 @@ const updateClassName = (dataFromApp) =>{
 
 const updateClassSubjects = (dataFromApp, idClass) =>{
   console.log(dataFromApp)
-  console.log(idClass)
-  
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   for(let i = 0; i < instance.classes.length; i++){
@@ -115,22 +113,40 @@ const removeTeacher = (dataFromApp) =>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
+  instance.teachers = instance.teachers.filter(obj => obj.id !== dataFromApp)
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 } 
 
 const removeGrid = (dataFromApp) =>{
-
+  console.log(dataFromApp)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  instance.timeslots = instance.timeslots.filter(obj => obj.id !== dataFromApp)
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
 const removeClass = (dataFromApp) =>{
-
+  console.log(dataFromApp)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  instance.classes = instance.classes.filter(obj => obj.id !== dataFromApp)
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
 const removeRoom = (dataFromApp) =>{
-
+  console.log(dataFromApp)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  instance.rooms = instance.rooms.filter(obj => obj.id !== dataFromApp)
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
 const removeRoomCategory = (dataFromApp)=>{
-
+  console.log(dataFromApp)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  instance.roomsCategory = instance.roomsCategory.filter(obj => obj.id !== dataFromApp)
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
 const removeClassSubject = (dataFromApp)=>{
@@ -157,7 +173,7 @@ contextBridge.exposeInMainWorld('updateTeacher', updateTeacher)
 contextBridge.exposeInMainWorld('updateRoom', updateRoom)
 
 //deletes
-contextBridge.exposeInIsolatedWorld('removeTeacher', removeTeacher)
+contextBridge.exposeInMainWorld('removeTeacher', removeTeacher)
 contextBridge.exposeInMainWorld('removeGrid', removeGrid)
 contextBridge.exposeInMainWorld('removeClass', removeClass)
 contextBridge.exposeInMainWorld('removeRoom', removeRoom)
