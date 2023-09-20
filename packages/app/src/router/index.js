@@ -84,7 +84,7 @@ const router = createRouter({
       component: () => import("../components/updates/UpdateClassName.vue")
     },
     {
-      path: '/Atualizar-Materia-Classe/:id',
+      path: '/Atualizar-Materia-Classe/:itemID/:classID',
       name: 'atualizar-materia-classe',
       component: () => import("../components/updates/UpdateClassSubject.vue")
     },
@@ -117,6 +117,11 @@ const router = createRouter({
       path: '/Atualizar-Tempo/:id',
       name: 'atualizar-tempo',
       component: () => import("../components/updates/UpdateTimeslot.vue")
+    },
+    {
+      path: '/Categorias-de-Salas',
+      name: 'categorias-de-salas',
+      component: () => import("../components/initials/RoomsCategories.vue")
     }
   ]
 })

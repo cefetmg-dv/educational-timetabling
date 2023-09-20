@@ -32,7 +32,8 @@
 
         methods:{
             removeClassSubject(itemID){
-                console.log(itemID)
+                console.log("chamou")
+                window.removeSubjects(itemID.toString(), this.classID.toString())
             }
         }
 
@@ -65,7 +66,7 @@
 
             <div class="updateClass-right">
                 <div class="updateClass-buttons">
-                    <EditButton class="updateClass-buttons-edit" :to="'/Atualizar-Materia-Classe/' + item.id">Editar</EditButton>
+                    <EditButton class="updateClass-buttons-edit" :to="'/Atualizar-Materia-Classe/' + item.id + '/' + this.classID">Editar</EditButton>
                     <RemoveButton @click="removeClassSubject(item.id)">Apagar</RemoveButton>
                 </div>
             </div>

@@ -1,47 +1,63 @@
 <script>
-import Multiselect from 'vue-multiselect';
 
 
     export default {
 
-    components: { Multiselect },
+        mounted(){
+            const selectBtn2 = document.querySelector(".multiselect-rooms-btn");
 
-    data() {
-        return {
-            subjectsInstance : [],
-        };
-    },
+            selectBtn2.addEventListener("click", ()=>{
+                selectBtn2.classList.toggle("open")
+            })
+
+            this.options = JSON.parse(window.searchFile()).rooms
+        },
+
     
+        data() {
+            return {
+                subjectsInstance : [],
+                options: [],
+                chosenRooms : [],
+                optionsChosenRooms: [],
+            };
+        },
+        
 
-    //pega dados passados pela url
-    computed: {
-        classID() {
-            return this.$route.params.id;
-        }
-    },
-
-    methods:{
-            HandleSubmit(e){
-                e.preventDefault()
-
-                //verifica id da disciplina
-                this.subjectsInstance = JSON.parse(window.searchFile()).classes[classID].subjects
-                
-                this.data = {
-                    id: this.subjectsInstance.length++,
-                    name: this.name,
-                    acronym: this.acronym,
-                    events: this.events,
-                    divided: this.divided,
-                    subgroups: this.subgroups,
-                    rooms: []   //aqui vai multiselect
-                }
-
-                console.log(this.data)
-                window.updateClassSubjects(JSON.stringify(this.data), this.ClassID.toString());
-
+        //pega dados passados pela url
+        computed: {
+            classID() {
+                return this.$route.params.classID;
+            },
+            itemID(){
+                return this.$route.params.itemID;
             }
-        }
+        },
+
+        methods:{
+                HandleSubmit(e){
+                    e.preventDefault()
+
+                    for(var i = 0; i < this.optionsChosenRooms.length; ++i){
+                        if(this.optionsChosenRooms[i] == true){
+                            this.chosenRooms.push(i)
+                        }
+                    }
+
+                    this.data = {
+                        id: this.itemID,
+                        name: this.name,
+                        acronym: this.acronym,
+                        events: this.events,
+                        divided: this.divided,
+                        subgroups: this.subgroups,
+                        rooms: this.chosenRooms 
+                    }
+
+                    console.log(this.data)
+                    window.updateSubjects(JSON.stringify(this.data), this.classID.toString());
+                }
+            }
 }
 
 </script>
@@ -79,16 +95,101 @@ import Multiselect from 'vue-multiselect';
 
             <div class="mb-3">
                 <label class="form-label">Salas</label>
-                <input required v-model="rooms" type="text" class="form-control" aria-describedby="emailHelp"/>
+            </div>
+
+            <div class="multiselect-container">
+                <div class="multiselect-rooms-btn">
+                    <span class="multiselect-btn-text">Selecione as Salas</span>
+                    <img src="../../assets/down-arrow.png">
+
+                </div>
+            
+                <ul class="multiselect-list-items">
+                    <li class="multiselect-item" v-for="item in this.options" :key="item.id">
+                        <input v-model = optionsChosenRooms[item.id] value={{item.id}} type="checkbox"/>
+                        <span class="multiselect-item-text">{{item.name}}</span>
+                    </li>
+                </ul>
             </div>
 
             
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
         </form>
     </div>
 </template>
 
 <style>
+
+    .multiselect-rooms-btn>img{
+        width: 20px;
+    }
+
+    .multiselect-list-items{
+        position: relative;
+        background-color: #fff;
+        margin-top: 15px;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        text-align: left;
+    }
+
+
+    .multiselect-rooms-btn.open ~ .multiselect-list-items{
+        display: block;
+    }
+
+    .multiselect-list-items .multiselect-item{
+        list-style: none;
+    }
+
+    .multiselect-item .multiselect-item-text{
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .multiselect-item .checkbox{
+        height: 16px;
+        widows: 16px;
+        border: 1.5px solid #c0c0c0;
+        border-radius: 4px;   
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .multiselect-item-text{
+        margin-left: 10px;
+    }
+
+
+    .multiselect-rooms-btn .multiselect-btn-text{
+        font-size: 17px;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .multiselect-rooms-btn{
+        width: 100%;
+        display: flex;
+        height: 40px;
+        align-items: center;
+        padding: 0 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1.5px solid #DCDCDC;
+    
+    }
+
+    .multiselect-container{
+        position: relative;
+        widows: 100%;
+        background-color: #fff;
+        
+        border-radius: 8px;
+    }
     .registerClass-form{
         margin: 0 auto;
         text-align: center;

@@ -1,3 +1,4 @@
+const { Console } = require('console');
 const { contextBridge } = require('electron')
 var fs = require('fs')
 
@@ -7,6 +8,16 @@ const searchFile = () => {
 }
 
 //Registers
+
+
+const registerTimeslot = (dataFromApp) =>{
+  console.log(dataFromApp)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  instance.timeslots.push(JSON.parse(dataFromApp))
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 2), 'utf-8')
+}
+
 
 const registerRoomsCategories = (dataFromApp) =>{
   console.log(dataFromApp)
@@ -32,13 +43,14 @@ const registerTeachers = (dataFromApp) =>{
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
-const registerSubjects = (dataFromApp) =>{
+const registerSubjects = (dataFromApp, idClass) =>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
-  instance.classes.subjects.push(JSON.parse(dataFromApp))
+  instance.classes[idClass].subjects.push(JSON.parse(dataFromApp))
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
+
 
 const registerClasses = (dataFromApp) =>{
   console.log(dataFromApp)
@@ -64,25 +76,23 @@ const updateClassName = (dataFromApp) =>{
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
-const updateClassSubjects = (dataFromApp, idClass) =>{
-  console.log(dataFromApp)
+
+const updateSubjects = (dataFromApp, idClass) =>{
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   for(let i = 0; i < instance.classes.length; i++){
-    console.log(instance.classes[i])
     if(instance.classes[i].id == parseInt(idClass)){
-      instance.classes[i].subjects.push(JSON.parse(dataFromApp))
+      instance.classes[i].subjects[JSON.parse(dataFromApp).id] = JSON.parse(dataFromApp)
     }
   }
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
+
 const updateTeacher = (dataFromApp) =>{
-  console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   for(let i = 0; i < instance.teachers.length; i++){
-    console.log(instance.teachers[i])
     if(instance.teachers[i].id == parseInt(JSON.parse(dataFromApp).id)){
       instance.teachers[i].name = JSON.parse(dataFromApp).name
       instance.teachers[i].unavailability = JSON.parse(dataFromApp).unavailability
@@ -102,6 +112,19 @@ const updateRoom = (dataFromApp) =>{
       instance.rooms[i].name = JSON.parse(dataFromApp).name
       instance.rooms[i].category = JSON.parse(dataFromApp).category
       instance.rooms[i].unavailability = JSON.parse(dataFromApp).unavailability
+    }
+  }
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+}
+
+const updateRoomsCategory = (dataFromApp, item) =>{
+  console.log(dataFromApp)
+  //console.log(itemID)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  for(let i = 0; i < instance.rooms_category.length; i++){
+    if(instance.rooms_category[i] == item){
+      instance.rooms_category[i] = dataFromApp
     }
   }
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
@@ -145,12 +168,17 @@ const removeRoomCategory = (dataFromApp)=>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
-  instance.roomsCategory = instance.roomsCategory.filter(obj => obj.id !== dataFromApp)
+  instance.rooms_category = instance.rooms_category.filter(obj => obj !== dataFromApp)
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
-const removeClassSubject = (dataFromApp)=>{
-
+const removeSubjects = (idSubject, idClass)=>{
+  console.log(idClass)
+  console.log(idSubject)
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  instance.classes[idClass].subjects = instance.classes[idClass].subjects.filter(obj => obj.id != idSubject)
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
 
@@ -160,6 +188,7 @@ const removeClassSubject = (dataFromApp)=>{
 contextBridge.exposeInMainWorld('searchFile', searchFile)
 
 //registers
+contextBridge.exposeInMainWorld('registerTimeslot', registerTimeslot)
 contextBridge.exposeInMainWorld('registerRoomsCategories', registerRoomsCategories)
 contextBridge.exposeInMainWorld('registerRooms', registerRooms);
 contextBridge.exposeInMainWorld('registerTeachers', registerTeachers)
@@ -168,9 +197,10 @@ contextBridge.exposeInMainWorld('registerClasses', registerClasses)
 
 //updates
 contextBridge.exposeInMainWorld('updateClassName', updateClassName)
-contextBridge.exposeInMainWorld('updateClassSubjects', updateClassSubjects)
+contextBridge.exposeInMainWorld('updateSubjects', updateSubjects)
 contextBridge.exposeInMainWorld('updateTeacher', updateTeacher)
 contextBridge.exposeInMainWorld('updateRoom', updateRoom)
+contextBridge.exposeInMainWorld('updateRoomsCategory', updateRoomsCategory)
 
 //deletes
 contextBridge.exposeInMainWorld('removeTeacher', removeTeacher)
@@ -178,5 +208,5 @@ contextBridge.exposeInMainWorld('removeGrid', removeGrid)
 contextBridge.exposeInMainWorld('removeClass', removeClass)
 contextBridge.exposeInMainWorld('removeRoom', removeRoom)
 contextBridge.exposeInMainWorld('removeRoomCategory', removeRoomCategory)
-contextBridge.exposeInMainWorld('removeClassSubject', removeClassSubject)
+contextBridge.exposeInMainWorld('removeSubjects', removeSubjects)
   

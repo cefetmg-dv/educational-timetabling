@@ -1,4 +1,5 @@
 <script>
+
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
@@ -12,73 +13,75 @@
 
         data(){
             return{
-                instanceRooms: []
+                instanceCategories: []
             }
         },
 
         mounted(){
-            this.instanceRooms = JSON.parse(window.searchFile()).rooms
+            this.instanceCategories = JSON.parse(window.searchFile()).rooms_category
             console.log(this.instanceRooms)
         },
 
         methods:{
-            removeRoom(item){
-                window.removeRoom(item)
+            removeRoomCategory(item){
+                console.log(item)
+                window.removeRoomCategory(item)
             }
         }
     }  
+
 </script>
 
 <template>
 
-    <div class="rooms-container">
-        <div class="rooms-button-container">
-            <GreenButton link="/Cadastrar-Sala">Cadastrar Sala</GreenButton>
-            <GreenButton link="/Categorias-de-Salas">Categorias de Salas</GreenButton>
+
+    <div class="roomsCategories-container">
+        <div class="roomsCategories-button-container">
+            <GreenButton link="/Cadastrar-Categoria-de-Sala">Cadastrar Categoria</GreenButton>
         </div>
         <hr>
-        <div class="rooms-title">Salas cadastradas:</div>
-        <div class="rooms-for" v-for="item in this.instanceRooms" :key="item.id">
-            <div class="rooms-left">
+        <div class="roomsCategories-title">Categorias cadastradas:</div>
+        <div class="roomsCategories-for" v-for="item in this.instanceCategories" :key="item">
+            <div class="roomsCategories-left">
                 
-                <p class="description">{{ item.name }}  </p>
+                <p class="description">{{ item }}  </p>
             
             </div>
 
-            <div class="rooms-right">
-                <div class="rooms-buttons">
-                    <EditButton class="rooms-buttons-edit" :to="'/Atualizar-Sala/' + item.id">Editar</EditButton>
-                    <RemoveButton @click="removeRoom(item.id)">Apagar</RemoveButton>
+            <div class="roomsCategories-right">
+                <div class="roomsCategories-buttons">
+                    <EditButton class="roomsCategories-buttons-edit" :to="'/Atualizar-Categoria-de-Sala/' + item">Editar</EditButton>
+                    <RemoveButton @click="removeRoomCategory(item)">Apagar</RemoveButton>
                 </div>
             </div>
         
         </div>
     </div>
 
-
 </template>
+
 
 <style>
 
-    .rooms-for {
+    .roomsCategories-for {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .rooms-left {
+    .roomsCategories-left {
         flex: 1;
         margin-left: 20%;
     }
 
 
-    .rooms {
+    .roomsCategories {
         display: inline;
         margin-right: 5px; 
     }
 
 
-    .rooms-right {
+    .roomsCategories-right {
         display: flex;
         align-items: center;
         gap: 10px; 
@@ -86,7 +89,7 @@
     }
 
 
-    .rooms-title{
+    .roomsCategories-title{
         font-size: 16px;
         font-weight: bold;
         display: flex;
@@ -95,7 +98,7 @@
         padding-bottom: 20px;
     }
 
-    .rooms-buttons{
+    .roomsCategories-buttons{
         margin-left: 50px;
         color: blue;
         float: right;
@@ -105,15 +108,15 @@
         margin-top: 10px;
     }
 
-    .rooms-buttons-edit{
+    .roomsCategories-buttons-edit{
         margin-right: 20px;
     }
 
-    .rooms-button-container {
+    .roomsCategories-button-container {
         display: flex; 
         gap: 5px; 
     }
-    .rooms-title{
+    .roomsCategories-title{
         font-size: 16px;
         font-weight: bold;
         display: flex;
@@ -122,18 +125,18 @@
         padding-bottom: 20px;
     }
 
-    .rooms-for{
+    .roomsCategories-for{
         display: flex;
         justify-content: center;
         margin: 0 auto;        
     }
 
-    .rooms-container{
+    .roomsCategories-container{
         margin-top: 50px;
         font-family: Poppins, sans-serif;
     }
 
-    .rooms-links{
+    .roomsCategories-links{
         width: 200px;
         border-style: solid;
         border-radius: 5px;
@@ -148,8 +151,11 @@
         font-weight: 400;
     }
 
-    .rooms-links:hover{
+    .roomsCategories-links:hover{
         background-color: #72BA75;
         color: white;
     }
+
+
+
 </style>

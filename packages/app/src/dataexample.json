@@ -286,40 +286,104 @@
          "shift": 2,
          "slot": 1,
          "description": "20h55 - 22h35"
+      },
+      {
+         "id": 2,
+         "day": "1",
+         "shift": "0",
+         "slot": "2",
+         "description": "10h50 - 12h30"
       }
    ],
    "rooms_category": [
       "Laboratório de Informática",
-      "Sala de Aula",
-      "asdasdas",
-      "asdasdasd"
+      "TESTE"
    ],
    "rooms": [
       {
-         "id": 0,
-         "name": "Sala 602",
+         "id": 3,
+         "name": "adasdas",
+         "category": "Laboratório de Informática",
+         "unavailability": [
+            1
+         ]
+      },
+      {
+         "id": 4,
+         "name": "dsadasd",
          "category": "Laboratório de Informática",
          "unavailability": []
       },
       {
-         "id": 1,
-         "name": "Sala 620",
-         "category": "Sala de Aula",
-         "unavailability": []
-      },
-      {
-         "id": 2,
-         "name": "Sala 621",
-         "category": "Sala de Aula",
-         "unavailability": []
+         "id": 5,
+         "name": "Sala 605",
+         "category": "Laboratório de Informática",
+         "unavailability": [
+            1,
+            3
+         ]
       }
    ],
    "teachers": [
       {
          "id": 0,
          "name": "Guilherme",
+         "unavailability": [
+            7,
+            8
+         ],
+         "preferences": [
+            1,
+            4
+         ]
+      },
+      {
+         "id": 5,
+         "name": "adasdasd",
          "unavailability": [],
          "preferences": []
+      },
+      {
+         "id": 6,
+         "name": "adasdasd",
+         "unavailability": [],
+         "preferences": []
+      },
+      {
+         "id": 7,
+         "name": "adasdasd",
+         "unavailability": [],
+         "preferences": []
+      },
+      {
+         "id": 8,
+         "name": "hgdfhfghdfg",
+         "unavailability": [],
+         "preferences": []
+      },
+      {
+         "id": 9,
+         "name": "DFHFGJFDGJFGHJ",
+         "unavailability": [],
+         "preferences": [
+            0,
+            5,
+            9
+         ]
+      },
+      {
+         "id": 6,
+         "name": "Alisson",
+         "unavailability": [
+            1,
+            3,
+            4
+         ],
+         "preferences": [
+            0,
+            3,
+            5
+         ]
       }
    ],
    "classes": [
@@ -328,14 +392,15 @@
          "name": "Engenharia da Computação - 1º Semestre",
          "subjects": [
             {
-               "id": 0,
-               "name": "Statistics",
-               "acronym": "Stat",
-               "events": 4,
-               "divided": false,
-               "subgroups": 0,
+               "id": "0",
+               "name": "Statistics 2",
+               "acronym": "Sts2",
+               "events": "2",
+               "divided": "true",
+               "subgroups": "1",
                "rooms": [
-                  0
+                  4,
+                  5
                ]
             },
             {
@@ -360,12 +425,23 @@
                   1,
                   2
                ]
+            },
+            {
+               "id": 3,
+               "name": "Algoritmos e Estruturas de Dados 1",
+               "acronym": "AEDS1",
+               "events": "2",
+               "divided": "true",
+               "subgroups": "1",
+               "rooms": [
+                  5
+               ]
             }
          ]
       },
       {
          "id": 1,
-         "name": "aksjfjisadjfadf",
+         "name": "Eng Mec",
          "subjects": []
       }
    ],

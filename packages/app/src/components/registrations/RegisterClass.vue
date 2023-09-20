@@ -19,7 +19,7 @@ import Multiselect from 'vue-multiselect';
                 this.classesInstance = JSON.parse(window.searchFile()).classes
 
                 this.data = {
-                    id: this.classesInstance.length++,
+                    id: this.classesInstance[parseInt(this.classesInstance.length)-1]['id']+1,
                     name: this.name,
                     subjects: []
                 }
@@ -35,6 +35,13 @@ import Multiselect from 'vue-multiselect';
 
 <template>
     <div class="registerClass-container">
+
+        <div class="registerClass-title">
+            Cadastro de Classe:
+        </div>
+
+        <hr>
+
         <form class="registerClass-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome da classe</label>
@@ -47,6 +54,18 @@ import Multiselect from 'vue-multiselect';
 </template>
 
 <style>
+
+    .registerClass-title{
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-weight: bold;
+       
+    }
+
     .registerClass-form{
         margin: 0 auto;
         text-align: center;

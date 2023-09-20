@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue';
+import Multiselect from 'vue-multiselect'
+
 
 </script>
 
@@ -37,7 +39,6 @@ import Navbar from './components/Navbar.vue';
   }
   *{
     font-family: Poppins, "Open sans", sans-serif;
-
   }
 
 </style>
