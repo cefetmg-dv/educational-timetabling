@@ -9,7 +9,6 @@ const searchFile = () => {
 
 //Registers
 
-
 const registerTimeslot = (dataFromApp) =>{
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')

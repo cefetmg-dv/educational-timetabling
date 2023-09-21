@@ -99,11 +99,6 @@ const router = createRouter({
       component: () => import("../components/updates/UpdateTeacher.vue")
     },
     {
-      path: '/Atualizar-Tempo/:id',
-      name: 'atualizar-tempo',
-      component: () => import("../components/updates/UpdateTimeslot.vue")
-    },
-    {
       path: '/Categorias-de-Salas',
       name: 'categorias-de-salas',
       component: () => import("../components/initials/RoomsCategories.vue")
