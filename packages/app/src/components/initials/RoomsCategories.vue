@@ -3,6 +3,8 @@
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
+    import Swal from 'sweetalert2';
+
 
     export default {
         components: {
@@ -24,8 +26,18 @@
 
         methods:{
             removeRoomCategory(item){
-                console.log(item)
-                window.removeRoomCategory(item)
+                Swal.fire({
+                    text: 'Deseja mesmo apagar essa categoria?',
+                    icon: 'warning',
+                 // Mostrar botão de Cancelar
+                    confirmButtonText: 'Confirmar',
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        window.removeRoomCategory(item)
+                    }
+                })
+                
+                
             }
         }
     }  

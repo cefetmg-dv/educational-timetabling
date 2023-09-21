@@ -1,5 +1,6 @@
 <script>
  
+    import Swal from 'sweetalert2';
 
     export default{
 
@@ -54,6 +55,12 @@
                 }
 
                 window.registerTeachers(JSON.stringify(this.dados))
+
+                Swal.fire({
+                    text: 'Professor(a) cadastrado(a) com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                })
                 
             },
 
@@ -74,6 +81,12 @@
 
 <template>
     <div class="registerTeacher-container">
+
+        <div class="registerTimeslot-title">
+            Cadastro de Professor:
+        </div>
+        <hr>
+        
         <form class="registerTeacher-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome completo</label>
@@ -138,6 +151,17 @@
 
 
 <style>
+
+    .registerTeacher-title{
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-weight: bold;
+       
+    }
 
     .multiselect-preferences-btn>img{
         width: 20px;

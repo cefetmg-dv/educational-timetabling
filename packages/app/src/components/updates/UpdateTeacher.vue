@@ -1,5 +1,7 @@
 <script>
-  
+
+    import Swal from 'sweetalert2';
+
     export default{
 
         computed:{
@@ -45,8 +47,6 @@
                     }
                 }
 
-
-
                 this.data = {
                     id : this.idTeacher,
                     name : this.name,
@@ -55,7 +55,12 @@
                 }
 
                 window.updateTeacher(JSON.stringify(this.data))
-                
+
+                Swal.fire({
+                    text: 'Professor(a) atualizado(a) com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                })      
             }
         },
         data(){
@@ -73,6 +78,13 @@
 <template>
 
     <div class="registerTeacher-container">
+
+
+        <div class="registerTimeslot-title">
+            Atualização de Professor:
+        </div>
+        <hr>
+
         <form class="registerTeacher-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome completo</label>
@@ -140,6 +152,17 @@
 </template>
 
 <style>
+
+    .updateTeacher-title{
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-weight: bold;
+       
+    }
 
     .multiselect-preferences-btn>img{
         width: 20px;

@@ -3,6 +3,7 @@
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
+    import Swal from 'sweetalert2';
 
     export default {
         components: {
@@ -24,8 +25,19 @@
 
         methods:{
             removeTeacher(item){
-                window.removeTeacher(item)
+                Swal.fire({
+                    text: 'Deseja mesmo apagar esse professor?',
+                    icon: 'warning',
+                 // Mostrar botão de Cancelar
+                    confirmButtonText: 'Confirmar',
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        window.removeTeacher(item)
+                    }
+                })
+                
             }
+   
         }
 
     }  

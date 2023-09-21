@@ -1,4 +1,7 @@
 <script>
+
+    import Swal from 'sweetalert2';
+
     export default{
 
         data(){
@@ -195,6 +198,12 @@
                 }
 
                 window.registerTimeslot(JSON.stringify(this.data))
+
+                Swal.fire({
+                    text: 'Intervalo cadastrado com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                })
             },
         },
     }
@@ -202,6 +211,12 @@
 
 <template>
     <div class="registerTimeslot-container">
+
+
+        <div class="registerTimeslot-title">
+            Cadastro de Intervalo de Tempo:
+        </div>
+        <hr>
         <form class="registerTimeslot-form" @submit="HandleSubmit">
             
             <div class="mb-3">
@@ -242,6 +257,17 @@
 
 <style>
 
+
+    .registerTimeslot-title{
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-weight: bold;
+       
+    }
 
     .registerTimeslot-form{
         margin: 0 auto;

@@ -3,6 +3,7 @@
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
+    import Swal from 'sweetalert2';
 
     export default {
         components: {
@@ -24,7 +25,18 @@
 
         methods:{
             removeClass(item){
-                window.removeClass(item)
+                Swal.fire({
+                    text: 'Deseja mesmo apagar essa classe?',
+                    icon: 'warning',
+                 // Mostrar botão de Cancelar
+                    confirmButtonText: 'Confirmar',
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        window.removeClass(item)
+                    }
+                })
+                
+                
             }
         }
 

@@ -1,10 +1,18 @@
 <script>
 
+    import Swal from 'sweetalert2';
+
     export default{
         methods: {
             HandleSubmit(e){
                 e.preventDefault()
                 window.registerRoomsCategories(this.roomCategory)
+
+                Swal.fire({
+                    text: 'Categoria de Sala cadastrada com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                })
             }
         }
     }
@@ -15,6 +23,13 @@
 <template>
 
     <div class="registerRoomCategory-container">
+
+        <div class="registerRoomCategory-title">
+            Cadastro de Categoria de Sala:
+        </div>
+
+        <hr>
+
         <form class="registerRoomCategory-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome da Categoria</label>
@@ -29,6 +44,17 @@
 
 
 <style>
+
+    .registerRoomCategory-title{
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-weight: bold;
+       
+    }
 
     .registerRoomCategory-form{
         margin: 0 auto;

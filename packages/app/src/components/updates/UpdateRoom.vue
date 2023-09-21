@@ -1,9 +1,8 @@
 <script>
 
+    import Swal from 'sweetalert2';
 
     export default{
-
-      
 
         data(){
             return{
@@ -57,6 +56,13 @@
                 }
                 console.log(this.dados)
                 window.updateRoom(JSON.stringify(this.dados))
+
+                
+                Swal.fire({
+                    text: 'Sala atualizada com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                })
             },
             
         }
@@ -67,8 +73,15 @@
 
 
 <template>
-    <div class="registerRoom-container">
-        <form class="registerRoom-form" @submit="HandleSubmit">
+    <div class="updateRoom-container">
+
+
+        <div class="updateRoom-title">
+            Atualização de Sala:
+        </div>
+
+        <hr>
+        <form class="updateRoom-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Número da Sala</label>
                 <input required v-model="number" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
@@ -115,6 +128,16 @@
 
 
 <style>
+
+    .updateRoom-title{
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-weight: bold;
+    }
 
     .multiselect-indisponibilities-btn>img{
         width: 20px;
@@ -186,7 +209,7 @@
         
         border-radius: 8px;
     }
-    .registerRoom-form{
+    .updateRoom-form{
         margin: 0 auto;
         text-align: center;
         width: 80%;

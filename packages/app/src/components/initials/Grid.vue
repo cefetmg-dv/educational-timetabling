@@ -2,6 +2,7 @@
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
+    import Swal from 'sweetalert2';
 
     export default {
         components: {
@@ -23,7 +24,17 @@
 
         methods:{
             removeTimeslot(item){
-                window.removeGrid(item)
+                Swal.fire({
+                    text: 'Deseja mesmo apagar esse intervalo?',
+                    icon: 'warning',
+                 // Mostrar botão de Cancelar
+                    confirmButtonText: 'Confirmar',
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        window.removeGrid(item)
+                    }
+                })
+                
             }
         }
     }

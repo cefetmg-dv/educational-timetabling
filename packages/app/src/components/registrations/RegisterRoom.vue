@@ -1,8 +1,9 @@
 <script>
 
+    import Swal from 'sweetalert2';
+
+
     export default{
-
-
 
         data(){
             return{
@@ -51,6 +52,13 @@
                 }
                 console.log(this.dados)
                 window.registerRooms(JSON.stringify(this.dados))
+
+                
+                Swal.fire({
+                    text: 'Sala cadastrada com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                })
             },
             
         }

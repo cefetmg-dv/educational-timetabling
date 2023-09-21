@@ -1,6 +1,7 @@
 <script>
-import Multiselect from 'vue-multiselect';
 
+
+    import Swal from 'sweetalert2';
 
     export default {
     data() {
@@ -9,7 +10,6 @@ import Multiselect from 'vue-multiselect';
             data: {},
         };
     },
-    components: { Multiselect },
 
     methods:{
             HandleSubmit(e){
@@ -25,7 +25,13 @@ import Multiselect from 'vue-multiselect';
                 }
 
                 console.log(this.data)
-                window.registerClasses(JSON.stringify(this.data));
+                window.registerClasses(JSON.stringify(this.data))
+
+                Swal.fire({
+                    text: 'Classe cadastrada com sucesso!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                })
 
             }
         }

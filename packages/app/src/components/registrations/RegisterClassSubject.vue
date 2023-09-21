@@ -1,5 +1,7 @@
 <script>
 
+    import Swal from 'sweetalert2';
+
     export default{
 
 
@@ -57,6 +59,12 @@
                     console.log(this.data)
                     window.registerSubjects(JSON.stringify(this.data), this.classID.toString());
 
+                    Swal.fire({
+                        text: 'Matéria cadastrada com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'Ok',
+                    })
+
                 }
             }
 }
@@ -65,6 +73,13 @@
 
 <template>
     <div class="registerClass-container">
+
+        <div class="registerClassSubject-title">
+            Cadastro de Disciplina:
+        </div>
+
+        <hr>
+
         <form class="registerClass-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome da Matéria</label>
@@ -119,6 +134,16 @@
 </template>
 
 <style>
+
+    .registerClassSubject-title{
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-weight: bold;
+    }
 
     .multiselect-rooms-btn>img{
         width: 20px;

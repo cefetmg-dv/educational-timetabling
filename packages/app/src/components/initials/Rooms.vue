@@ -2,6 +2,7 @@
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
+    import Swal from 'sweetalert2';
 
     export default {
         components: {
@@ -23,7 +24,18 @@
 
         methods:{
             removeRoom(item){
-                window.removeRoom(item)
+
+                Swal.fire({
+                    text: 'Deseja mesmo apagar essa sala?',
+                    icon: 'warning',
+                 // Mostrar botão de Cancelar
+                    confirmButtonText: 'Confirmar',
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        window.removeRoom(item)
+                    }
+                })
+                
             }
         }
     }  

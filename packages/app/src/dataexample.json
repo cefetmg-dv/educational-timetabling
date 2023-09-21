@@ -1,487 +1,418 @@
 {
-   "timeslots": [
-      {
-         "id": 0,
-         "day": 1,
-         "shift": 0,
-         "slot": 0,
-         "description": "07h00 - 08h40"
-      },
-      {
-         "id": 1,
-         "day": 1,
-         "shift": 0,
-         "slot": 1,
-         "description": "08h55 - 10h35"
-      },
-      {
-         "id": 3,
-         "day": 1,
-         "shift": 1,
-         "slot": 0,
-         "description": "13h50 - 15h30"
-      },
-      {
-         "id": 4,
-         "day": 1,
-         "shift": 1,
-         "slot": 1,
-         "description": "15h50 - 17h30"
-      },
-      {
-         "id": 5,
-         "day": 1,
-         "shift": 2,
-         "slot": 0,
-         "description": "19h00 - 20h40"
-      },
-      {
-         "id": 6,
-         "day": 1,
-         "shift": 2,
-         "slot": 1,
-         "description": "20h55 - 22h35"
-      },
-      {
-         "id": 7,
-         "day": 2,
-         "shift": 0,
-         "slot": 0,
-         "description": "07h00 - 08h40"
-      },
-      {
-         "id": 8,
-         "day": 2,
-         "shift": 0,
-         "slot": 1,
-         "description": "08h55 - 10h35"
-      },
-      {
-         "id": 9,
-         "day": 2,
-         "shift": 0,
-         "slot": 2,
-         "description": "10h50 - 12h30"
-      },
-      {
-         "id": 10,
-         "day": 2,
-         "shift": 1,
-         "slot": 0,
-         "description": "13h50 - 15h30"
-      },
-      {
-         "id": 11,
-         "day": 2,
-         "shift": 1,
-         "slot": 1,
-         "description": "15h50 - 17h30"
-      },
-      {
-         "id": 12,
-         "day": 2,
-         "shift": 2,
-         "slot": 0,
-         "description": "19h00 - 20h40"
-      },
-      {
-         "id": 13,
-         "day": 2,
-         "shift": 2,
-         "slot": 1,
-         "description": "20h55 - 22h35"
-      },
-      {
-         "id": 14,
-         "day": 3,
-         "shift": 0,
-         "slot": 0,
-         "description": "07h00 - 08h40"
-      },
-      {
-         "id": 15,
-         "day": 3,
-         "shift": 0,
-         "slot": 1,
-         "description": "08h55 - 10h35"
-      },
-      {
-         "id": 16,
-         "day": 3,
-         "shift": 0,
-         "slot": 2,
-         "description": "10h50 - 12h30"
-      },
-      {
-         "id": 17,
-         "day": 3,
-         "shift": 1,
-         "slot": 0,
-         "description": "13h50 - 15h30"
-      },
-      {
-         "id": 18,
-         "day": 3,
-         "shift": 1,
-         "slot": 1,
-         "description": "15h50 - 17h30"
-      },
-      {
-         "id": 19,
-         "day": 3,
-         "shift": 2,
-         "slot": 0,
-         "description": "19h00 - 20h40"
-      },
-      {
-         "id": 20,
-         "day": 3,
-         "shift": 2,
-         "slot": 1,
-         "description": "20h55 - 22h35"
-      },
-      {
-         "id": 21,
-         "day": 4,
-         "shift": 0,
-         "slot": 0,
-         "description": "07h00 - 08h40"
-      },
-      {
-         "id": 22,
-         "day": 4,
-         "shift": 0,
-         "slot": 1,
-         "description": "08h55 - 10h35"
-      },
-      {
-         "id": 23,
-         "day": 4,
-         "shift": 0,
-         "slot": 2,
-         "description": "10h50 - 12h30"
-      },
-      {
-         "id": 24,
-         "day": 4,
-         "shift": 1,
-         "slot": 0,
-         "description": "13h50 - 15h30"
-      },
-      {
-         "id": 25,
-         "day": 4,
-         "shift": 1,
-         "slot": 1,
-         "description": "15h50 - 17h30"
-      },
-      {
-         "id": 26,
-         "day": 4,
-         "shift": 2,
-         "slot": 0,
-         "description": "19h00 - 20h40"
-      },
-      {
-         "id": 27,
-         "day": 4,
-         "shift": 2,
-         "slot": 1,
-         "description": "20h55 - 22h35"
-      },
-      {
-         "id": 28,
-         "day": 5,
-         "shift": 0,
-         "slot": 0,
-         "description": "07h00 - 08h40"
-      },
-      {
-         "id": 29,
-         "day": 5,
-         "shift": 0,
-         "slot": 1,
-         "description": "08h55 - 10h35"
-      },
-      {
-         "id": 30,
-         "day": 5,
-         "shift": 0,
-         "slot": 2,
-         "description": "10h50 - 12h30"
-      },
-      {
-         "id": 31,
-         "day": 5,
-         "shift": 1,
-         "slot": 0,
-         "description": "13h50 - 15h30"
-      },
-      {
-         "id": 32,
-         "day": 5,
-         "shift": 1,
-         "slot": 1,
-         "description": "15h50 - 17h30"
-      },
-      {
-         "id": 33,
-         "day": 5,
-         "shift": 2,
-         "slot": 0,
-         "description": "19h00 - 20h40"
-      },
-      {
-         "id": 34,
-         "day": 5,
-         "shift": 2,
-         "slot": 1,
-         "description": "20h55 - 22h35"
-      },
-      {
-         "id": 35,
-         "day": 6,
-         "shift": 0,
-         "slot": 0,
-         "description": "07h00 - 08h40"
-      },
-      {
-         "id": 36,
-         "day": 6,
-         "shift": 0,
-         "slot": 1,
-         "description": "08h55 - 10h35"
-      },
-      {
-         "id": 37,
-         "day": 6,
-         "shift": 0,
-         "slot": 2,
-         "description": "10h50 - 12h30"
-      },
-      {
-         "id": 38,
-         "day": 6,
-         "shift": 1,
-         "slot": 0,
-         "description": "13h50 - 15h30"
-      },
-      {
-         "id": 39,
-         "day": 6,
-         "shift": 1,
-         "slot": 1,
-         "description": "15h50 - 17h30"
-      },
-      {
-         "id": 40,
-         "day": 6,
-         "shift": 2,
-         "slot": 0,
-         "description": "19h00 - 20h40"
-      },
-      {
-         "id": 41,
-         "day": 6,
-         "shift": 2,
-         "slot": 1,
-         "description": "20h55 - 22h35"
-      },
-      {
-         "id": 2,
-         "day": "1",
-         "shift": "0",
-         "slot": "2",
-         "description": "10h50 - 12h30"
-      }
-   ],
-   "rooms_category": [
-      "Laboratório de Informática",
-      "TESTE"
-   ],
-   "rooms": [
-      {
-         "id": 3,
-         "name": "adasdas",
-         "category": "Laboratório de Informática",
-         "unavailability": [
-            1
-         ]
-      },
-      {
-         "id": 4,
-         "name": "dsadasd",
-         "category": "Laboratório de Informática",
-         "unavailability": []
-      },
-      {
-         "id": 5,
-         "name": "Sala 605",
-         "category": "Laboratório de Informática",
-         "unavailability": [
+  "timeslots": [
+    {
+      "id": 1,
+      "day": 1,
+      "shift": 0,
+      "slot": 1,
+      "description": "08h55 - 10h35"
+    },
+    {
+      "id": 3,
+      "day": 1,
+      "shift": 1,
+      "slot": 0,
+      "description": "13h50 - 15h30"
+    },
+    {
+      "id": 4,
+      "day": 1,
+      "shift": 1,
+      "slot": 1,
+      "description": "15h50 - 17h30"
+    },
+    {
+      "id": 5,
+      "day": 1,
+      "shift": 2,
+      "slot": 0,
+      "description": "19h00 - 20h40"
+    },
+    {
+      "id": 6,
+      "day": 1,
+      "shift": 2,
+      "slot": 1,
+      "description": "20h55 - 22h35"
+    },
+    {
+      "id": 7,
+      "day": 2,
+      "shift": 0,
+      "slot": 0,
+      "description": "07h00 - 08h40"
+    },
+    {
+      "id": 8,
+      "day": 2,
+      "shift": 0,
+      "slot": 1,
+      "description": "08h55 - 10h35"
+    },
+    {
+      "id": 9,
+      "day": 2,
+      "shift": 0,
+      "slot": 2,
+      "description": "10h50 - 12h30"
+    },
+    {
+      "id": 10,
+      "day": 2,
+      "shift": 1,
+      "slot": 0,
+      "description": "13h50 - 15h30"
+    },
+    {
+      "id": 11,
+      "day": 2,
+      "shift": 1,
+      "slot": 1,
+      "description": "15h50 - 17h30"
+    },
+    {
+      "id": 12,
+      "day": 2,
+      "shift": 2,
+      "slot": 0,
+      "description": "19h00 - 20h40"
+    },
+    {
+      "id": 13,
+      "day": 2,
+      "shift": 2,
+      "slot": 1,
+      "description": "20h55 - 22h35"
+    },
+    {
+      "id": 14,
+      "day": 3,
+      "shift": 0,
+      "slot": 0,
+      "description": "07h00 - 08h40"
+    },
+    {
+      "id": 15,
+      "day": 3,
+      "shift": 0,
+      "slot": 1,
+      "description": "08h55 - 10h35"
+    },
+    {
+      "id": 16,
+      "day": 3,
+      "shift": 0,
+      "slot": 2,
+      "description": "10h50 - 12h30"
+    },
+    {
+      "id": 17,
+      "day": 3,
+      "shift": 1,
+      "slot": 0,
+      "description": "13h50 - 15h30"
+    },
+    {
+      "id": 18,
+      "day": 3,
+      "shift": 1,
+      "slot": 1,
+      "description": "15h50 - 17h30"
+    },
+    {
+      "id": 19,
+      "day": 3,
+      "shift": 2,
+      "slot": 0,
+      "description": "19h00 - 20h40"
+    },
+    {
+      "id": 20,
+      "day": 3,
+      "shift": 2,
+      "slot": 1,
+      "description": "20h55 - 22h35"
+    },
+    {
+      "id": 21,
+      "day": 4,
+      "shift": 0,
+      "slot": 0,
+      "description": "07h00 - 08h40"
+    },
+    {
+      "id": 22,
+      "day": 4,
+      "shift": 0,
+      "slot": 1,
+      "description": "08h55 - 10h35"
+    },
+    {
+      "id": 23,
+      "day": 4,
+      "shift": 0,
+      "slot": 2,
+      "description": "10h50 - 12h30"
+    },
+    {
+      "id": 24,
+      "day": 4,
+      "shift": 1,
+      "slot": 0,
+      "description": "13h50 - 15h30"
+    },
+    {
+      "id": 25,
+      "day": 4,
+      "shift": 1,
+      "slot": 1,
+      "description": "15h50 - 17h30"
+    },
+    {
+      "id": 26,
+      "day": 4,
+      "shift": 2,
+      "slot": 0,
+      "description": "19h00 - 20h40"
+    },
+    {
+      "id": 27,
+      "day": 4,
+      "shift": 2,
+      "slot": 1,
+      "description": "20h55 - 22h35"
+    },
+    {
+      "id": 28,
+      "day": 5,
+      "shift": 0,
+      "slot": 0,
+      "description": "07h00 - 08h40"
+    },
+    {
+      "id": 29,
+      "day": 5,
+      "shift": 0,
+      "slot": 1,
+      "description": "08h55 - 10h35"
+    },
+    {
+      "id": 30,
+      "day": 5,
+      "shift": 0,
+      "slot": 2,
+      "description": "10h50 - 12h30"
+    },
+    {
+      "id": 31,
+      "day": 5,
+      "shift": 1,
+      "slot": 0,
+      "description": "13h50 - 15h30"
+    },
+    {
+      "id": 32,
+      "day": 5,
+      "shift": 1,
+      "slot": 1,
+      "description": "15h50 - 17h30"
+    },
+    {
+      "id": 33,
+      "day": 5,
+      "shift": 2,
+      "slot": 0,
+      "description": "19h00 - 20h40"
+    },
+    {
+      "id": 34,
+      "day": 5,
+      "shift": 2,
+      "slot": 1,
+      "description": "20h55 - 22h35"
+    },
+    {
+      "id": 35,
+      "day": 6,
+      "shift": 0,
+      "slot": 0,
+      "description": "07h00 - 08h40"
+    },
+    {
+      "id": 36,
+      "day": 6,
+      "shift": 0,
+      "slot": 1,
+      "description": "08h55 - 10h35"
+    },
+    {
+      "id": 37,
+      "day": 6,
+      "shift": 0,
+      "slot": 2,
+      "description": "10h50 - 12h30"
+    },
+    {
+      "id": 38,
+      "day": 6,
+      "shift": 1,
+      "slot": 0,
+      "description": "13h50 - 15h30"
+    },
+    {
+      "id": 39,
+      "day": 6,
+      "shift": 1,
+      "slot": 1,
+      "description": "15h50 - 17h30"
+    },
+    {
+      "id": 40,
+      "day": 6,
+      "shift": 2,
+      "slot": 0,
+      "description": "19h00 - 20h40"
+    },
+    {
+      "id": 41,
+      "day": 6,
+      "shift": 2,
+      "slot": 1,
+      "description": "20h55 - 22h35"
+    },
+    {
+      "id": 2,
+      "day": "1",
+      "shift": "0",
+      "slot": "2",
+      "description": "10h50 - 12h30"
+    },
+    {
+      "id": 0,
+      "day": "1",
+      "shift": "0",
+      "slot": "0",
+      "description": "07h00 - 08h40"
+    }
+  ],
+  "rooms_category": [
+    "TESTE"
+  ],
+  "rooms": [
+    {
+      "id": 3,
+      "name": "adasdas",
+      "category": "Laboratório de Informática",
+      "unavailability": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "name": "dsadasd",
+      "category": "Laboratório de Informática",
+      "unavailability": []
+    },
+    {
+      "id": 5,
+      "name": "Sala 605",
+      "category": "Laboratório de Informática",
+      "unavailability": [
+        1,
+        3
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "id": 9,
+      "name": "DFHFGJFDGJFGHJ",
+      "unavailability": [],
+      "preferences": [
+        0,
+        5,
+        9
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "id": 0,
+      "name": "Engenharia da Computação - 1º Semestre",
+      "subjects": [
+        {
+          "id": 2,
+          "name": "Database Laboratory",
+          "acronym": "DBL",
+          "events": 2,
+          "divided": true,
+          "subgroups": 2,
+          "rooms": [
             1,
-            3
-         ]
-      }
-   ],
-   "teachers": [
-      {
-         "id": 0,
-         "name": "Guilherme",
-         "unavailability": [
-            7,
-            8
-         ],
-         "preferences": [
-            1,
-            4
-         ]
-      },
-      {
-         "id": 5,
-         "name": "adasdasd",
-         "unavailability": [],
-         "preferences": []
-      },
-      {
-         "id": 6,
-         "name": "adasdasd",
-         "unavailability": [],
-         "preferences": []
-      },
-      {
-         "id": 7,
-         "name": "adasdasd",
-         "unavailability": [],
-         "preferences": []
-      },
-      {
-         "id": 8,
-         "name": "hgdfhfghdfg",
-         "unavailability": [],
-         "preferences": []
-      },
-      {
-         "id": 9,
-         "name": "DFHFGJFDGJFGHJ",
-         "unavailability": [],
-         "preferences": [
-            0,
-            5,
-            9
-         ]
-      },
-      {
-         "id": 6,
-         "name": "Alisson",
-         "unavailability": [
-            1,
-            3,
-            4
-         ],
-         "preferences": [
-            0,
-            3,
+            2
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Algoritmos e Estruturas de Dados 1",
+          "acronym": "AEDS1",
+          "events": "2",
+          "divided": "true",
+          "subgroups": "1",
+          "rooms": [
             5
-         ]
-      }
-   ],
-   "classes": [
-      {
-         "id": 0,
-         "name": "Engenharia da Computação - 1º Semestre",
-         "subjects": [
-            {
-               "id": "0",
-               "name": "Statistics 2",
-               "acronym": "Sts2",
-               "events": "2",
-               "divided": "true",
-               "subgroups": "1",
-               "rooms": [
-                  4,
-                  5
-               ]
-            },
-            {
-               "id": 1,
-               "name": "Database",
-               "acronym": "DB",
-               "events": 4,
-               "divided": false,
-               "subgroups": 0,
-               "rooms": [
-                  0
-               ]
-            },
-            {
-               "id": 2,
-               "name": "Database Laboratory",
-               "acronym": "DBL",
-               "events": 2,
-               "divided": true,
-               "subgroups": 2,
-               "rooms": [
-                  1,
-                  2
-               ]
-            },
-            {
-               "id": 3,
-               "name": "Algoritmos e Estruturas de Dados 1",
-               "acronym": "AEDS1",
-               "events": "2",
-               "divided": "true",
-               "subgroups": "1",
-               "rooms": [
-                  5
-               ]
-            }
-         ]
-      },
-      {
-         "id": 1,
-         "name": "Eng Mec",
-         "subjects": []
-      }
-   ],
-   "events": [
-      {
-         "id": 0,
-         "class": 0,
-         "subject": 0,
-         "subgroup": null,
-         "teacher": 0
-      },
-      {
-         "id": 1,
-         "class": 0,
-         "subject": 1,
-         "subgroup": null,
-         "teacher": 1
-      },
-      {
-         "id": 2,
-         "class": 0,
-         "subject": 2,
-         "subgroup": 1,
-         "teacher": 0
-      },
-      {
-         "id": 3,
-         "class": 0,
-         "subject": 2,
-         "subgroup": 2,
-         "teacher": 0
-      }
-   ],
-   "precedence_rules": [
-      {
-         "event": 1,
-         "dependent_events": [
-            2,
-            3
-         ]
-      }
-   ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Eng Mec",
+      "subjects": []
+    },
+    {
+      "id": 2,
+      "name": "Design de Moda 1 Semestre",
+      "subjects": []
+    }
+  ],
+  "events": [
+    {
+      "id": 0,
+      "class": 0,
+      "subject": 0,
+      "subgroup": null,
+      "teacher": 0
+    },
+    {
+      "id": 1,
+      "class": 0,
+      "subject": 1,
+      "subgroup": null,
+      "teacher": 1
+    },
+    {
+      "id": 2,
+      "class": 0,
+      "subject": 2,
+      "subgroup": 1,
+      "teacher": 0
+    },
+    {
+      "id": 3,
+      "class": 0,
+      "subject": 2,
+      "subgroup": 2,
+      "teacher": 0
+    }
+  ],
+  "precedence_rules": [
+    {
+      "event": 1,
+      "dependent_events": [
+        2,
+        3
+      ]
+    }
+  ]
 }

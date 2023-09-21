@@ -3,6 +3,8 @@
     import GreenButton from '../GreenButton.vue'
     import EditButton from '../EditButton.vue'
     import RemoveButton from '../RemoveButton.vue';
+    import Swal from 'sweetalert2';
+
 
     export default {
         components:{
@@ -32,12 +34,19 @@
 
         methods:{
             removeClassSubject(itemID){
-                console.log("chamou")
-                window.removeSubjects(itemID.toString(), this.classID.toString())
+                Swal.fire({
+                    text: 'Deseja mesmo apagar essa matéria?',
+                    icon: 'warning',
+                 // Mostrar botão de Cancelar
+                    confirmButtonText: 'Confirmar',
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        window.removeSubjects(itemID.toString(), this.classID.toString())
+                    }
+                })
+                
             }
         }
-
-
     }
 
 </script>
@@ -79,6 +88,7 @@
 
 <style>
 
+ 
     .updateClass-for {
         display: flex;
         justify-content: space-between;
