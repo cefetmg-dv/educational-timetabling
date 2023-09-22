@@ -50,9 +50,9 @@
                         id: this.subjectsInstance[parseInt(this.subjectsInstance.length)-1]['id']+1,
                         name: this.name,
                         acronym: this.acronym,
-                        events: this.events,
+                        events: parseInt(this.events),
                         divided: this.divided,
-                        subgroups: this.subgroups,
+                        subgroups: parseInt(this.subgroups),
                         rooms: this.chosenRooms
                     }
 
@@ -93,7 +93,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Eventos</label>
-                <input required v-model="events" type="text" class="form-control" aria-describedby="emailHelp"/>
+                <input pattern="[1-3]" required v-model="events" type="text" class="form-control" aria-describedby="emailHelp"/>
             </div>
 
             <div class="mb-3">
@@ -106,7 +106,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Subgrupos</label>
-                <input required v-model="subgroups" type="text" class="form-control" aria-describedby="emailHelp"/>
+                <input pattern="[1-3]" required v-model="subgroups" type="text" class="form-control" aria-describedby="emailHelp"/>
             </div>
 
             <div class="mb-3">

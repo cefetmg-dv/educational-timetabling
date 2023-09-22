@@ -82,7 +82,7 @@
 <template>
     <div class="registerTeacher-container">
 
-        <div class="registerTimeslot-title">
+        <div class="registerTeacher-title">
             Cadastro de Professor:
         </div>
         <hr>

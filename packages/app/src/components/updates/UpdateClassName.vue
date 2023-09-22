@@ -6,6 +6,7 @@
     data() {
         return {
             classesInstance : [],
+            name: '',
             data: {},
         };
     },
@@ -14,6 +15,16 @@
     computed: {
         classID() {
             return this.$route.params.id;
+        }
+    },
+
+    mounted(){
+
+        //preenche input
+        for(var i = 0; i < JSON.parse(window.searchFile()).classes.length; ++i){
+            if(this.classID == JSON.parse(window.searchFile()).classes[i].id){
+                this.name = JSON.parse(window.searchFile()).classes[i].name
+            }
         }
     },
 

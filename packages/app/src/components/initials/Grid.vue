@@ -62,8 +62,7 @@
 
             <div class="grid-right">
                 <div class="grid-buttons">
-                <EditButton class="grid-buttons-edit" :to="'/Atualizar-Tempo/' + item.id">Editar</EditButton>
-                <RemoveButton @click="removeTimeslot(item.id)">Apagar</RemoveButton>
+                    <RemoveButton @click="removeTimeslot(item.id)">Apagar</RemoveButton>
                 </div>
             </div>
         </div>

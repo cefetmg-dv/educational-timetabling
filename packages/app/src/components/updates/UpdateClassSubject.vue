@@ -4,27 +4,6 @@
 
     export default {
 
-        mounted(){
-            const selectBtn2 = document.querySelector(".multiselect-rooms-btn");
-
-            selectBtn2.addEventListener("click", ()=>{
-                selectBtn2.classList.toggle("open")
-            })
-
-            this.options = JSON.parse(window.searchFile()).rooms
-        },
-
-    
-        data() {
-            return {
-                subjectsInstance : [],
-                options: [],
-                chosenRooms : [],
-                optionsChosenRooms: [],
-            };
-        },
-        
-
         //pega dados passados pela url
         computed: {
             classID() {
@@ -34,6 +13,58 @@
                 return this.$route.params.itemID;
             }
         },
+
+        mounted(){
+            const selectBtn2 = document.querySelector(".multiselect-rooms-btn");
+
+            selectBtn2.addEventListener("click", ()=>{
+                selectBtn2.classList.toggle("open")
+            })
+
+            this.options = JSON.parse(window.searchFile()).rooms
+            console.log(this.itemID)
+
+            //preenche inputs
+            for(var i = 0; i < JSON.parse(window.searchFile()).classes.length; ++i){
+                if(this.classID == JSON.parse(window.searchFile()).classes[i].id){
+                    console.log("entrou")
+                    for(var j = 0; j < JSON.parse(window.searchFile()).classes[i].subjects.length; ++j){
+                        if(this.itemID == JSON.parse(window.searchFile()).classes[i].subjects[j].id){
+                            console.log("entrou2")
+                            this.nameSubject = JSON.parse(window.searchFile()).classes[i].subjects[j].name;
+                            this.acronym = JSON.parse(window.searchFile()).classes[i].subjects[j].acronym;
+                            this.events = JSON.parse(window.searchFile()).classes[i].subjects[j].events;
+                            this.subgroups = JSON.parse(window.searchFile()).classes[i].subjects[j].subgroups;
+                            this.divided = JSON.parse(window.searchFile()).classes[i].subjects[j].divided;
+                            for(var k = 0; k < JSON.parse(window.searchFile()).classes[i].subjects[j].rooms.length; ++k){
+                                this.optionsChosenRooms[JSON.parse(window.searchFile()).classes[i].subjects[j].rooms[k]] = true
+                            }
+                        
+                        }
+                    }
+                }
+            }
+            console.log("teste")
+            
+        },
+
+    
+        data() {
+            return {
+                subjectsInstance : [],
+                options: [],
+                chosenRooms : [],
+                optionsChosenRooms: [],
+                nameSubject: '',
+                acronym: '',
+                events: '',
+                divided: '',
+                subgroups: '',
+            };
+        },
+        
+
+        
 
         methods:{
                 HandleSubmit(e){
@@ -46,12 +77,12 @@
                     }
 
                     this.data = {
-                        id: this.itemID,
-                        name: this.name,
+                        id: parseInt(this.itemID),
+                        name: this.nameSubject,
                         acronym: this.acronym,
-                        events: this.events,
+                        events: parseInt(this.events),
                         divided: this.divided,
-                        subgroups: this.subgroups,
+                        subgroups: parseInt(this.subgroups),
                         rooms: this.chosenRooms 
                     }
 
@@ -82,7 +113,7 @@
         <form class="registerClass-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome da Matéria</label>
-                <input required v-model="name" type="text" class="form-control" aria-describedby="emailHelp"/>
+                <input required v-model="nameSubject" type="text" class="form-control" aria-describedby="emailHelp"/>
             </div>
 
             <div class="mb-3">
@@ -92,7 +123,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Eventos</label>
-                <input required v-model="events" type="text" class="form-control" aria-describedby="emailHelp"/>
+                <input pattern="[1-3]" required v-model="events" type="text" class="form-control" aria-describedby="emailHelp"/>
             </div>
 
             <div class="mb-3">
@@ -105,7 +136,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Subgrupos</label>
-                <input required v-model="subgroups" type="text" class="form-control" aria-describedby="emailHelp"/>
+                <input pattern="[1-3]" required v-model="subgroups" type="text" class="form-control" aria-describedby="emailHelp"/>
             </div>
 
             <div class="mb-3">

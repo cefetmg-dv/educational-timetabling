@@ -79,9 +79,27 @@ const updateClassName = (dataFromApp) =>{
 const updateSubjects = (dataFromApp, idClass) =>{
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
+  console.log(dataFromApp)
+  console.log(idClass)
   for(let i = 0; i < instance.classes.length; i++){
-    if(instance.classes[i].id == parseInt(idClass)){
-      instance.classes[i].subjects[JSON.parse(dataFromApp).id] = JSON.parse(dataFromApp)
+    if(instance.classes[i].id == idClass){
+      for(let j = 0 ; j < instance.classes[i].subjects.length; j++){
+        console.log("INSTANCE")
+        console.log(instance.classes[i].subjects[j])
+        console.log("DATA FROM APP")
+        console.log(JSON.parse(dataFromApp).id)
+        if(instance.classes[i].subjects[j].id == JSON.parse(dataFromApp).id){
+          console.log("DEU")
+          instance.classes[i].subjects[j].id = JSON.parse(dataFromApp).id;
+          instance.classes[i].subjects[j].name = JSON.parse(dataFromApp).name;
+          instance.classes[i].subjects[j].acronym = JSON.parse(dataFromApp).acronym;
+          instance.classes[i].subjects[j].events = JSON.parse(dataFromApp).events;
+          instance.classes[i].subjects[j].divided = JSON.parse(dataFromApp).divided;
+          instance.classes[i].subjects[j].subgroups = JSON.parse(dataFromApp).subgroups;
+          instance.classes[i].subjects[j].rooms = JSON.parse(dataFromApp).rooms;
+        }
+      }
+      //instance.classes[i].subjects[JSON.parse(dataFromApp).id] = JSON.parse(dataFromApp)
     }
   }
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')

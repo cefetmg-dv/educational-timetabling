@@ -24,7 +24,19 @@
             })
 
             this.options = JSON.parse(window.searchFile()).timeslots
-    
+
+            //preenche inputs
+            for(var i = 0; i < JSON.parse(window.searchFile()).teachers.length; ++i){
+                if(JSON.parse(window.searchFile()).teachers[i].id == this.idTeacher){
+                    this.name = JSON.parse(window.searchFile()).teachers[i].name
+                    for(var j = 0; j < JSON.parse(window.searchFile()).teachers[i].preferences.length; ++j){
+                        this.optionsChosenPreferences[JSON.parse(window.searchFile()).teachers[i].preferences[j]] = true 
+                    }
+                    for(var j = 0; j < JSON.parse(window.searchFile()).teachers[i].unavailability.length; ++j){
+                        this.optionsChosenIndisponibilities[JSON.parse(window.searchFile()).teachers[i].unavailability[j]] = true 
+                    }
+                }
+            }
         },
 
         methods: {
@@ -69,7 +81,8 @@
                 optionsChosenPreferences: [],
                 preferences: [],
                 optionsChosenIndisponibilities: [],               
-                indisponibilities: []              
+                indisponibilities: [],
+                name: ''           
             }
         }
     }
@@ -80,7 +93,7 @@
     <div class="registerTeacher-container">
 
 
-        <div class="registerTimeslot-title">
+        <div class="updateTeacher-title">
             Atualização de Professor:
         </div>
         <hr>
@@ -88,7 +101,7 @@
         <form class="registerTeacher-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Nome completo</label>
-                <input required v-model="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                <input value = initialName required v-model="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
             </div>
             <div class="mb-3">
                 <label class="form-label">Preferências</label>
