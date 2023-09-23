@@ -1,6 +1,8 @@
 const { contextBridge } = require('electron');
 const timetabling = require('bindings')('timetabling');
 const { Console } = require('console');
+const fs = require('fs')
+
 
 const searchFile = () => {
   var instance = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8');

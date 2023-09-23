@@ -5,8 +5,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: () => import("../views/HomePage.vue")
+      name: 'home',
+      component: () => import("../components/initials/HomePage.vue")
     },
     {
       path: '/Professores',
@@ -104,6 +104,6 @@ const router = createRouter({
       component: () => import("../components/initials/RoomsCategories.vue")
     }
   ]
-})
+});
 
-export default router
+export default router;
