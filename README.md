@@ -20,7 +20,12 @@ A aplicação é desenvolvida sobre o _framework_ [Electron](https://www.electro
 ## ⚙ Preparando a aplicação para uso
 
 ```sh
+npm install -g node-gyp
+npm install -g windows-build-tools
 npm install
+node-gyp clean
+node-gyp configure
+node-gyp build
 npm start
 ```
 

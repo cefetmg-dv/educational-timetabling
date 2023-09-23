@@ -2,16 +2,18 @@
   "name": "educational-timetabling",
   "version": "1.0.0",
   "description": "An educational timetabling application",
-  "main": "main.js",
   "keywords": [
     "timetabling",
     "optimization"
   ],
   "contributors": [
-    "André L. Maravilha <andre.maravilha@cefetmg.br> (https://andremaravilha.github.io)",
-    "Wallace Ketler Melo de Morais <> ()"
+    "André L. Maravilha",
+    "Wallace Ketler Melo de Morais"
   ],
   "license": "MIT",
+  "private": true,
+  "gypfile": true,
+  "main": "main.js",
   "workspaces": [
     "./packages/*"
   ],
@@ -23,8 +25,9 @@
     "electron": "^24.1.3"
   },
   "dependencies": {
+    "bindings": "^1.5.0",
     "bootstrap": "^5.2.3",
-    "fs": "^0.0.1-security",
+    "node-addon-api": "^7.0.0",
     "vue-router": "^4.2.2"
   }
 }

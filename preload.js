@@ -1,5 +1,6 @@
-const { contextBridge } = require('electron')
-var fs = require('fs')
+const { contextBridge } = require('electron');
+const fs = require('fs');
+const timetabling = require('bindings')('timetabling');
 
 // Exemplo no arquivo preload.js
 const salvarArquivo = (data) => {
@@ -9,6 +10,15 @@ const salvarArquivo = (data) => {
       console.log(e);
     }
 };
+
+let json = fs.readFileSync("C:\\Users\\andre\\Workspace\\projects\\educational-timetabling\\example.json", 'utf-8');
+let problem = JSON.parse(json);
+
+console.log("My input:");
+console.log(problem);
+
+console.log("My solution:");
+console.log(timetabling.solve(problem, 'mip'));
 
 // Expor a função no objeto window
 contextBridge.exposeInMainWorld('salvarArquivo', salvarArquivo);
