@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue';
+import Multiselect from 'vue-multiselect'
+
 
 </script>
 
@@ -10,8 +12,9 @@ import Navbar from './components/Navbar.vue';
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
   
-  <div id="#app">
   
+  <div id="#app">
+    
     <Navbar/>
   
     <RouterView/>
@@ -26,7 +29,13 @@ import Navbar from './components/Navbar.vue';
     padding: 0;
     margin: 0;
     min-width: 100%;
-    
+    min-height: 100%;
+    display: block;
+  }
+  @media (min-width: 0px){
+    div#app{
+      display: block;
+    }
   }
   *{
     font-family: Poppins, "Open sans", sans-serif;

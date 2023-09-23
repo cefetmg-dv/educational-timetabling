@@ -11,24 +11,24 @@
 
 </script>
 
+
 <template>
 
-    <router-link :to="link" class="greenButton-links">
+    <router-link :to="link" class="editButton-links">
         <slot></slot>
     </router-link>
 
 </template>
 
-
 <style>
-    .greenButton-links{
-        height: 60px;
+    .editButton-links{
+        height: 30px;
         font-family: Poppins, sans-serif;
-        width: 200px;
+        width: 100px;
         border-style: solid;
         border-radius: 5px;
         border-width: 1px;
-        border-color: #72BA75;
+        border-color: lightblue;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -36,11 +36,11 @@
         text-decoration: none;
         color:white;
         font-weight: 400;
-        background-color: #72BA75;
+        background-color: lightblue;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    .greenButton-links:hover{
+    .editButton-links:hover{
         background-color: whitesmoke;
         color: black;
         transform: translateY(-2px);

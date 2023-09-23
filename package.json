@@ -7,8 +7,8 @@
     "optimization"
   ],
   "contributors": [
-    "André L. Maravilha",
-    "Wallace Ketler Melo de Morais"
+    "André L. Maravilha <andre.maravilha@cefetmg.br> (https://andremaravilha.github.io)",
+    "Wallace Ketler Melo de Morais <wallace-m-m-2011@hotmail.com> (https://github.com/wallaceketler)"
   ],
   "license": "MIT",
   "private": true,
@@ -26,8 +26,11 @@
   },
   "dependencies": {
     "bindings": "^1.5.0",
-    "bootstrap": "^5.2.3",
     "node-addon-api": "^7.0.0",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.2",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "bootstrap": "^5.3.1",
+    "vue-multiselect": "^3.0.0-alpha.2",
+    "vue-sweetalert2": "^5.0.5"
   }
 }

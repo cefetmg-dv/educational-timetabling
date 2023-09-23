@@ -4,7 +4,7 @@
 
 <template>
     <div class="navbar-container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
 
                 <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,10 +25,10 @@
                         <div class="navbar-nav ms-auto">
                         <ul class="navbar-nav">
                             <li class='nav-item'>
-                                <router-link class="nav-link" to="/Horarios">
+                                <router-link class="nav-link" to="/Grade">
                                     <div class="navbar-textAndImage">
                                         <img src = "../assets/novo-horario.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Horários</p>
+                                        <p>Grade</p>
                                     </div>
                                 </router-link>
 
@@ -37,26 +37,17 @@
                             <li class='nav-item'>
                                 <router-link class ="nav-link" to="/Professores">
                                     <div class="navbar-textAndImage">
-                                        <img src = "../assets/professor.png" style = "width: 50px" alt="novo-horario"/>
+                                        <img src = "../assets/professor.png" style = "width: 50px" alt="professor"/>
                                         <p>Professores</p>
                                     </div>
                                 </router-link>
                             </li>
 
                             <li class='nav-item'>
-                                <router-link class="nav-link" to="/Disciplinas">
+                                <router-link class="nav-link" to="/Classes">
                                     <div class="navbar-textAndImage">
-                                        <img src = "../assets/disciplina.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Disciplinas</p>
-                                    </div>
-                                </router-link>
-                            </li>
-
-                            <li class='nav-item'>
-                                <router-link class="nav-link" to="/Cursos">
-                                    <div class="navbar-textAndImage">
-                                        <img src = "../assets/curso.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Cursos</p>
+                                        <img src = "../assets/curso.png" style = "width: 50px" alt="classes"/>
+                                        <p>Classes</p>
                                     </div>
                                 </router-link>
                             </li>
@@ -66,15 +57,6 @@
                                     <div class="navbar-textAndImage">
                                         <img src = "../assets/sala.png" style = "width: 50px" alt="novo-horario"/>
                                         <p>Salas</p>
-                                    </div>
-                                </router-link>
-                            </li>
-
-                            <li class='nav-item'>
-                                <router-link class="nav-link" to="/Turmas">
-                                    <div class="navbar-textAndImage">
-                                        <img src = "../assets/turma.png" style = "width: 50px" alt="novo-horario"/>
-                                        <p>Turmas</p>
                                     </div>
                                 </router-link>
                             </li>
@@ -113,6 +95,7 @@
 
 .navbar-textAndImage:hover{
     transform: translateY(-5px);
+    background-color: #72BA75;
 }
 
 </style>

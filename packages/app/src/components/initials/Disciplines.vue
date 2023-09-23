@@ -11,6 +11,7 @@
 <template>
     <div class="disciplines-container">
         <GreenButton link="/Cadastrar-Disciplina">Cadastrar Disciplina</GreenButton>
+        <hr>
     </div>
 </template>
 

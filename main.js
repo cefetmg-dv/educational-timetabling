@@ -9,7 +9,7 @@ const createWindow = () => {
     height: 800,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      sandbox: false
+      sandbox: false,
     }
   });
 
@@ -23,6 +23,7 @@ const createWindow = () => {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+  
 }
 
 // This method will be called when Electron has finished
