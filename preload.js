@@ -212,8 +212,9 @@ const updateSubjects = (dataFromApp, idClass) =>{
         }
       
         if(instance.classes[i].subjects[j].id == JSON.parse(dataFromApp).id){
-          
-          if(instance.classes[i].subjects[i].name == JSON.parse(dataFromApp).name){
+          console.log(JSON.parse(dataFromApp).name)
+          console.log(instance.classes[i].subjects[j].name)
+          if(instance.classes[i].subjects[j].name == JSON.parse(dataFromApp).name){
             isTheSame = true
             console.log("É O MESMO")
           }
@@ -390,7 +391,6 @@ const removeSubjects = (idSubject, idClass)=>{
 
 const generateSolution = () => {
 
-  disciplineWithoutTeacher = false
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   //create events
@@ -399,9 +399,9 @@ const generateSolution = () => {
   var event = {}
   var eventID = 0
   for(var i = 0; i < instance.classes.length; ++i){
-    console.log("teste")
+    
     for(var j = 0; j < instance.classes[i].subjects.length; ++j){
-      console.log("teste")
+    
       for(var k = 0; k < instance.classes[i].subjects[j].events; k++){
 
         event = {
@@ -411,19 +411,24 @@ const generateSolution = () => {
           subgroup: instance.classes[i].subjects[j].subgroups,
           teacher: instance.classes[i].subjects[j].teachers[k],
         }
-        console.log(event)
-        console.log("teste")
+
+
+        if(instance.classes[i].subjects[j].teachers.length == 0){
+          return 'disciplineWithoutProfessor'
+        }else if(instance.classes[i].subjects[j].rooms.length == 0){
+          return 'disciplineWithoutRoom'
+        }
+
         instance.events.push(event)
         eventID++
       }
     }
   }
+  
+
 
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 
-  if(disciplineWithoutTeacher){
-    return 'disciplineWithoutProfessor'
-  }
 
   
   let json = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
@@ -432,8 +437,10 @@ const generateSolution = () => {
   console.log("My input:")
   console.log(problem)
   console.log("My solution:")
-  console.log(timetabling.solve(problem, 'mip'))
-  
+  var solution = timetabling.solve(problem, 'mip')
+  console.log(solution)
+  console.log(JSON.stringify(solution))
+  return JSON.stringify(solution)
 }
 
 

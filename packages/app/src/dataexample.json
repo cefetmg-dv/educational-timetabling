@@ -331,7 +331,9 @@
          ],
          "preferences": [
             1,
-            4
+            4,
+            5,
+            6
          ]
       },
       {
@@ -362,16 +364,16 @@
                "id": 1,
                "name": "materia teste",
                "acronym": "mt",
-               "events": 3,
+               "events": 2,
                "divided": true,
                "subgroups": 2,
                "rooms": [
-                  0
+                  1
                ],
                "teachers": [
-                  14,
-                  14,
-                  16
+                  1,
+                  2,
+                  2
                ]
             },
             {
@@ -404,13 +406,107 @@
                   1,
                   2
                ]
+            },
+            {
+               "id": 4,
+               "name": "Programação I",
+               "acronym": "prog1",
+               "events": 2,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  1
+               ],
+               "teachers": [
+                  0,
+                  0
+               ]
+            },
+            {
+               "id": 5,
+               "name": "Programação 2",
+               "acronym": "prog2",
+               "events": 2,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  0
+               ],
+               "teachers": [
+                  0,
+                  1
+               ]
+            },
+            {
+               "id": 6,
+               "name": "Arquitetura de Computadores",
+               "acronym": "AOCI",
+               "events": 2,
+               "divided": true,
+               "subgroups": 2,
+               "rooms": [
+                  1
+               ],
+               "teachers": [
+                  1,
+                  0
+               ]
+            },
+            {
+               "id": 7,
+               "name": "Arquitetura de Computadores 4",
+               "acronym": "AOCI2",
+               "events": 2,
+               "divided": true,
+               "subgroups": 2,
+               "rooms": [
+                  0,
+                  1
+               ],
+               "teachers": [
+                  0,
+                  1
+               ]
             }
          ]
       },
       {
          "id": 1,
          "name": "Eng Mec",
-         "subjects": []
+         "subjects": [
+            {
+               "id": 0,
+               "name": "asdasds",
+               "acronym": "sadas",
+               "events": 2,
+               "divided": true,
+               "subgroups": 2,
+               "rooms": [
+                  0,
+                  1
+               ],
+               "teachers": [
+                  0,
+                  1
+               ]
+            },
+            {
+               "id": 1,
+               "name": "asdasdsadasdsadsa",
+               "acronym": "ssd",
+               "events": 3,
+               "divided": true,
+               "subgroups": 2,
+               "rooms": [
+                  0
+               ],
+               "teachers": [
+                  0,
+                  0,
+                  0
+               ]
+            }
+         ]
       },
       {
          "id": 2,
@@ -429,56 +525,140 @@
          "class": 0,
          "subject": 1,
          "subgroup": 2,
-         "teacher": 14
+         "teacher": 1
       },
       {
          "id": 1,
          "class": 0,
          "subject": 1,
          "subgroup": 2,
-         "teacher": 14
+         "teacher": 2
       },
       {
          "id": 2,
-         "class": 0,
-         "subject": 1,
-         "subgroup": 2,
-         "teacher": 16
-      },
-      {
-         "id": 3,
          "class": 0,
          "subject": 2,
          "subgroup": 2,
          "teacher": 0
       },
       {
-         "id": 4,
+         "id": 3,
          "class": 0,
          "subject": 2,
          "subgroup": 2,
          "teacher": 1
       },
       {
-         "id": 5,
+         "id": 4,
          "class": 0,
          "subject": 2,
          "subgroup": 2,
          "teacher": 2
+      },
+      {
+         "id": 5,
+         "class": 0,
+         "subject": 3,
+         "subgroup": 1,
+         "teacher": 1
       },
       {
          "id": 6,
          "class": 0,
          "subject": 3,
          "subgroup": 1,
-         "teacher": 1
+         "teacher": 2
       },
       {
          "id": 7,
          "class": 0,
-         "subject": 3,
-         "subgroup": 1,
-         "teacher": 2
+         "subject": 4,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 8,
+         "class": 0,
+         "subject": 4,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 9,
+         "class": 0,
+         "subject": 5,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 10,
+         "class": 0,
+         "subject": 5,
+         "subgroup": 2,
+         "teacher": 1
+      },
+      {
+         "id": 11,
+         "class": 0,
+         "subject": 6,
+         "subgroup": 2,
+         "teacher": 1
+      },
+      {
+         "id": 12,
+         "class": 0,
+         "subject": 6,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 13,
+         "class": 0,
+         "subject": 7,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 14,
+         "class": 0,
+         "subject": 7,
+         "subgroup": 2,
+         "teacher": 1
+      },
+      {
+         "id": 15,
+         "class": 1,
+         "subject": 0,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 16,
+         "class": 1,
+         "subject": 0,
+         "subgroup": 2,
+         "teacher": 1
+      },
+      {
+         "id": 17,
+         "class": 1,
+         "subject": 1,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 18,
+         "class": 1,
+         "subject": 1,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 19,
+         "class": 1,
+         "subject": 1,
+         "subgroup": 2,
+         "teacher": 0
       }
    ],
    "precedence_rules": [

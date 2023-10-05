@@ -48,9 +48,19 @@
                         }
                     }
 
+                    var id;
+                    console.log(this.subjectsInstance)
+                    console.log(this.subjectsInstance.length)
+                    if(this.subjectsInstance.length>0){
+                        var id = this.subjectsInstance[parseInt(this.subjectsInstance.length)-1]['id']+1
+                    }else{
+                        console.log("é 0")
+                        var id = 0
+                    }
+
 
                     this.data = {
-                        id: this.subjectsInstance[parseInt(this.subjectsInstance.length)-1]['id']+1,
+                        id: id,
                         name: this.name,
                         acronym: this.acronym,
                         events: parseInt(this.events),
