@@ -174,7 +174,11 @@
                 else{
                     this.error = true;
                     console.log("inválido")
-                    //mostra alert
+                    Swal.fire({
+                        text: 'Intervalo inválido!',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })
                     return
                 }
 
@@ -184,6 +188,11 @@
                     if(this.instanceGrids[item].id   == this.idTime){
                         this.isIdUsed = true
                         //mostra alert
+                        Swal.fire({
+                            text: 'Intervalo já cadastrado anteriormente',
+                            icon: 'error',
+                            confirmButtonText: 'Ok',
+                        })
                         console.log("já cadastrado")
                         return
                     }
@@ -199,6 +208,7 @@
 
                 window.registerTimeslot(JSON.stringify(this.data))
 
+                this.$router.push('/Grade')
                 Swal.fire({
                     text: 'Intervalo cadastrado com sucesso!',
                     icon: 'success',

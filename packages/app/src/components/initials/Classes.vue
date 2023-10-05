@@ -33,6 +33,7 @@
                 }).then((result)=>{
                     if(result.isConfirmed){
                         window.removeClass(item)
+                        this.$router.push('/')
                     }
                 })
                 

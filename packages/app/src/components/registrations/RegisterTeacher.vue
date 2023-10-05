@@ -54,13 +54,23 @@
                     preferences: this.preferences
                 }
 
-                window.registerTeachers(JSON.stringify(this.dados))
+                this.isRegistered = window.registerTeachers(JSON.stringify(this.dados))
 
-                Swal.fire({
-                    text: 'Professor(a) cadastrado(a) com sucesso!',
-                    icon: 'success',
-                    confirmButtonText: 'Ok',
-                })
+                if(this.isRegistered){
+                    Swal.fire({
+                        text: 'Nome de professor(a) já cadastrado(a) anteriormente!',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    }) 
+                }else{
+
+                    this.$router.push('/Professores')
+                    Swal.fire({
+                        text: 'Professor(a) cadastrado(a) com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'Ok',
+                    })
+                }
                 
             },
 
@@ -73,7 +83,8 @@
                 optionsChosenPreferences: [],
                 preferences: [],
                 optionsChosenIndisponibilities: [],               
-                indisponibilities: []
+                indisponibilities: [],
+                isRegistered : false
             }
         }
     }

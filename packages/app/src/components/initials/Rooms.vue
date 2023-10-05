@@ -33,6 +33,7 @@
                 }).then((result)=>{
                     if(result.isConfirmed){
                         window.removeRoom(item)
+                        this.$router.push('/')
                     }
                 })
                 

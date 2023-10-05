@@ -21,6 +21,7 @@
                 options: [],
                 chosenRooms : [],
                 optionsChosenRooms: [],
+                isRegistered : false
             };
         },
         
@@ -35,6 +36,8 @@
         methods:{
                 HandleSubmit(e){
                     e.preventDefault()
+
+                    this.chosenRooms = []
 
                     //verifica id da disciplina
                     this.subjectsInstance = JSON.parse(window.searchFile()).classes[this.classID].subjects
@@ -51,19 +54,33 @@
                         name: this.name,
                         acronym: this.acronym,
                         events: parseInt(this.events),
-                        divided: this.divided,
+                        divided: JSON.parse(this.divided),
                         subgroups: parseInt(this.subgroups),
-                        rooms: this.chosenRooms
+                        rooms: this.chosenRooms,
+                        teachers: []
                     }
 
                     console.log(this.data)
-                    window.registerSubjects(JSON.stringify(this.data), this.classID.toString());
+                    this.isRegistered = window.registerSubjects(JSON.stringify(this.data), this.classID.toString());
 
-                    Swal.fire({
-                        text: 'Matéria cadastrada com sucesso!',
-                        icon: 'success',
-                        confirmButtonText: 'Ok',
-                    })
+                    if(this.isRegistered){
+                        Swal.fire({
+                            text: 'Matéria já cadastrada anteriormente!',
+                            icon: 'error',
+                            confirmButtonText: 'Ok',
+                        })
+                    }
+                    else{
+
+                        this.$router.push('/Disciplinas')
+
+                        Swal.fire({
+                            text: 'Matéria cadastrada com sucesso!',
+                            icon: 'success',
+                            confirmButtonText: 'Ok',
+                        })    
+                    }
+                    
 
                 }
             }

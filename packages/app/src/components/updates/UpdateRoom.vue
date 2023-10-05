@@ -12,6 +12,9 @@
                 optionsChosenIndisponibilities: [],
                 options:[],     
                 indisponibilities: [],     
+                name: '',
+                category: '',
+                isRegistered : false
             }
         },
 
@@ -35,6 +38,19 @@
 
             this.options = JSON.parse(window.searchFile()).timeslots
             console.log(this.options)
+
+            //preenche inputs
+            for(var i = 0; i < JSON.parse(window.searchFile()).rooms.length; ++i){
+                if(this.roomID == JSON.parse(window.searchFile()).rooms[i].id){
+                    this.name = JSON.parse(window.searchFile()).rooms[i].name
+                    this.category = JSON.parse(window.searchFile()).rooms[i].category
+                    for(var j = 0; j < JSON.parse(window.searchFile()).rooms[i].unavailability.length; ++j){
+                        if(JSON.parse(window.searchFile()).rooms[i].unavailability.length){
+                            this.optionsChosenIndisponibilities[JSON.parse(window.searchFile()).rooms[i].unavailability[j]] = true
+                        }
+                    }
+                }
+            }
         },
         
 
@@ -50,19 +66,43 @@
 
                 this.dados = {
                     id: this.roomID,
-                    name: this.number,
+                    name: this.name,
                     category: this.category,
                     unavailability: this.indisponibilities
                 }
                 console.log(this.dados)
-                window.updateRoom(JSON.stringify(this.dados))
+                this.isRegistered = window.updateRoom(JSON.stringify(this.dados))
 
+                if(this.isRegistered){
+                    Swal.fire({
+                        text: 'Sala já cadastrada anteriormente',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })
+                //preenche inputs
+                this.optionsChosenIndisponibilities = []
+                this.indisponibilities = []
+                for(var i = 0; i < JSON.parse(window.searchFile()).rooms.length; ++i){
+                    if(this.roomID == JSON.parse(window.searchFile()).rooms[i].id){
+                        for(var j = 0; j < JSON.parse(window.searchFile()).rooms[i].unavailability.length; ++j){
+                            if(JSON.parse(window.searchFile()).rooms[i].unavailability.length){
+                                this.optionsChosenIndisponibilities[JSON.parse(window.searchFile()).rooms[i].unavailability[j]] = true
+                            }
+                        }
+                    }
+                }
+
+                }else{
+
+                    this.$router.push('/Salas')
+
+                    Swal.fire({
+                        text: 'Sala atualizada com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'Ok',
+                    })
+                }
                 
-                Swal.fire({
-                    text: 'Sala atualizada com sucesso!',
-                    icon: 'success',
-                    confirmButtonText: 'Ok',
-                })
             },
             
         }
@@ -84,7 +124,7 @@
         <form class="updateRoom-form" @submit="HandleSubmit">
             <div class="mb-3">
                 <label class="form-label">Número da Sala</label>
-                <input required v-model="number" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                <input required v-model="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 
             </div>
             <div class="mb-3">

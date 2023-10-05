@@ -4,6 +4,18 @@
 
     export default{
 
+        data() {
+            return {
+                roomCategory: '',
+                isRegistered : false
+            }
+        },
+
+        mounted(){
+            //preenche input
+            this.roomCategory = this.item
+        },
+
         computed:{
             item(){
                 return this.$route.params.id;
@@ -14,14 +26,26 @@
             HandleSubmit(e){
                 e.preventDefault()
                 console.log(this.item)
-                window.updateRoomsCategory(this.roomCategory, this.item)
-
                 
-                Swal.fire({
-                    text: 'Categoria de Sala atualizada com sucesso!',
-                    icon: 'success',
-                    confirmButtonText: 'Ok',
-                })
+                this.isRegistered = window.updateRoomsCategory(this.roomCategory, this.item)
+
+                if(this.isRegistered){
+                    Swal.fire({
+                        text: 'Categoria de Sala já cadastrada anteriormente!',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })
+                }else{
+
+                    this.$router.push('/Categorias-de-Salas')
+
+                    Swal.fire({
+                        text: 'Categoria de Sala atualizada com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'Ok',
+                    })
+                }
+                
             }
         }
 

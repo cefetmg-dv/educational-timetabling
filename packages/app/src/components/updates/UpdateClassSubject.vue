@@ -60,6 +60,7 @@
                 events: '',
                 divided: '',
                 subgroups: '',
+                isRegistered : false
             };
         },
         
@@ -87,13 +88,42 @@
                     }
 
                     console.log(this.data)
-                    window.updateSubjects(JSON.stringify(this.data), this.classID.toString());
+                    this.isRegistered = window.updateSubjects(JSON.stringify(this.data), this.classID.toString());
 
-                    Swal.fire({
-                        text: 'Matéria atualizada com sucesso!',
-                        icon: 'success',
-                        confirmButtonText: 'Ok',
-                    })
+                    if(this.isRegistered){
+                        Swal.fire({
+                            text: 'Matéria já cadastrada anteriormente!',
+                            icon: 'error',
+                            confirmButtonText: 'Ok',
+                        })
+
+                        //preenche inputs
+                        this.optionsChosenRooms = []
+                        this.chosenRooms = []
+                        for(var i = 0; i < JSON.parse(window.searchFile()).classes.length; ++i){
+                            if(this.classID == JSON.parse(window.searchFile()).classes[i].id){
+                                for(var j = 0; j < JSON.parse(window.searchFile()).classes[i].subjects.length; ++j){
+                                    if(this.itemID == JSON.parse(window.searchFile()).classes[i].subjects[j].id){
+                                    
+                                        for(var k = 0; k < JSON.parse(window.searchFile()).classes[i].subjects[j].rooms.length; ++k){
+                                            this.optionsChosenRooms[JSON.parse(window.searchFile()).classes[i].subjects[j].rooms[k]] = true
+                                        }
+                                    
+                                    }
+                                }
+                            }
+                        }
+                    }else{
+
+                        this.$router.push('/Disciplinas')
+
+                        Swal.fire({
+                            text: 'Matéria atualizada com sucesso!',
+                            icon: 'success',
+                            confirmButtonText: 'Ok',
+                        })
+                    }
+                    
                 }
             }
 }

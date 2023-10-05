@@ -4,6 +4,7 @@
     import RemoveButton from '../RemoveButton.vue';
     import Swal from 'sweetalert2';
 
+
     export default {
         components: {
             GreenButton,
@@ -22,6 +23,13 @@
             console.log(this.instanceGrids)
         },
 
+        computed: {
+            sortedInstanceGrids() {
+            // Cria uma cópia ordenada da lista de instâncias
+            return [...this.instanceGrids].sort((a, b) => a.id - b.id);
+            }
+        },
+
         methods:{
             removeTimeslot(item){
                 Swal.fire({
@@ -32,6 +40,8 @@
                 }).then((result)=>{
                     if(result.isConfirmed){
                         window.removeGrid(item)
+                        
+                        this.$router.push('/')
                     }
                 })
                 
@@ -47,7 +57,7 @@
         <hr>
 
         <div class="grid-title">Intervalos Cadastrados:</div>
-        <div class="grid-for" v-for="item in this.instanceGrids" :key="item.id">
+        <div class="grid-for" v-for="item in this.sortedInstanceGrids" :key="item.id">
             <div class="grid-left">
                 <div class="description-and-day">
                     <p class="description">{{ item.description }},</p>

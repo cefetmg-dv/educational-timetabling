@@ -8,6 +8,7 @@
         return {
             classesInstance : [],
             data: {},
+            isRegistered: false
         };
     },
 
@@ -25,13 +26,26 @@
                 }
 
                 console.log(this.data)
-                window.registerClasses(JSON.stringify(this.data))
+                this.isRegistered = window.registerClasses(JSON.stringify(this.data))
 
-                Swal.fire({
-                    text: 'Classe cadastrada com sucesso!',
-                    icon: 'success',
-                    confirmButtonText: 'Ok',
-                })
+
+                if(this.isRegistered){
+                    Swal.fire({
+                        text: 'Classe já cadastrada anteriormente!',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })  
+                }else{
+
+                    this.$router.push('/Classes')
+
+                    Swal.fire({
+                        text: 'Classe cadastrada com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'Ok',
+                    })
+                }
+                
 
             }
         }

@@ -33,6 +33,7 @@
                 }).then((result)=>{
                     if(result.isConfirmed){
                         window.removeTeacher(item)
+                        this.$router.push('/')
                     }
                 })
                 

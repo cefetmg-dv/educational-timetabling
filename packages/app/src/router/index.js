@@ -107,6 +107,11 @@ const router = createRouter({
       path: '/Categorias-de-Salas',
       name: 'categorias-de-salas',
       component: () => import("../components/initials/RoomsCategories.vue")
+    },
+    {
+      path: '/Cadastrar-Professor-de-Materia/:itemID/:classID',
+      name: 'cadastrar-professor-de-materia',
+      component: () => import("../components/registrations/RegisterSubjectTeacher.vue")
     }
   ]
 });

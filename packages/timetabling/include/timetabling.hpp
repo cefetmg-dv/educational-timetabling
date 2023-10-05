@@ -9,20 +9,20 @@
 #include <map>
 #include <string>
 
-using id_t = size_t;
+using id_type = size_t;
 
 struct Event {
-    id_t teacher;
-    id_t group;
-    id_t subgroup;
+    id_type teacher;
+    id_type group;
+    id_type subgroup;
     std::vector<id_t> possible_rooms;
 };
 
 struct EventSchedule {
-    EventSchedule(id_t event_, id_t timeslot_, id_t room_) : event(event_), timeslot(timeslot_), room(room_) {}
-    id_t event;
-    id_t timeslot;
-    id_t room;
+    EventSchedule(id_type event_, id_type timeslot_, id_type room_) : event(event_), timeslot(timeslot_), room(room_) {}
+    id_type event;
+    id_type timeslot;
+    id_type room;
 };
 
 struct Problem {
@@ -31,7 +31,7 @@ public:
     size_t n_rooms;
     size_t n_events;
     std::list< std::set<id_t> > resource_sharing;
-    std::set< std::tuple< id_t, id_t > > precedence;
+    std::set< std::tuple< id_t, id_type > > precedence;
     std::map< id_t, std::set<id_t> > compatibility;
     std::map< id_t, std::set<id_t> > rooms_unavailability;
     std::map< id_t, std::set<id_t> > events_unavailability;

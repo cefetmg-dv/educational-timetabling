@@ -1,6 +1,6 @@
 const { contextBridge } = require('electron');
 const timetabling = require('bindings')('timetabling');
-const { Console } = require('console');
+const { Console, count } = require('console');
 const fs = require('fs')
 
 
@@ -20,89 +20,204 @@ const registerTimeslot = (dataFromApp) =>{
 }
 
 
-const registerRoomsCategories = (dataFromApp) =>{
+const registerSubjectTeacher = (dataFromApp, classID, itemID) =>{
+  var teachersID = []
+  console.log("o que chegou")
   console.log(dataFromApp)
+  
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
-  instance.rooms_category.push(dataFromApp)
+  //change name of the teachers per the id of the teachers
+  for(var i = 0; i < dataFromApp.length; ++i){
+    for(var j = 0; j < instance.teachers.length; ++j){
+      if(instance.teachers[j].name == dataFromApp[i]){
+        teachersID.push(instance.teachers[j].id)
+      }
+    }
+  }
+  console.log(teachersID)
+
+  for(var i = 0; i < instance.classes.length; ++i){
+    if(instance.classes[i].id == classID){
+      for(var j = 0; j < instance.classes[i].subjects.length; ++j){
+        if(instance.classes[i].subjects[j].id == itemID){
+          instance.classes[i].subjects[j].teachers = teachersID
+        }
+      }
+    }
+  }
+
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 2), 'utf-8')
+  
+}
+
+const registerRoomsCategories = (dataFromApp) =>{
+ 
+  var isRegistered = false
+
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+
+  //verify if it is already registered
+  for(var i = 0; i < instance.rooms_category.length; ++i){
+    if(instance.rooms_category[i] == dataFromApp){
+      isRegistered = true
+    }
+  }
+  if(!isRegistered){
+    instance.rooms_category.push(dataFromApp)
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 2), 'utf-8')
+  }else{
+    isRegistered = true
+  }
+  return isRegistered
 }
 
 const registerRooms = (dataFromApp) =>{
+
+  var isRegistered = false
+
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
-  instance.rooms.push(JSON.parse(dataFromApp))
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  //verify if it is already registered
+  for(var i = 0; i < instance.rooms.length; ++i){
+    if(JSON.parse(dataFromApp).name == instance.rooms[i].name){
+      isRegistered = true
+    }
+  }
+  if(!isRegistered){
+    instance.rooms.push(JSON.parse(dataFromApp))
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+
+  return isRegistered
 }
 
 const registerTeachers = (dataFromApp) =>{
-  console.log(dataFromApp)
+  var isRegistered = false
+ 
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+
   const instance = JSON.parse(instanceData)
-  instance.teachers.push(JSON.parse(dataFromApp))
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  //verify if there's some teacher registered with the same name
+  for(var i = 0; i < instance.teachers.length; ++i){
+    if(JSON.parse(dataFromApp).name == instance.teachers[i].name){
+      isRegistered = true;
+    }
+  }
+  if(!isRegistered){
+    instance.teachers.push(JSON.parse(dataFromApp))
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+
+  return isRegistered
 }
 
 const registerSubjects = (dataFromApp, idClass) =>{
+
+  var isRegistered = false
+
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
-  instance.classes[idClass].subjects.push(JSON.parse(dataFromApp))
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  //verify if it is already registered
+  for(var i = 0; i < instance.classes.length; ++i){
+    if(instance.classes[i].id == idClass){
+      for(var j = 0; j < instance.classes[i].subjects.length; ++j){
+        if(instance.classes[i].subjects[j].name == JSON.parse(dataFromApp).name){
+          isRegistered = true
+        }
+      }
+    }
+    
+  }
+  if(!isRegistered){
+    instance.classes[idClass].subjects.push(JSON.parse(dataFromApp))
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+  return isRegistered
 }
 
 
 const registerClasses = (dataFromApp) =>{
+  var isRegistered = false
+
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
-  instance.classes.push(JSON.parse(dataFromApp))
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  
+  //verify if it is already registered
+  for(var i = 0; i < instance.classes.length; ++i){
+    if(instance.classes[i].name == JSON.parse(dataFromApp).name){
+      isRegistered = true
+    }
+  }
+
+  if(!isRegistered){
+    instance.classes.push(JSON.parse(dataFromApp))
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+
+  return isRegistered
 }
 
 //Updates
 
 const updateClassName = (dataFromApp) =>{
-  console.log(dataFromApp)
+  var isRegistered = false
+  var isOther = false
+  var isTheSame = false
+
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   console.log(instance)
-  for(let i = 0; i< instance.classes.length; i++){
-    console.log(instance.classes[i])
+  for(let i = 0; i < instance.classes.length; i++){
+    if(instance.classes[i].name == JSON.parse(dataFromApp).name){
+      isRegistered = true
+      console.log("ESTÁ REGISTRADO")
+    }
     if(instance.classes[i].id == JSON.parse(dataFromApp).id){
+      if(instance.classes[i].name == JSON.parse(dataFromApp).name){
+        isTheSame = true
+      }
       instance.classes[i].name = JSON.parse(dataFromApp).name
     }
   }
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  if(!isTheSame && isRegistered){
+    isOther = true
+    console.log("É OUTRO")
+  }else{
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+  return isOther
 }
 
-// let json = fs.readFileSync("C:\\Users\\andre\\Workspace\\projects\\educational-timetabling\\example.json", 'utf-8');
-// let problem = JSON.parse(json);
-
-// console.log("My input:");
-// console.log(problem);
-
-// console.log("My solution:");
-// console.log(timetabling.solve(problem, 'mip'));
-
-// // Expor a função no objeto window
-// contextBridge.exposeInMainWorld('salvarArquivo', salvarArquivo);
 
 const updateSubjects = (dataFromApp, idClass) =>{
+
+  var isRegistered = false
+  var isOther = false
+  var isTheSame = false
+
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
-  console.log(dataFromApp)
-  console.log(idClass)
+
   for(let i = 0; i < instance.classes.length; i++){
     if(instance.classes[i].id == idClass){
       for(let j = 0 ; j < instance.classes[i].subjects.length; j++){
-        console.log("INSTANCE")
-        console.log(instance.classes[i].subjects[j])
-        console.log("DATA FROM APP")
-        console.log(JSON.parse(dataFromApp).id)
+        if(instance.classes[i].subjects[j].name == JSON.parse(dataFromApp).name){
+          isRegistered = true
+          console.log("ESTÁ REGISTRADO")
+        }
+      
         if(instance.classes[i].subjects[j].id == JSON.parse(dataFromApp).id){
-          console.log("DEU")
+          
+          if(instance.classes[i].subjects[i].name == JSON.parse(dataFromApp).name){
+            isTheSame = true
+            console.log("É O MESMO")
+          }
+
           instance.classes[i].subjects[j].id = JSON.parse(dataFromApp).id;
           instance.classes[i].subjects[j].name = JSON.parse(dataFromApp).name;
           instance.classes[i].subjects[j].acronym = JSON.parse(dataFromApp).acronym;
@@ -115,49 +230,109 @@ const updateSubjects = (dataFromApp, idClass) =>{
       //instance.classes[i].subjects[JSON.parse(dataFromApp).id] = JSON.parse(dataFromApp)
     }
   }
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  if(!isTheSame && isRegistered){
+    isOther = true
+    console.log("É DIFERENTE")
+  }else{
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+  return isOther
 }
 
 
 const updateTeacher = (dataFromApp) =>{
+
+  console.log("dados vindos do app")
+  console.log(JSON.parse(dataFromApp))
+
+  var isRegistered = false
+  var isOther = false
+  var isTheSame = false
+
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   for(let i = 0; i < instance.teachers.length; i++){
+    if(instance.teachers[i].name == JSON.parse(dataFromApp).name){
+      isRegistered = true
+    }
+
     if(instance.teachers[i].id == parseInt(JSON.parse(dataFromApp).id)){
+      if(instance.teachers[i].name == JSON.parse(dataFromApp).name){
+        console.log("NOME DA INSTANCIA")
+        console.log(instance.teachers[i].name)
+        console.log(JSON.parse(dataFromApp).name)
+        isTheSame = true  
+      }
       instance.teachers[i].name = JSON.parse(dataFromApp).name
       instance.teachers[i].unavailability = JSON.parse(dataFromApp).unavailability
       instance.teachers[i].preferences = JSON.parse(dataFromApp).preferences
     }
   }
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  
+  if(!isTheSame && isRegistered){
+    isOther = true
+  }else{
+    console.log("é O MESMO NOME!")
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+  return isOther
 }
 
 const updateRoom = (dataFromApp) =>{
+
+  var isRegistered = false
+  var isOther = false
+  var isTheSame = false
+  
   console.log(dataFromApp)
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   for(let i = 0; i < instance.rooms.length; i++){
-    console.log(instance.rooms[i])
+    if(JSON.parse(dataFromApp).name == instance.rooms[i].name){
+      isRegistered = true
+    }
     if(instance.rooms[i].id == parseInt(JSON.parse(dataFromApp).id)){
+      if(JSON.parse(dataFromApp).name == instance.rooms[i].name){
+        isTheSame = true
+      }
       instance.rooms[i].name = JSON.parse(dataFromApp).name
       instance.rooms[i].category = JSON.parse(dataFromApp).category
       instance.rooms[i].unavailability = JSON.parse(dataFromApp).unavailability
     }
   }
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  if(!isTheSame && isRegistered){
+    isOther = true
+  }else{
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+  return isOther  
 }
 
 const updateRoomsCategory = (dataFromApp, item) =>{
-  console.log(dataFromApp)
-  //console.log(itemID)
+
+  var isRegistered = false
+  var isTheSame = false
+  var isOther = false
+
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   for(let i = 0; i < instance.rooms_category.length; i++){
+    if(dataFromApp == instance.rooms_category[i]){
+      isRegistered = true
+    }
     if(instance.rooms_category[i] == item){
+      if(instance.rooms_category[i] == dataFromApp){
+        isTheSame = true
+      }
       instance.rooms_category[i] = dataFromApp
     }
   }
-  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  if(!isTheSame && isRegistered){
+    isOther = true
+  }else{
+    fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+  }
+  return isOther
 }
 
 //Deletes
@@ -211,6 +386,56 @@ const removeSubjects = (idSubject, idClass)=>{
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 }
 
+//Solution
+
+const generateSolution = () => {
+
+  disciplineWithoutTeacher = false
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  //create events
+  console.log("ENTREI")
+  instance.events = []
+  var event = {}
+  var eventID = 0
+  for(var i = 0; i < instance.classes.length; ++i){
+    console.log("teste")
+    for(var j = 0; j < instance.classes[i].subjects.length; ++j){
+      console.log("teste")
+      for(var k = 0; k < instance.classes[i].subjects[j].events; k++){
+
+        event = {
+          id : eventID,
+          class: instance.classes[i].id,
+          subject: instance.classes[i].subjects[j].id,
+          subgroup: instance.classes[i].subjects[j].subgroups,
+          teacher: instance.classes[i].subjects[j].teachers[k],
+        }
+        console.log(event)
+        console.log("teste")
+        instance.events.push(event)
+        eventID++
+      }
+    }
+  }
+
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+
+  if(disciplineWithoutTeacher){
+    return 'disciplineWithoutProfessor'
+  }
+
+  
+  let json = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  //let json = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8');
+  let problem = JSON.parse(json);
+  console.log("My input:")
+  console.log(problem)
+  console.log("My solution:")
+  console.log(timetabling.solve(problem, 'mip'))
+  
+}
+
 
 // show functions to window object
 
@@ -224,6 +449,7 @@ contextBridge.exposeInMainWorld('registerRooms', registerRooms);
 contextBridge.exposeInMainWorld('registerTeachers', registerTeachers)
 contextBridge.exposeInMainWorld('registerSubjects', registerSubjects)
 contextBridge.exposeInMainWorld('registerClasses', registerClasses)
+contextBridge.exposeInMainWorld('registerSubjectTeacher', registerSubjectTeacher)
 
 //updates
 contextBridge.exposeInMainWorld('updateClassName', updateClassName)
@@ -240,3 +466,5 @@ contextBridge.exposeInMainWorld('removeRoom', removeRoom)
 contextBridge.exposeInMainWorld('removeRoomCategory', removeRoomCategory)
 contextBridge.exposeInMainWorld('removeSubjects', removeSubjects)
   
+//solution
+contextBridge.exposeInMainWorld('generateSolution', generateSolution)

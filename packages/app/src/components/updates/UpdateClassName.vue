@@ -8,6 +8,7 @@
             classesInstance : [],
             name: '',
             data: {},
+            isRegistered : false
         };
     },
     
@@ -38,13 +39,25 @@
                 }
 
                 console.log(this.data)
-                window.updateClassName(JSON.stringify(this.data));
+                this.isRegistered = window.updateClassName(JSON.stringify(this.data));
 
-                Swal.fire({
+                if(this.isRegistered){
+                    Swal.fire({
+                    text: 'Nome de classe já cadastrado anteriormente!',
+                    icon: 'error',
+                    confirmButtonText: 'Ok',
+                })  
+                }else{
+
+                    this.$router.push('/Classes')
+
+                    Swal.fire({
                     text: 'Classe atualizada com sucesso!',
                     icon: 'success',
                     confirmButtonText: 'Ok',
                 })
+                }
+                
 
             }
         }

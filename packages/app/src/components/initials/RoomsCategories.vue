@@ -34,6 +34,7 @@
                 }).then((result)=>{
                     if(result.isConfirmed){
                         window.removeRoomCategory(item)
+                        this.$router.push('/')
                     }
                 })
                 

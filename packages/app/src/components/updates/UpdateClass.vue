@@ -42,6 +42,7 @@
                 }).then((result)=>{
                     if(result.isConfirmed){
                         window.removeSubjects(itemID.toString(), this.classID.toString())
+                        this.$router.push('/')
                     }
                 })
                 
@@ -75,6 +76,7 @@
 
             <div class="updateClass-right">
                 <div class="updateClass-buttons">
+                    <EditButton class="updateClass-buttons-edit" :to="'/Cadastrar-Professor-de-Materia/' + item.id + '/' + this.classID">Professores</EditButton>
                     <EditButton class="updateClass-buttons-edit" :to="'/Atualizar-Materia-Classe/' + item.id + '/' + this.classID">Editar</EditButton>
                     <RemoveButton @click="removeClassSubject(item.id)">Apagar</RemoveButton>
                 </div>

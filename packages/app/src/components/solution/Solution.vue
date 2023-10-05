@@ -1,5 +1,11 @@
 <script>
 
+    export default {
+        mounted(){
+            window.generateSolution();
+        }
+    }
+
 </script>
 
 <template>

@@ -13,7 +13,8 @@
                 instanceRooms : [],
                 dados : {},
                 options:[],
-                options2:[]          
+                options2:[],
+                isRegistered : false    
             }
         },
 
@@ -38,6 +39,8 @@
                 //verifica qual o id atual
                 this.instanceRooms = JSON.parse(window.searchFile()).rooms
 
+                this.indisponibilities = []
+
                 for(var i = 0; i < this.optionsChosenIndisponibilities.length; ++i){
                     if(this.optionsChosenIndisponibilities[i] == true){
                         this.indisponibilities.push(i)
@@ -46,19 +49,30 @@
                 
                 this.dados = {
                     id: this.instanceRooms[parseInt(this.instanceRooms.length)-1]['id']+1,
-                    name: this.number,
+                    name: this.name,
                     category: this.category,
                     unavailability: this.indisponibilities
                 }
                 console.log(this.dados)
-                window.registerRooms(JSON.stringify(this.dados))
+                this.isRegistered = window.registerRooms(JSON.stringify(this.dados))
 
+                if(this.isRegistered){
+                    Swal.fire({
+                        text: 'Sala já cadastrada anteriormente!',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })
+                }else{
+
+                    this.$router.push('/Salas')
+
+                    Swal.fire({
+                        text: 'Sala cadastrada com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'Ok',
+                    })
+                }
                 
-                Swal.fire({
-                    text: 'Sala cadastrada com sucesso!',
-                    icon: 'success',
-                    confirmButtonText: 'Ok',
-                })
             },
             
         }
@@ -79,8 +93,8 @@
 
         <form class="registerRoom-form" @submit="HandleSubmit">
             <div class="mb-3">
-                <label class="form-label">Número da Sala</label>
-                <input required v-model="number" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                <label class="form-label">Nome da Sala</label>
+                <input required v-model="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 
             </div>
             <div class="mb-3">

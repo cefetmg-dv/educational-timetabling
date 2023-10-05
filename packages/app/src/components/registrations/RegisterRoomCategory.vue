@@ -3,16 +3,36 @@
     import Swal from 'sweetalert2';
 
     export default{
+
+        data(){
+            return{
+                isRegistered : false
+            }
+        },
+
+
         methods: {
             HandleSubmit(e){
                 e.preventDefault()
-                window.registerRoomsCategories(this.roomCategory)
+                this.isRegistered = window.registerRoomsCategories(this.roomCategory)
 
-                Swal.fire({
-                    text: 'Categoria de Sala cadastrada com sucesso!',
-                    icon: 'success',
-                    confirmButtonText: 'Ok',
-                })
+                if(this.isRegistered){
+                    Swal.fire({
+                        text: 'Categoria de Sala já cadastrada anteriormente!',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })
+                }else{
+
+                    this.$router.push('/Categorias-de-Salas')
+
+                    Swal.fire({
+                        text: 'Categoria de Sala cadastrada com sucesso!',
+                        icon: 'success',
+                        confirmButtonText: 'Ok',
+                    })
+                }
+                
             }
         }
     }

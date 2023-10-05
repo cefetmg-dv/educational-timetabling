@@ -13,6 +13,7 @@
     ],
     "defines": [ "NAPI_DISABLE_CPP_EXCEPTIONS" ],
     "cflags!": [ "-fno-exceptions" ],
+    "cflags": [ "-std=c++11" ],
     "cflags_cc!": [ "-fno-exceptions" ]
   },
 
@@ -42,7 +43,20 @@
     }],
 
     ["OS=='linux'", {
-      "targets": [],
+      "targets": [
+        {
+          "target_name": "timetabling",
+          "include_dirs": [
+            "/opt/gurobi/include"
+          ],
+          "link_settings": {
+            "libraries": [
+              "/opt/gurobi/lib/libgurobi_g++5.2.a",
+              "/opt/gurobi/lib/libgurobi100.so"
+            ]
+          }
+        }
+      ],
     }],
 
   ]

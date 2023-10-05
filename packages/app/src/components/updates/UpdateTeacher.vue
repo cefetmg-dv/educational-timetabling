@@ -44,7 +44,6 @@
             HandleSubmit(e){
                 e.preventDefault()
 
-
                 console.log(this.optionsChosenPreferences)
                 console.log(this.optionsChosenIndisponibilities)
                 for(var i = 0; i < this.optionsChosenPreferences.length; ++i){
@@ -66,13 +65,41 @@
                     preferences: this.preferences
                 }
 
-                window.updateTeacher(JSON.stringify(this.data))
+                this.isRegistered = window.updateTeacher(JSON.stringify(this.data))
+                
+                if(this.isRegistered){
+                    Swal.fire({
+                        text: 'Nome de professor(a) já cadastrado anteriormente!',
+                        icon: 'error',
+                        confirmButtonText: 'Ok',
+                    })
+                    
+                    //preenche inputs para evitar repetição de multiselect
+                    this.optionsChosenIndisponibilities = []
+                    this.optionsChosenPreferences = []
+                    this.indisponibilities = []
+                    this.preferences = []
+                    for(var i = 0; i < JSON.parse(window.searchFile()).teachers.length; ++i){
+                        if(JSON.parse(window.searchFile()).teachers[i].id == this.idTeacher){
+                            for(var j = 0; j < JSON.parse(window.searchFile()).teachers[i].preferences.length; ++j){
+                                this.optionsChosenPreferences[JSON.parse(window.searchFile()).teachers[i].preferences[j]] = true 
+                            }
+                            for(var j = 0; j < JSON.parse(window.searchFile()).teachers[i].unavailability.length; ++j){
+                                this.optionsChosenIndisponibilities[JSON.parse(window.searchFile()).teachers[i].unavailability[j]] = true 
+                            }
+                        }
+                    }
+                }else{
 
-                Swal.fire({
+                    this.$router.push('/Professores')
+                    
+                    Swal.fire({
                     text: 'Professor(a) atualizado(a) com sucesso!',
                     icon: 'success',
                     confirmButtonText: 'Ok',
-                })      
+                })
+                }
+                      
             }
         },
         data(){
@@ -82,7 +109,8 @@
                 preferences: [],
                 optionsChosenIndisponibilities: [],               
                 indisponibilities: [],
-                name: ''           
+                name: '',
+                isRegistered : false          
             }
         }
     }
