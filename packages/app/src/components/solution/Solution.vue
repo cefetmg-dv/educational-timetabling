@@ -2,7 +2,9 @@
 
    
     import Swal from 'sweetalert2';
-    import html2pdf from "html2pdf.js";
+    import jspdf from 'jspdf'
+    import  html2pdf  from 'html2pdf.js';
+
 
     export default {
 
@@ -149,9 +151,39 @@
         methods:{
             
             downloadAsPDF() {
+                
                 this.$nextTick(()=>{
-                    window.print()
-                })    
+                    //window.print()
+                    /*
+                    const doc = new jspdf('p', 'mm', 'a4');
+                    const html = this.$refs.content.innerHTML;
+                    const pageWidth = doc.internal.pageSize.getWidth();
+                    const pageHeight = doc.internal.pageSize.getHeight();
+
+                    doc.html(html, {
+                    callback: function (pdf) {
+                        pdf.save('horário.pdf');
+                    },
+                    x: 0,
+                    y: 0,
+                    width: pageWidth - 30, // Ajuste o valor da largura conforme necessário
+                    useCss: true, // Permite o uso de estilos CSS
+                    });
+                    doc.save("horário.pdf")
+                    */
+
+                    const content = document.querySelector("#content")
+
+                    const options = {
+                        margin: [10,10,10,10],
+                        filename: "newtime.pdf",
+                        html2canvas: { scale: 2},
+                        jsPDF: {unit:"mm", format: "a4", orientation: "portrait"}
+                    };
+
+                    html2pdf().set(options).from(content).save()
+                })
+                    
             }
         }
     };
@@ -167,7 +199,7 @@
     </div>
 
     
-    <div >
+    <div id="content">
         <div  class="solution-container" v-for="i in this.classLength">
             <h1 class="solution-classTitle">{{className[i-1]}}</h1>
             <table border="1">
@@ -415,7 +447,7 @@
         border: 1px solid black; 
         padding: 8px; 
         text-align: center; 
-        font-size: px;
+        font-size: 8px;
     }
 
 
