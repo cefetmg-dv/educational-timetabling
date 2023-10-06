@@ -1,6 +1,7 @@
 <script>
 
-    import Swal from 'sweetalert2';
+    import { createIfStatement } from '@vue/compiler-core';
+import Swal from 'sweetalert2';
 
     export default {
 
@@ -9,6 +10,7 @@
                 solution: [],
                 classLength: 0,
                 className: [],
+                classID: []
             };
         },
         mounted(){
@@ -36,13 +38,76 @@
             console.log("quantidade de classes: " + this.classLength)
             for(var i = 0; i < JSON.parse(window.searchFile()).classes.length; ++i){
                 this.className.push(JSON.parse(window.searchFile()).classes[i].name)
+                this.classID.push(JSON.parse(window.searchFile()).classes[i].id)
             }
 
             this.$nextTick(()=>{
+                /*
                 var elements = document.getElementsByClassName('0-1')
                 for(var i = 0; i < elements.length; ++i){
                     elements[i].innerText = "PASKDJKOASDKJSAD"
                 }
+                */
+
+                //são 41 posições pra cada classe
+                //var tds = []
+                //esse for maior representa a iteração pra uma classe
+                for(var j = 1; j < this.classLength+1; ++j){
+                    console.log(j)
+                    var tds = []
+                    //a cada vez que esse for é executado, a lista de <tds> é reinicializada com uma classe diferente
+                    for(var i = 0 ; i < 41; ++i){
+                        tds[i] = document.getElementsByClassName(`${i}-${j}`)
+                        
+                    }
+                    console.log(tds)
+                    
+                    //ok acima
+                    //itero pelas aulas da solution
+                    for(var k = 0; k < this.solution.length; ++k){
+                        console.log(this.solution[k].timeslot)
+                        //para cada evento eu verifico todas as posições para aquela classe
+                        for(var l = 0; l < 41; ++l){
+                            //se a posição for igual ao valor do timeslot
+                            if(l == this.solution[k].timeslot){
+                                //procuro pelo events qual classe se trata
+                                for(var m = 0; m < JSON.parse(window.searchFile()).events.length; ++m){
+                                    if(JSON.parse(window.searchFile()).events[m].id == this.solution[k].event){
+                                        //verifico se aquele evento é dessa classe
+                                        /*
+                                        if(this.classID[j-1] == JSON.parse(window.searchFile()).events[m].class){
+                                            continue
+                                        }
+                                        */
+                                        //sabendo qual evento, consigo pegar os dados como professor e matéria
+                                        for(var n = 0 ; n < JSON.parse(window.searchFile()).teachers.length; ++n){
+                                            //pego id professor
+                                            if(JSON.parse(window.searchFile()).teachers[n].id == JSON.parse(window.searchFile()).events[m].teacher){
+                                                //procuro nome de professor
+                                                for(var o = 0; o < JSON.parse(window.searchFile()).teachers.length; ++o){
+                                                    if(JSON.parse(window.searchFile()).teachers[o].id == JSON.parse(window.searchFile()).teachers[n].id){
+                                                        //insiro nome do professor no <td>
+                                                        for(var p = 0; p < tds[l].length; ++p){
+                                                            tds[l][p].innerText = JSON.parse(window.searchFile()).teachers[o].name
+                                                            tds[l][p].innerText = '<br>'
+                                                        }
+
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                        
+                }
+                
+
+
+                
+
             })
             
 
@@ -79,11 +144,11 @@
                     7h50
                 </td>
                 <td :class = "'0-'+i"></td>
-                <td id = '7'></td>
-                <td id = '14'></td>
-                <td id = '21'></td>
-                <td id = '28'></td>
-                <td id = '35'></td>
+                <td :class = "'7-'+i"></td>
+                <td :class = "'14-'+i"></td>
+                <td :class = "'21-'+i"></td>
+                <td :class = "'28-'+i"></td>
+                <td :class = "'35-'+i"></td>
             </tr>
             <tr>
                 <td class="solution-tableTime">
@@ -91,11 +156,11 @@
                     8h40
                 </td>
                 <td :class = "'0-'+i"></td>
-                <td id = '7'></td>
-                <td id = '14'></td>
-                <td id = '21'></td>
-                <td id = '28'></td>
-                <td id = '35'></td>
+                <td :class = "'7-'+i"></td>
+                <td :class = "'14-'+i"></td>
+                <td :class = "'21-'+i"></td>
+                <td :class = "'28-'+i"></td>
+                <td :class = "'35-'+i"></td>
             </tr>
             <tr>
                 <td colspan="7" class="solution-tableBreak">Intervalo, 8h40 às 8h55 (15 min.)</td>
@@ -105,24 +170,24 @@
                     8h55<br>
                     9h45
                 </td>
-                <td id = '1'></td>
-                <td id = '8'></td>
-                <td id = '15'></td>
-                <td id = '22'></td>
-                <td id = '29'></td>
-                <td id = '36'></td>
+                <td :class = "'1-'+i"></td>
+                <td :class = "'8-'+i"></td>
+                <td :class = "'15-'+i"></td>
+                <td :class = "'22-'+i"></td>
+                <td :class = "'29-'+i"></td>
+                <td :class = "'36-'+i"></td>
             </tr>
             <tr>
                 <td class="solution-tableTime">
                     9h45<br>
                     10h35
                 </td>
-                <td id = '1'></td>
-                <td id = '8'></td>
-                <td id = '15'></td>
-                <td id = '22'></td>
-                <td id = '29'></td>
-                <td id = '36'></td>
+                <td :class = "'1-'+i"></td>
+                <td :class = "'8-'+i"></td>
+                <td :class = "'15-'+i"></td>
+                <td :class = "'22-'+i"></td>
+                <td :class = "'29-'+i"></td>
+                <td :class = "'36-'+i"></td>
             </tr>
             <tr>
                 <td colspan="7" class="solution-tableBreak">Intervalo, 10h35 às 10h50 (15 min.)</td>
@@ -132,24 +197,24 @@
                     10h50<br>
                     11h40
                 </td>
-                <td id = '2'></td>
-                <td id = '9'></td>
-                <td id = '16'></td>
-                <td id = '23'></td>
-                <td id = '30'></td>
-                <td id = '37'></td>
+                <td :class = "'2-'+i"></td>
+                <td :class = "'9-'+i"></td>
+                <td :class = "'16-'+i"></td>
+                <td :class = "'23-'+i"></td>
+                <td :class = "'30-'+i"></td>
+                <td :class = "'37-'+i"></td>
             </tr>
             <tr>
                 <td class="solution-tableTime">
                     11h40<br>
                     12h30
                 </td>
-                <td id = '2'></td>
-                <td id = '9'></td>
-                <td id = '16'></td>
-                <td id = '23'></td>
-                <td id = '30'></td>
-                <td id = '37'></td>
+                <td :class = "'2-'+i"></td>
+                <td :class = "'9-'+i"></td>
+                <td :class = "'16-'+i"></td>
+                <td :class = "'23-'+i"></td>
+                <td :class = "'30-'+i"></td>
+                <td :class = "'37-'+i"></td>
             </tr>
             <tr>
                 <td colspan="7" class="solution-tableEat">Almoço, 12h30 às 13h50 (1h e 20 min.)</td>
@@ -159,24 +224,24 @@
                     13h50<br>
                     14h40
                 </td>
-                <td id = '3'></td>
-                <td id = '10'></td>
-                <td id = '17'></td>
-                <td id = '24'></td>
-                <td id = '31'></td>
-                <td id = '38'></td>
+                <td :class = "'3-'+i"></td>
+                <td :class = "'10-'+i"></td>
+                <td :class = "'17-'+i"></td>
+                <td :class = "'24-'+i"></td>
+                <td :class = "'31-'+i"></td>
+                <td :class = "'38-'+i"></td>
             </tr>
             <tr>
                 <td class="solution-tableTime">
                     14h40<br>
                     15h30
                 </td>
-                <td id = '3'></td>
-                <td id = '10'></td>
-                <td id = '17'></td>
-                <td id = '24'></td>
-                <td id = '31'></td>
-                <td id = '38'></td>
+                <td :class = "'3-'+i"></td>
+                <td :class = "'10-'+i"></td>
+                <td :class = "'17-'+i"></td>
+                <td :class = "'24-'+i"></td>
+                <td :class = "'31-'+i"></td>
+                <td :class = "'38-'+i"></td>
             </tr>
             <tr>
                 <td colspan="7" class="solution-tableBreak">Intervalo, 15h30 às 15h50 (20 min.)</td>
@@ -186,24 +251,24 @@
                     15h50<br>
                     16h40
                 </td>
-                <td id = '4'></td>
-                <td id = '11'></td>
-                <td id = '18'></td>
-                <td id = '25'></td>
-                <td id = '32'></td>
-                <td id = '39'></td>
+                <td :class = "'4-'+i"></td>
+                <td :class = "'11-'+i"></td>
+                <td :class = "'18-'+i"></td>
+                <td :class = "'25-'+i"></td>
+                <td :class = "'32-'+i"></td>
+                <td :class = "'39-'+i"></td>
             </tr>
             <tr>
                 <td class="solution-tableTime">
                     16h40<br>
                     17h30
                 </td>
-                <td id = '4'></td>
-                <td id = '11'></td>
-                <td id = '18'></td>
-                <td id = '25'></td>
-                <td id = '32'></td>
-                <td id = '39'></td>
+                <td :class = "'4-'+i"></td>
+                <td :class = "'11-'+i"></td>
+                <td :class = "'18-'+i"></td>
+                <td :class = "'25-'+i"></td>
+                <td :class = "'32-'+i"></td>
+                <td :class = "'39-'+i"></td>
             </tr>
             <tr>
                 <td colspan="7" class="solution-tableEat">Jantar, 17h30 às 19h00 (1h e 30 min.)</td>
@@ -213,24 +278,24 @@
                     19h00<br>
                     19h50
                 </td>
-                <td id = '5'></td>
-                <td id = '12'></td>
-                <td id = '19'></td>
-                <td id = '26'></td>
-                <td id = '33'></td>
-                <td id = '40'></td>
+                <td :class = "'5-'+i"></td>
+                <td :class = "'12-'+i"></td>
+                <td :class = "'19-'+i"></td>
+                <td :class = "'26-'+i"></td>
+                <td :class = "'33-'+i"></td>
+                <td :class = "'40-'+i"></td>
             </tr>
             <tr>
                 <td class="solution-tableTime">
                     19h50<br>
                     20h40
                 </td>
-                <td id = '5'></td>
-                <td id = '12'></td>
-                <td id = '19'></td>
-                <td id = '26'></td>
-                <td id = '33'></td>
-                <td id = '40'></td>
+                <td :class = "'5-'+i"></td>
+                <td :class = "'12-'+i"></td>
+                <td :class = "'19-'+i"></td>
+                <td :class = "'26-'+i"></td>
+                <td :class = "'33-'+i"></td>
+                <td :class = "'40-'+i"></td>
             </tr>
             <tr>
                 <td colspan="7" class="solution-tableBreak">Intervalo, 20h40 às 20h55 (15 min.)</td>
@@ -240,24 +305,24 @@
                     20h55<br>
                     21h45
                 </td>
-                <td id = '6'></td>
-                <td id = '13'></td>
-                <td id = '20'></td>
-                <td id = '27'></td>
-                <td id = '34'></td>
-                <td id = '41'></td>
+                <td :class = "'6-'+i"></td>
+                <td :class = "'13-'+i"></td>
+                <td :class = "'20-'+i"></td>
+                <td :class = "'27-'+i"></td>
+                <td :class = "'34-'+i"></td>
+                <td :class = "'41-'+i"></td>
             </tr>
             <tr>
                 <td class="solution-tableTime">
                     21h45<br>
                     22h35
                 </td>
-                <td id = '6'></td>
-                <td id = '13'></td>
-                <td id = '20'></td>
-                <td id = '27'></td>
-                <td id = '34'></td>
-                <td id = '41'></td>
+                <td :class = "'6-'+i"></td>
+                <td :class = "'13-'+i"></td>
+                <td :class = "'20-'+i"></td>
+                <td :class = "'27-'+i"></td>
+                <td :class = "'34-'+i"></td>
+                <td :class = "'41-'+i"></td>
             </tr>
         </table>
 
