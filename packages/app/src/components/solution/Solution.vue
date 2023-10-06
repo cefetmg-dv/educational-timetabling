@@ -35,7 +35,6 @@ import Swal from 'sweetalert2';
             }
             
             this.classLength = JSON.parse(window.searchFile()).classes.length
-            //console.log("quantidade de classes: " + this.classLength)
             for(var i = 0; i < JSON.parse(window.searchFile()).classes.length; ++i){
                 this.className.push(JSON.parse(window.searchFile()).classes[i].name)
                 this.classID.push(JSON.parse(window.searchFile()).classes[i].id)
@@ -53,10 +52,10 @@ import Swal from 'sweetalert2';
                 //var tds = []
                 //esse for maior representa a iteração pra uma classe
                 for(var j = 1; j < this.classLength+1; ++j){
-                    //console.log(j)
+                    
                     var tds = []
                     //a cada vez que esse for é executado, a lista de <tds> é reinicializada com uma classe diferente
-                    for(var i = 0 ; i < 41; ++i){
+                    for(var i = 0 ; i <= 41; ++i){
                         tds[i] = document.getElementsByClassName(`${i}-${j}`)
                         
                     }
@@ -64,21 +63,27 @@ import Swal from 'sweetalert2';
                     //itero pelas aulas da solution
                     for(var k = 0; k < this.solution.length; ++k){
                         //para cada aula eu verifico todas as posições para aquela classe
-                        for(var l = 0; l < 41; ++l){
+                        for(var l = 0; l <= 41; ++l){
                             //se a posição for igual ao valor do timeslot
                             if(l == this.solution[k].timeslot){
+                                
                                 //procuro pelo events qual classe se trata
                                 for(var m = 0; m < JSON.parse(window.searchFile()).events.length; ++m){
                                     if(JSON.parse(window.searchFile()).events[m].id == this.solution[k].event){
                                         
                                         //pego dados do evento atual
                                         var actualClass = JSON.parse(window.searchFile()).events[m].class
-                                        
+                                        var actualSubject = JSON.parse(window.searchFile()).events[m].subject
+                                        console.log(actualSubject)
+
                                         //verifico se aquele evento é dessa classe
-                                        console.log(actualClass)
-                                        //console.log(this.classID[j-1])
+                                  
                                         if(actualClass == (j-1)){
-                                            console.log("tá certo")
+                                            
+                                            //sabendo qual evento, consigo colocar a cor de fundo
+                                            for(var p = 0; p < tds[l].length; ++p){
+                                                tds[l][p].style.backgroundColor = 'lightBlue'
+                                            }
 
                                             //sabendo qual evento, consigo pegar os dados como professor
                                             for(var n = 0 ; n < JSON.parse(window.searchFile()).teachers.length; ++n){
@@ -89,27 +94,33 @@ import Swal from 'sweetalert2';
                                                         if(JSON.parse(window.searchFile()).teachers[o].id == JSON.parse(window.searchFile()).teachers[n].id){
                                                             //insiro nome do professor no <td>
                                                             for(var p = 0; p < tds[l].length; ++p){
-                                                                tds[l][p].innerText = JSON.parse(window.searchFile()).teachers[o].name
-                                                                //tds[l][p].innerHTML = '<br>'
+                                                                tds[l][p].innerText += JSON.parse(window.searchFile()).teachers[o].name
+                                                                tds[l][p].innerHTML += "<br>"   
                                                             }
 
                                                         }
                                                     }
                                                 }
                                             }
+                                            
                                             //sabendo qual evento, consigo pegar os dados da matéria
-                                            /*
                                             for(var n = 0; n < JSON.parse(window.searchFile()).classes.length; ++n){
                                                 for(var o = 0; o < JSON.parse(window.searchFile()).classes[n].subjects.length; ++o){
-                                                    
+                                                    if(JSON.parse(window.searchFile()).classes[n].subjects[o].id == actualSubject){
+                                                        for(var p = 0; p < tds[l].length; ++p){
+                                                            tds[l][p].innerText += JSON.parse(window.searchFile()).classes[n].subjects[o].name
+                                                            tds[l][p].innerHTML += "<br>"
+                                                        }
+                                                    }
                                                 }
-                                            }*/
+                                            }
                                             
+                                    
                                             //sabendo qual event, consigo pegar os dados da sala
                                             for(var n = 0; n < JSON.parse(window.searchFile()).rooms.length; ++n){
                                                 if(JSON.parse(window.searchFile()).rooms[n].id == this.solution[k].room){
                                                     for(var p = 0; p < tds[l].length; ++p){
-                                                        tds[l][p].innerText += ', Sala ' + this.solution[k].room
+                                                        tds[l][p].innerText += JSON.parse(window.searchFile()).rooms[n].name
                                                     }
                                                 }
                                             }
@@ -142,7 +153,6 @@ import Swal from 'sweetalert2';
 </script>
 
 <template>
-
 
     <div class="solution-container" v-for="i in this.classLength">
         <h1 class="solution-classTitle">{{className[i-1]}}</h1>
@@ -351,6 +361,8 @@ import Swal from 'sweetalert2';
 
 <style>
 
+
+
     .solution-tableEat{
         height: 10px;
         background-color: black;
@@ -388,7 +400,10 @@ import Swal from 'sweetalert2';
         border: 1px solid black; 
         padding: 8px; 
         text-align: center; 
+        font-size: px;
     }
+
+
 
 
 </style>
