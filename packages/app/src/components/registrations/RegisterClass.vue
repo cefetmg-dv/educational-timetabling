@@ -19,8 +19,15 @@
                 //verifica id
                 this.classesInstance = JSON.parse(window.searchFile()).classes
 
+                var id;
+                if(this.subjectsInstance.length>0){
+                    var id = this.subjectsInstance[parseInt(this.classesInstance.length)-1]['id']+1
+                }else{
+                    var id = 0
+                }
+
                 this.data = {
-                    id: this.classesInstance[parseInt(this.classesInstance.length)-1]['id']+1,
+                    id: id,
                     name: this.name,
                     subjects: []
                 }

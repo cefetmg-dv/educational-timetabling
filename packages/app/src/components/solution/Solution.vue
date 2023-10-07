@@ -2,7 +2,6 @@
 
    
     import Swal from 'sweetalert2';
-    import jspdf from 'jspdf'
     import  html2pdf  from 'html2pdf.js';
 
 
@@ -44,15 +43,9 @@
             }
 
             this.$nextTick(()=>{
-                /*
-                var elements = document.getElementsByClassName('0-1')
-                for(var i = 0; i < elements.length; ++i){
-                    elements[i].innerText = "PASKDJKOASDKJSAD"
-                }
-                */
+
 
                 //são 41 posições pra cada classe
-                //var tds = []
                 //esse for maior representa a iteração pra uma classe
                 for(var j = 1; j < this.classLength+1; ++j){
                     
@@ -153,24 +146,6 @@
             downloadAsPDF() {
                 
                 this.$nextTick(()=>{
-                    //window.print()
-                    /*
-                    const doc = new jspdf('p', 'mm', 'a4');
-                    const html = this.$refs.content.innerHTML;
-                    const pageWidth = doc.internal.pageSize.getWidth();
-                    const pageHeight = doc.internal.pageSize.getHeight();
-
-                    doc.html(html, {
-                    callback: function (pdf) {
-                        pdf.save('horário.pdf');
-                    },
-                    x: 0,
-                    y: 0,
-                    width: pageWidth - 30, // Ajuste o valor da largura conforme necessário
-                    useCss: true, // Permite o uso de estilos CSS
-                    });
-                    doc.save("horário.pdf")
-                    */
 
                     const content = document.querySelector("#content")
 
@@ -194,10 +169,11 @@
 
 <template>
 
-    <div>
-        <button @click="downloadAsPDF">Baixar PDF</button>
+    <div class = "solution-download-container">
+        <button class = "solution-download" @click="downloadAsPDF">Baixar PDF</button>
     </div>
 
+    <hr>
     
     <div id="content">
         <div  class="solution-container" v-for="i in this.classLength">
@@ -408,7 +384,35 @@
 
 <style>
 
+    .solution-download-container{
+        padding-top: 50px;
+    }
 
+    .solution-download{
+        height: 60px;
+        font-family: Poppins, sans-serif;
+        width: 200px;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: #72BA75;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color:white;
+        font-weight: 400;
+        background-color: #72BA75;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .solution-download:hover{
+        background-color: whitesmoke;
+        color: black;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
 
     .solution-tableEat{
         height: 10px;
@@ -447,7 +451,7 @@
         border: 1px solid black; 
         padding: 8px; 
         text-align: center; 
-        font-size: 8px;
+        font-size: 12px;
     }
 
 

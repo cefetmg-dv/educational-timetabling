@@ -44,20 +44,6 @@
                     }
                 }
             }
-            /*
-            for(var i = 0; i < JSON.parse(window.searchFile()).teachers.length; ++i){
-                for(var j = 0; j < this.initialTeachersID.length; ++j){
-                    if(JSON.parse(window.searchFile()).teachers[i].id == this.initialTeachersID[j]){
-                        console.log("DEU")
-                        console.log("O J" + j)
-                        console.log(JSON.parse(window.searchFile()).teachers[j].name)
-                        this.chosenTeachers[j] = JSON.parse(window.searchFile()).teachers[j].name
-                    }
-                }
-                
-            }*/
-
-            console.log("CHOSEN TEACHERS" +this.chosenTeachers)
 
         },
 

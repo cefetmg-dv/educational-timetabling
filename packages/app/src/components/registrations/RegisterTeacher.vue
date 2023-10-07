@@ -45,10 +45,17 @@
 
                 //verifica qual o id atual
                 this.instanceTeachers = JSON.parse(window.searchFile()).teachers
+
+                var id;
+                if(this.subjectsInstance.length>0){
+                    var id = this.subjectsInstance[parseInt(this.instanceTeachers.length)-1]['id']+1
+                }else{
+                    var id = 0
+                }
                
                 
                 this.dados = {
-                    id : this.instanceTeachers[parseInt(this.instanceTeachers.length)-1]['id']+1,
+                    id : id,
                     name : this.name,
                     unavailability : this.indisponibilities,
                     preferences: this.preferences
@@ -109,7 +116,7 @@
 
             <div class="multiselect-container">
                 <div class="multiselect-preferences-btn">
-                    <span class="multiselect-btn-text">Selecione as preferências</span>
+                    
                     <img src="../../assets/down-arrow.png">
 
                 </div>
@@ -127,6 +134,7 @@
                     </li>
                 </ul>
             </div>
+            <br>
             
             <div class="mb-3">
                 <label class="form-label">Indisponibilidades</label>
@@ -135,7 +143,7 @@
 
             <div class="multiselect-container">
                 <div class="multiselect-indisponibilities-btn">
-                    <span class="multiselect-btn-text">Selecione as Indisponibilidades</span>
+                    
                     <img src="../../assets/down-arrow.png">
 
                 </div>
@@ -153,6 +161,7 @@
                     </li>
                 </ul>
             </div>
+            <br>
 
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
@@ -176,10 +185,12 @@
 
     .multiselect-preferences-btn>img{
         width: 20px;
+        margin-left: auto;
     }
 
     .multiselect-indisponibilities-btn>img{
         width: 20px;
+        margin-left: auto; 
     }
 
     .multiselect-list-items{
@@ -245,7 +256,7 @@
         padding: 0 16px;
         border-radius: 8px;
         cursor: pointer;
-        border: 1.5px solid #DCDCDC;
+        border: 1.4px solid #dfe3e7;
     
     }
 
@@ -257,7 +268,7 @@
         padding: 0 16px;
         border-radius: 8px;
         cursor: pointer;
-        border: 1.5px solid #DCDCDC;
+        border: 1.4px solid #dfe3e7;
     
     }
 
@@ -265,8 +276,8 @@
         position: relative;
         widows: 100%;
         background-color: #fff;
-        
         border-radius: 8px;
+        margin-top: -20px
     }
 
     .registerTeacher-form{

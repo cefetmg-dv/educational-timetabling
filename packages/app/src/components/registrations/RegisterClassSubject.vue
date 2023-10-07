@@ -49,12 +49,9 @@
                     }
 
                     var id;
-                    console.log(this.subjectsInstance)
-                    console.log(this.subjectsInstance.length)
                     if(this.subjectsInstance.length>0){
                         var id = this.subjectsInstance[parseInt(this.subjectsInstance.length)-1]['id']+1
                     }else{
-                        console.log("é 0")
                         var id = 0
                     }
 
@@ -82,7 +79,7 @@
                     }
                     else{
 
-                        this.$router.push('/Disciplinas')
+                        this.$router.push('/Classes')
 
                         Swal.fire({
                             text: 'Matéria cadastrada com sucesso!',

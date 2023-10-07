@@ -46,9 +46,16 @@
                         this.indisponibilities.push(i)
                     }
                 }
+
+                var id;
+                if(this.subjectsInstance.length>0){
+                    var id = this.subjectsInstance[parseInt(this.instanceRooms.length)-1]['id']+1
+                }else{
+                    var id = 0
+                }
                 
                 this.dados = {
-                    id: this.instanceRooms[parseInt(this.instanceRooms.length)-1]['id']+1,
+                    id: id,
                     name: this.name,
                     category: this.category,
                     unavailability: this.indisponibilities
