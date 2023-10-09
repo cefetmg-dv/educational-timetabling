@@ -36,8 +36,6 @@
                         this.$router.push('/')
                     }
                 })
-                
-                
             }
         }
 

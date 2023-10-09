@@ -328,6 +328,14 @@ const updateRoomsCategory = (dataFromApp, item) =>{
       instance.rooms_category[i] = dataFromApp
     }
   }
+
+  //altera nome da categoria na sala que ela estiver cadastrada
+  for(var i = 0; i < instance.rooms.length; ++i){
+    if(instance.rooms[i].category == item){
+      instance.rooms[i].category = dataFromApp
+    }
+  }
+
   if(!isTheSame && isRegistered){
     isOther = true
   }else{
@@ -343,6 +351,26 @@ const removeTeacher = (dataFromApp) =>{
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   instance.teachers = instance.teachers.filter(obj => obj.id !== dataFromApp)
+
+  //reorganiza ids dos professores
+  for(var i = 0; i < instance.teachers.length; ++i){
+    if(instance.teachers[i].id > dataFromApp){
+      instance.teachers[i].id --
+    }
+  }
+
+  //remove e atualiza associação de professores a disciplinas
+  for(var i = 0; i < instance.classes.length; ++i){
+    for(var j = 0; j < instance.classes[i].subjects.length; ++j){
+      instance.classes[i].subjects[j].teachers = instance.classes[i].subjects[j].teachers.filter(obj => obj !== dataFromApp)
+      for(var k = 0; k < instance.classes[i].subjects[j].teachers.length; ++k){
+        if(instance.classes[i].subjects[j].teachers[k] > dataFromApp)
+        instance.classes[i].subjects[j].teachers[k] --
+      }
+    }
+  }
+
+
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 } 
 
@@ -359,7 +387,18 @@ const removeClass = (dataFromApp) =>{
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   instance.classes = instance.classes.filter(obj => obj.id !== dataFromApp)
+
+
+
+  //reorganiza ids dos professores
+  for(var i = 0; i < instance.classes.length; ++i){
+    if(instance.classes[i].id > dataFromApp){
+      instance.classes[i].id --
+    }
+  }
+
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+
 }
 
 const removeRoom = (dataFromApp) =>{
@@ -367,7 +406,30 @@ const removeRoom = (dataFromApp) =>{
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   instance.rooms = instance.rooms.filter(obj => obj.id !== dataFromApp)
+
+
+  //reorganiza ids das salas
+  for(var i = 0; i < instance.rooms.length; ++i){
+    if(instance.rooms[i].id > dataFromApp){
+      instance.rooms[i].id --
+    }
+  }
+
+  //remove e atualiza associações
+  for(var i = 0; i < instance.classes.length; ++i){
+    for(var j = 0; j < instance.classes[i].subjects.length; ++j){
+      instance.classes[i].subjects[j].rooms = instance.classes[i].subjects[j].rooms.filter(obj => obj !== dataFromApp)
+      for(var k = 0; k < instance.classes[i].subjects[j].rooms.length; ++k){
+        if(instance.classes[i].subjects[j].rooms[k] > dataFromApp){
+          instance.classes[i].subjects[j].rooms[k] --
+        }
+      }
+    }
+  }
+
+
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+
 }
 
 const removeRoomCategory = (dataFromApp)=>{
@@ -384,7 +446,18 @@ const removeSubjects = (idSubject, idClass)=>{
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   instance.classes[idClass].subjects = instance.classes[idClass].subjects.filter(obj => obj.id != idSubject)
+
+  //reorganiza ids das matérias
+
+  for(var i = 0; i < instance.classes[idClass].subjects.length; ++i){
+    if(instance.classes[idClass].subjects[i].id > idSubject){
+      instance.classes[idClass].subjects[i].id --
+    }
+  }
+
+
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+
 }
 
 //Solution
@@ -394,7 +467,7 @@ const generateSolution = () => {
   var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
   const instance = JSON.parse(instanceData)
   //create events
-  console.log("ENTREI")
+
   instance.events = []
   var event = {}
   var eventID = 0
