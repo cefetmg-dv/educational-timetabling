@@ -137,9 +137,7 @@
 
             <div class="multiselect-container">
                 <div class="multiselect-preferences-btn">
-                    <span class="multiselect-btn-text">Selecione as preferências</span>
                     <img src="../../assets/down-arrow.png">
-
                 </div>
             
                 <ul class="multiselect-list-items">
@@ -157,6 +155,7 @@
 
                 
             </div>
+            <br>
 
 
             <div class="mb-3">
@@ -165,7 +164,6 @@
 
             <div class="multiselect-container">
                 <div class="multiselect-indisponibilities-btn">
-                    <span class="multiselect-btn-text">Selecione as Indisponibilidades</span>
                     <img src="../../assets/down-arrow.png">
 
                 </div>
@@ -183,6 +181,7 @@
                     </li>
                 </ul>
             </div>
+            <br>
 
 
 
@@ -207,10 +206,12 @@
 
     .multiselect-preferences-btn>img{
         width: 20px;
+        margin-left: auto; 
     }
 
     .multiselect-indisponibilities-btn>img{
         width: 20px;
+        margin-left: auto; 
     }
 
     .multiselect-list-items{
@@ -276,7 +277,7 @@
         padding: 0 16px;
         border-radius: 8px;
         cursor: pointer;
-        border: 1.5px solid #DCDCDC;
+        border: 1.4px solid #dfe3e7;
     
     }
 
@@ -288,7 +289,7 @@
         padding: 0 16px;
         border-radius: 8px;
         cursor: pointer;
-        border: 1.5px solid #DCDCDC;
+        border: 1.4px solid #dfe3e7;
     
     }
 

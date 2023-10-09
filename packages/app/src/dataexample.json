@@ -247,11 +247,11 @@
       }
    ],
    "rooms_category": [
-      "TESTE",
+      "Sala de Aula",
       "Laboratório de Controle",
-      "TESTE 2",
-      "teste",
-      "TESTEx"
+      "Laboratório de Informática",
+      "Laboratório de Eletrônica",
+      "Laboratório de Tecidos"
    ],
    "rooms": [
       {
@@ -270,6 +270,18 @@
          "id": 1,
          "name": "Sala 607",
          "category": "Laboratório de Controle",
+         "unavailability": [
+            1,
+            4,
+            5,
+            6,
+            9
+         ]
+      },
+      {
+         "id": 2,
+         "name": "Sala 305",
+         "category": "Sala de Aula",
          "unavailability": []
       }
    ],
@@ -304,17 +316,31 @@
          "name": "Alisson",
          "unavailability": [],
          "preferences": []
+      },
+      {
+         "id": 3,
+         "name": "Raulivan",
+         "unavailability": [],
+         "preferences": [
+            4
+         ]
+      },
+      {
+         "id": 4,
+         "name": "Antonio",
+         "unavailability": [],
+         "preferences": []
       }
    ],
    "classes": [
       {
          "id": 0,
-         "name": "Engenharia da Computação - 1º Semestre",
+         "name": "Engenharia da Computação - 1 Semestre",
          "subjects": [
             {
                "id": 1,
-               "name": "materia teste",
-               "acronym": "mt",
+               "name": "Cálculo I",
+               "acronym": "CALCI",
                "events": 2,
                "divided": true,
                "subgroups": 2,
@@ -481,8 +507,30 @@
       },
       {
          "id": 3,
-         "name": "Eng Mec 3 semestre",
+         "name": "Design De Moda 1 Semestre",
          "subjects": []
+      },
+      {
+         "id": 4,
+         "name": "Técnico em Informática 1 Semestre",
+         "subjects": [
+            {
+               "id": 0,
+               "name": "Programação Estruturada",
+               "acronym": "PROGEST",
+               "events": 3,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  2
+               ],
+               "teachers": [
+                  3,
+                  0,
+                  1
+               ]
+            }
+         ]
       }
    ],
    "events": [
@@ -629,6 +677,27 @@
       {
          "id": 20,
          "class": 2,
+         "subject": 0,
+         "subgroup": 2,
+         "teacher": 1
+      },
+      {
+         "id": 21,
+         "class": 4,
+         "subject": 0,
+         "subgroup": 2,
+         "teacher": 3
+      },
+      {
+         "id": 22,
+         "class": 4,
+         "subject": 0,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 23,
+         "class": 4,
          "subject": 0,
          "subgroup": 2,
          "teacher": 1

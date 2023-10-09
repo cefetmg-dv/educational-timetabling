@@ -47,8 +47,8 @@
                 this.instanceTeachers = JSON.parse(window.searchFile()).teachers
 
                 var id;
-                if(this.subjectsInstance.length>0){
-                    var id = this.subjectsInstance[parseInt(this.instanceTeachers.length)-1]['id']+1
+                if(this.instanceTeachers.length>0){
+                    var id = this.instanceTeachers[parseInt(this.instanceTeachers.length)-1]['id']+1
                 }else{
                     var id = 0
                 }

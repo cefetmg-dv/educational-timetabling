@@ -53,7 +53,6 @@
                     //a cada vez que esse for é executado, a lista de <tds> é reinicializada com uma classe diferente
                     for(var i = 0 ; i <= 41; ++i){
                         tds[i] = document.getElementsByClassName(`${i}-${j}`)
-                        
                     }
 
                     //itero pelas aulas da solution
@@ -99,13 +98,16 @@
                                                 }
                                             }
                                             
+                                            
                                             //sabendo qual evento, consigo pegar os dados da matéria
                                             for(var n = 0; n < JSON.parse(window.searchFile()).classes.length; ++n){
                                                 for(var o = 0; o < JSON.parse(window.searchFile()).classes[n].subjects.length; ++o){
-                                                    if(JSON.parse(window.searchFile()).classes[n].subjects[o].id == actualSubject){
-                                                        for(var p = 0; p < tds[l].length; ++p){
-                                                            tds[l][p].innerText += JSON.parse(window.searchFile()).classes[n].subjects[o].name
-                                                            tds[l][p].innerHTML += "<br>"
+                                                    if(JSON.parse(window.searchFile()).classes[n].id == actualClass){
+                                                        if(JSON.parse(window.searchFile()).classes[n].subjects[o].id == actualSubject){
+                                                            for(var p = 0; p < tds[l].length; ++p){
+                                                                tds[l][p].innerText += JSON.parse(window.searchFile()).classes[n].subjects[o].name
+                                                                tds[l][p].innerHTML += "<br>"
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -433,6 +435,7 @@
         height: 10px;
         background-color: grey;
         color: white;
+        margin-top: 20px;
     }
 
     .solution-classTitle{
@@ -440,6 +443,8 @@
         margin: 0 auto;
         justify-content: center;
         text-align: center;
+        font-size: 30px;
+        
     }
 
     table {
@@ -453,6 +458,11 @@
         text-align: center; 
         font-size: 12px;
     }
+
+    td {
+        width: 100px;
+        height: 80px;
+     }
 
 
 
