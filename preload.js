@@ -208,7 +208,6 @@ const updateSubjects = (dataFromApp, idClass) =>{
       for(let j = 0 ; j < instance.classes[i].subjects.length; j++){
         if(instance.classes[i].subjects[j].name == JSON.parse(dataFromApp).name){
           isRegistered = true
-          console.log("ESTÁ REGISTRADO")
         }
       
         if(instance.classes[i].subjects[j].id == JSON.parse(dataFromApp).id){
@@ -216,7 +215,6 @@ const updateSubjects = (dataFromApp, idClass) =>{
           console.log(instance.classes[i].subjects[j].name)
           if(instance.classes[i].subjects[j].name == JSON.parse(dataFromApp).name){
             isTheSame = true
-            console.log("É O MESMO")
           }
 
           instance.classes[i].subjects[j].id = JSON.parse(dataFromApp).id;
@@ -226,11 +224,23 @@ const updateSubjects = (dataFromApp, idClass) =>{
           instance.classes[i].subjects[j].divided = JSON.parse(dataFromApp).divided;
           instance.classes[i].subjects[j].subgroups = JSON.parse(dataFromApp).subgroups;
           instance.classes[i].subjects[j].rooms = JSON.parse(dataFromApp).rooms;
+
+          //diminui tamanho de array de professores
+
+          let differenceLenghtTeachers = instance.classes[i].subjects[j].teachers.length - instance.classes[i].subjects[j].events
+          if(differenceLenghtTeachers > 0){
+              console.log("DIFERENÇA")
+              for(var k = 0; k < differenceLenghtTeachers; ++k){
+                instance.classes[i].subjects[j].teachers.pop()
+              }
+          }
         }
       }
       //instance.classes[i].subjects[JSON.parse(dataFromApp).id] = JSON.parse(dataFromApp)
     }
   }
+
+
   if(!isTheSame && isRegistered){
     isOther = true
     console.log("É DIFERENTE")
@@ -455,7 +465,6 @@ const removeSubjects = (idSubject, idClass)=>{
     }
   }
 
-
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 
 }
@@ -490,6 +499,8 @@ const generateSolution = () => {
           return 'disciplineWithoutProfessor'
         }else if(instance.classes[i].subjects[j].rooms.length == 0){
           return 'disciplineWithoutRoom'
+        }else if(instance.classes[i].subjects[j].events != instance.classes[i].subjects[j].teachers.length){
+          return 'disciplineWithoutProfessor'
         }
 
         instance.events.push(event)

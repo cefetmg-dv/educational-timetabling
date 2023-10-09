@@ -271,6 +271,14 @@
          "name": "Sala 305",
          "category": "Sala de Aula",
          "unavailability": []
+      },
+      {
+         "id": 2,
+         "name": "Sala 307",
+         "category": "Laboratório de Controle",
+         "unavailability": [
+            1
+         ]
       }
    ],
    "teachers": [
@@ -324,7 +332,6 @@
                ],
                "teachers": [
                   0,
-                  1,
                   1
                ]
             },
