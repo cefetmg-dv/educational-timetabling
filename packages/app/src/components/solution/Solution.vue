@@ -18,7 +18,7 @@
         mounted(){
 
             this.testeContent = 'sei la'
-            this.solution = window.generateSolution()
+            this.solution = window.generateSolutionSA()
             if(this.solution == 'disciplineWithoutProfessor'){
                 this.$router.push('/')
                 Swal.fire({

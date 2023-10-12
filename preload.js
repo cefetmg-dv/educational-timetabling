@@ -1,5 +1,6 @@
 const { contextBridge } = require('electron');
 const timetabling = require('bindings')('timetabling');
+const simulatedAnnealing = require('bindings')('simulatedAnnealing');
 const { Console, count } = require('console');
 const fs = require('fs')
 
@@ -527,6 +528,60 @@ const generateSolution = () => {
   return JSON.stringify(solution)
 }
 
+const generateSolutionSA = () => {
+
+  var instanceData = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  const instance = JSON.parse(instanceData)
+  //create events
+
+  instance.events = []
+  var event = {}
+  var eventID = 0
+  for(var i = 0; i < instance.classes.length; ++i){
+    
+    for(var j = 0; j < instance.classes[i].subjects.length; ++j){
+    
+      for(var k = 0; k < instance.classes[i].subjects[j].events; k++){
+
+        event = {
+          id : eventID,
+          class: instance.classes[i].id,
+          subject: instance.classes[i].subjects[j].id,
+          subgroup: instance.classes[i].subjects[j].subgroups,
+          teacher: instance.classes[i].subjects[j].teachers[k],
+        }
+
+
+        if(instance.classes[i].subjects[j].teachers.length == 0){
+          return 'disciplineWithoutProfessor'
+        }else if(instance.classes[i].subjects[j].rooms.length == 0){
+          return 'disciplineWithoutRoom'
+        }else if(instance.classes[i].subjects[j].events != instance.classes[i].subjects[j].teachers.length){
+          return 'disciplineWithoutProfessor'
+        }
+
+        instance.events.push(event)
+        eventID++
+      }
+    }
+  }
+  
+  fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
+
+
+  let json = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8')
+  //let json = fs.readFileSync('./packages/app/src/dataexample.json', 'utf-8');
+  let problem = JSON.parse(json);
+  console.log("My input:")
+  console.log(problem)
+  console.log("My solution:")
+  var solution = simulatedAnnealing.solve(problem, 'sa')
+  console.log(solution)
+  console.log(JSON.stringify(solution))
+  return JSON.stringify(solution)
+
+}
+
 
 // show functions to window object
 
@@ -559,3 +614,4 @@ contextBridge.exposeInMainWorld('removeSubjects', removeSubjects)
   
 //solution
 contextBridge.exposeInMainWorld('generateSolution', generateSolution)
+contextBridge.exposeInMainWorld('generateSolutionSA', generateSolutionSA)

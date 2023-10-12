@@ -9,7 +9,11 @@
     "sources": [
       "packages/timetabling/src/timetabling.cpp",
       "packages/timetabling/src/mip.cpp",
-      "packages/timetabling/src/addon.cpp"
+      "packages/timetabling/src/addon.cpp",
+      "packages/simulatedAnnealing/src/addon.cpp",
+      "packages/simulatedAnnealing/src/SA.cpp",
+      "packages/simulatedAnnealing/src/timetabling.cpp"
+      
     ],
     "defines": [ "NAPI_DISABLE_CPP_EXCEPTIONS" ],
     "cflags!": [ "-fno-exceptions" ],
