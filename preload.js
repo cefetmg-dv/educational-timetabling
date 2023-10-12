@@ -1,6 +1,5 @@
 const { contextBridge } = require('electron');
 const timetabling = require('bindings')('timetabling');
-const simulatedAnnealing = require('bindings')('simulatedAnnealing');
 const { Console, count } = require('console');
 const fs = require('fs')
 
@@ -575,7 +574,7 @@ const generateSolutionSA = () => {
   console.log("My input:")
   console.log(problem)
   console.log("My solution:")
-  var solution = simulatedAnnealing.solve(problem, 'sa')
+  var solution = timetabling.solve(problem, 'sa')
   console.log(solution)
   console.log(JSON.stringify(solution))
   return JSON.stringify(solution)
