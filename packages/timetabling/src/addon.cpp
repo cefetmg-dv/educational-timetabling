@@ -5,6 +5,7 @@
 #include <iostream>
 #include "../include/timetabling.hpp"
 #include "../include/mip.hpp"
+#include "../include/SA.hpp"
 
 
 /**

@@ -6,7 +6,7 @@
 
 /**
  * Solves the timetabling problem using a MIP solver.
- */
+*/
 class MIP : public Solver {
 public:
 

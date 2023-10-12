@@ -5,6 +5,10 @@
 #include "./solver.hpp"
 #include "./timetabling.hpp"
 
+
+/**
+ * Solves the timetabling problem using the simulated annealing algorithm.
+*/
 class SA: public Solver{
 public:
 
