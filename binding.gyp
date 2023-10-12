@@ -24,7 +24,7 @@
         {
           "target_name": "timetabling",
           "include_dirs": [
-            "C:/gurobi1002/win64/include"
+            "C:/gurobi1003/win64/include"
           ],
           "link_settings": {
             "libraries": [
@@ -35,7 +35,7 @@
           "msvs_settings": {
             "VCLinkerTool": {
               "AdditionalLibraryDirectories": [
-                  "C:/gurobi1002/win64/lib"
+                  "C:/gurobi1003/win64/lib"
               ]
             }
           }

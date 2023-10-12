@@ -15,7 +15,7 @@ struct Event {
     id_type teacher;
     id_type group;
     id_type subgroup;
-    std::vector<id_t> possible_rooms;
+    std::vector<id_type> possible_rooms;
 };
 
 struct EventSchedule {
@@ -30,11 +30,11 @@ public:
     size_t n_timeslots;
     size_t n_rooms;
     size_t n_events;
-    std::list< std::set<id_t> > resource_sharing;
-    std::set< std::tuple< id_t, id_type > > precedence;
-    std::map< id_t, std::set<id_t> > compatibility;
-    std::map< id_t, std::set<id_t> > rooms_unavailability;
-    std::map< id_t, std::set<id_t> > events_unavailability;
+    std::list< std::set<id_type> > resource_sharing;
+    std::set< std::tuple< id_type, id_type > > precedence;
+    std::map< id_type, std::set<id_type> > compatibility;
+    std::map< id_type, std::set<id_type> > rooms_unavailability;
+    std::map< id_type, std::set<id_type> > events_unavailability;
 };
 
 Problem load_problem(const std::string& data);
