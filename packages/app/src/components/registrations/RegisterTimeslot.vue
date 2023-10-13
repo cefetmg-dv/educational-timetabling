@@ -200,9 +200,9 @@
 
                 this.data = {
                     id: this.idTime,
-                    day: this.day,
-                    shift: this.shift,
-                    slot: this.slot,
+                    day: parseInt(this.day),
+                    shift: parseInt(this.shift),
+                    slot: parseInt(this.slot),
                     description: this.descriptionTime,
                 }
 

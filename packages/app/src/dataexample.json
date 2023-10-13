@@ -226,23 +226,23 @@
       },
       {
          "id": 2,
-         "day": "1",
-         "shift": "0",
-         "slot": "2",
+         "day": 1,
+         "shift": 0,
+         "slot": 2,
          "description": "10h50 - 12h30"
       },
       {
          "id": 0,
-         "day": "1",
-         "shift": "0",
-         "slot": "0",
+         "day": 1,
+         "shift": 0,
+         "slot": 0,
          "description": "07h00 - 08h40"
       },
       {
          "id": 3,
-         "day": "1",
-         "shift": "1",
-         "slot": "0",
+         "day": 1,
+         "shift": 1,
+         "slot": 0,
          "description": "13h50 - 15h30"
       }
    ],
