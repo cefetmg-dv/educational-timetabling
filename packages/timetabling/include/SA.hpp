@@ -9,7 +9,7 @@
 /**
  * Solves the timetabling problem using the simulated annealing algorithm.
 */
-class SA: public Solver{
+class SA{
 public:
 
     /**
@@ -17,8 +17,8 @@ public:
      * @param problem The problem to be solved.
      * @return A vector of event schedules.
      */
-    std::vector<EventSchedule> solve(const Problem& problem) override;
+    std::vector<EventSchedule> solve(const Problem& problem, const std::string& raw_data);
 };
 
 
-#endif //TIMETABLING_SA_HPP__s
+#endif //TIMETABLING_SA_HPP__

@@ -154,7 +154,7 @@
                     const options = {
                         margin: [10,10,10,10],
                         filename: "newtime.pdf",
-                        html2canvas: { scale: 2},
+                        html2canvas: { scale: 2 },
                         jsPDF: {unit:"mm", format: "a4", orientation: "portrait"}
                     };
 

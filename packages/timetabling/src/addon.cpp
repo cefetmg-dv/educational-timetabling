@@ -37,8 +37,10 @@ Napi::Value solve(const Napi::CallbackInfo& info) {
     std::string solver = info[1].As<Napi::String>().Utf8Value();
     //std::cout << solver << std::endl;
 
+    
     // Solve the problem
-    auto schedule = SA().solve(load_problem(json));
+    auto schedule = SA().solve(load_problem(json), json);
+    //auto schedule = MIP().solve(load_problem(json));
 
     // Create the solution object to return
     Napi::Array solution = Napi::Array::New(env, schedule.size());
@@ -50,7 +52,9 @@ Napi::Value solve(const Napi::CallbackInfo& info) {
         solution.Set(i, obj);
     }
 
+
     return solution;
+    
 }
 
 

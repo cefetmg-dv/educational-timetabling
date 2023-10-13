@@ -14,8 +14,9 @@ public:
      * @param problem The problem to be solved.
      * @return A vector of event schedules.
      */
+
     virtual std::vector<EventSchedule> solve(const Problem& problem) = 0;
-    
+
 };
 
 #endif // TIMETABLING_SOLVER_HPP__
