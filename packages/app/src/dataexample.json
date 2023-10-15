@@ -328,7 +328,7 @@
             },
             {
                "id": 2,
-               "name": "testeeee",
+               "name": "Inteligência Artificial",
                "acronym": "te",
                "events": 3,
                "divided": true,
@@ -344,7 +344,7 @@
             },
             {
                "id": 3,
-               "name": "fisica",
+               "name": "Fisica I",
                "acronym": "fis",
                "events": 2,
                "divided": true,
