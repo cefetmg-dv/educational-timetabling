@@ -4,7 +4,7 @@
 
 <template>
 
-<button class="greenButton-links">
+    <button class="greenButton-links">
         <slot></slot>
     </button>
 

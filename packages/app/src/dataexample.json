@@ -305,6 +305,12 @@
          "name": "Antonio",
          "unavailability": [],
          "preferences": []
+      },
+      {
+         "id": 4,
+         "name": "Guilherme",
+         "unavailability": [],
+         "preferences": []
       }
    ],
    "classes": [
@@ -323,7 +329,7 @@
                   1
                ],
                "teachers": [
-                  0
+                  4
                ]
             },
             {
@@ -344,7 +350,7 @@
             },
             {
                "id": 3,
-               "name": "Fisica I",
+               "name": "Algoritmos",
                "acronym": "fis",
                "events": 2,
                "divided": true,
@@ -454,6 +460,21 @@
                   0,
                   0
                ]
+            },
+            {
+               "id": 2,
+               "name": "Programação I",
+               "acronym": "PROG1",
+               "events": 2,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  1
+               ],
+               "teachers": [
+                  2,
+                  2
+               ]
             }
          ]
       },
@@ -511,7 +532,7 @@
          "class": 0,
          "subject": 1,
          "subgroup": 2,
-         "teacher": 0
+         "teacher": 4
       },
       {
          "id": 1,
@@ -641,27 +662,41 @@
       },
       {
          "id": 19,
+         "class": 1,
+         "subject": 2,
+         "subgroup": 2,
+         "teacher": 2
+      },
+      {
+         "id": 20,
+         "class": 1,
+         "subject": 2,
+         "subgroup": 2,
+         "teacher": 2
+      },
+      {
+         "id": 21,
          "class": 2,
          "subject": 0,
          "subgroup": 2,
          "teacher": 0
       },
       {
-         "id": 20,
+         "id": 22,
          "class": 4,
          "subject": 0,
          "subgroup": 2,
          "teacher": 2
       },
       {
-         "id": 21,
+         "id": 23,
          "class": 4,
          "subject": 0,
          "subgroup": 2,
          "teacher": 0
       },
       {
-         "id": 22,
+         "id": 24,
          "class": 4,
          "subject": 0,
          "subgroup": 2,

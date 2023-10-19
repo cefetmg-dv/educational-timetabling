@@ -1,9 +1,23 @@
 <script>
-import GreenButton from '@/components/GreenButton.vue';
+    
+    import GreenButton from '@/components/GreenButton.vue';
+    import GreenButton2 from '@/components/GreenButton2.vue';
+    import Swal from 'sweetalert2';
 
 export default {
     components: {
-        GreenButton
+        GreenButton,
+        GreenButton2
+    },
+
+    methods:{
+        showTutorial(){
+            Swal.fire({
+                text: 'Cadastre os dados do CEFET por meio da barra de navegação acima e depois clique em Gerar Horário na página inicial. Não se esqueça de associar a cada matéria cadastrada os seus professores e suas salas.',
+                icon: 'info',
+                confirmButtonText: 'Ok',
+            })
+        }
     }
 };
 </script>
@@ -17,9 +31,9 @@ export default {
     <br>
     <div class="homePage-buttonsContainer">
         
-            <GreenButton link="/Tutorial">Tutorial</GreenButton>
+            <GreenButton2 @click="showTutorial">Tutorial</GreenButton2>
         
-                    <GreenButton link="/Solucao">Gerar Horário</GreenButton>
+            <GreenButton link="/Solucao">Gerar Horário</GreenButton>
             </div>
 </template>
 

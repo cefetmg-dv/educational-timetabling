@@ -219,6 +219,7 @@ std::vector<EventSchedule> SA::solve(const Problem& problem, const std::string& 
     
     //Simulated Annealing
     std::vector<EventSchedule> auxSchedules;
+    std::vector<EventSchedule> bestSchedules = schedules;
     float temperature = T0;     //define temperatura
     float alfa = 0.1;           //taxa de resfriamento
     int iterT = 0;              //número de iterações na temperatura T
@@ -234,6 +235,9 @@ std::vector<EventSchedule> SA::solve(const Problem& problem, const std::string& 
             delta = OF(auxSchedules, raw_data) - OF(schedules, raw_data);
             if(delta <= 0){
                 schedules = auxSchedules;
+                if(OF(auxSchedules, raw_data) < OF(bestSchedules, raw_data)){
+                    bestSchedules = auxSchedules;
+                }
             }else{ 
                 x = static_cast<float>(rand()) / RAND_MAX;   //gera número aleatório de 0 a 1
                 if(x < exp(delta,temperature)){
@@ -247,5 +251,5 @@ std::vector<EventSchedule> SA::solve(const Problem& problem, const std::string& 
     }
     
 
-    return schedules;
+    return bestSchedules;
 }
