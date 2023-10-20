@@ -86,15 +86,39 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
     }
 
     //Professores não podem dar aula em turnos alternados(manhã e noite), deve ser manhã e tarde ou tarde e noite
-    /*
     for(size_t i = 0; i < schedules.size(); ++i){
-        for(size_t j = 0; j < data["events"].size(); ++j){
-            if(data["events"][j]["id"] == i){
-                //verifico se o timeslot 
+        for(size_t j = 0; j < schedules.size(); ++j){
+            //verifico se estas duas aulas tem o mesmo professor
+            for(size_t k = 0; k < data["events"].size(); ++k){
+                if(data["events"][k]["id"] == i && i!=j){
+                    professor1 = data["events"][k]["teacher"];
+                }else if(data["events"][k]["id"] == j && i!=j){
+                    professor2 = data["events"][k]["teacher"];
+                }
             }
+            if(professor1 == professor2){
+                //para cada aula pego o timeslot dela
+                for(size_t k = 0; k < data["timeslots"].size(); ++k){
+                    if(schedules[i].timeslot == data["timeslots"][k]["id"]){
+                            timeslot1 = data["timeslots"][k]["id"];
+                    }else if(schedules[j].timeslot == data["timeslots"][k]["id"]){
+                            timeslot2 = data["timeslots"][k]["id"];
+                    }
+                }
+                //verifico se timeslot está no mesmo dia e se for, verifico se está em timeslots diferentes
+                for(size_t k = 0; k < data["timeslots"].size(); ++k){
+                    if(data["timeslots"][timeslot1]["day"] == data["timeslots"][timeslot2]["day"]){
+                        if(data["timeslots"][timeslot1]["shift"] == 0 && data["timeslots"][timeslot1]["shift"] == 2 ||
+                           data["timeslots"][timeslot1]["shift"] == 1 && data["timeslots"][timeslot1]["shift"] == 0
+                        ){
+                            finalValue += rigidWeigth;
+                        }
+                    }   
+                }
+            }
+            
         }
     }
-    */
 
 
     //Matérias optativas para certo curso não podem colidir horários com as aulas do semestre em que se é ofertada (desnecessária? se é pra uma classe vai ser alocada corretamente nela)
@@ -136,30 +160,87 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
                     finalValue += softWeigth;
                 }
             }
-            
         }
-        
     }
 
     //Evitar aulas de eixos parecidos de forma consecutiva para uma mesma turma (sem dados suficientes para esse)
 
-    //Evitar dias sem aulas para determinadas turmas (não acho que seja uma boa)
-    
-        /*   
-        for(size_t i = 0; i <= lastClassID; ++i){
-            for(size_t j = 0; j < data["events"].size(); ++j){
-                if(data["eventos"][j]["class"] == i){
-                    for()
+    //Evitar dias sem aulas para determinadas turmas
+    /*
+    for(size_t i = 0; i < schedules.size(); ++i){
+        //pega id da class1
+        for(size_t k = 0; k < data["events"].size(); ++k){
+            if(data["events"][k]["id"] == i){
+                class1 = data["events"][k]["class"];
+            }
+        }
+        for(size_t j = 0; j < schedules.size(); ++j){
+            //pega id da class2
+            for(size_t k = 0; k < data["events"].size(); ++k){
+                if(data["events"][k]["id"] == j){
+                    class2 = data["events"][k]["class"];
+                }
+            }
+            if(class1 == class2 && i != j){
+                for(size_t k = 0; k < data["timeslots"].size(); ++k){
+                    if(data["timeslots"][k]["day"] == 0){
+
+                    }    
                 }
             }
         }
-        */
+    }*/
 
-    //preferencias
+    //preferencias de professores (olhar esse peso)
+    for(size_t i = 0; i < schedules.size(); ++i){
+        for(size_t j = 0; j < data["events"].size(); ++j){
+            if(data["events"][j]["id"] == i){
+                for(size_t k = 0; k < data["teachers"].size(); ++k){
+                    if(data["teachers"][k]["id"] == data["events"][j]["teacher"]){
+                        if(data["teachers"][k]["preferences"].size() != 0){
+                            for(size_t l = 0; l < data["teachers"][k]["preferences"].size(); ++l){
+                                if(schedules[i].timeslot != data["teachers"][k]["preferences"][l]){
+                                    finalValue += softWeigth;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     //indisponibilidades de professores
+    for(size_t i = 0; i < schedules.size(); ++i){
+        for(size_t j = 0; j < data["events"].size(); ++j){
+            if(data["events"][j]["id"] == i){
+                for(size_t k = 0; k < data["teachers"].size(); ++k){
+                    if(data["teachers"][k]["id"] == data["events"][j]["teacher"]){
+                        if(data["teachers"][k]["unavailability"].size() != 0){
+                            for(size_t l = 0; l < data["teachers"][k]["unavailability"].size(); ++l){
+                                if(schedules[i].timeslot == data["teachers"][k]["unavailability"][l]){
+                                    finalValue += softWeigth;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     //indisponibilidades de salas
+    for(size_t i = 0; i < schedules.size(); ++i){
+        for(size_t j = 0; j < data["rooms"].size(); ++j){
+            if(data["rooms"][j]["id"] == schedules[i].room){
+                for(size_t k = 0; k < data["rooms"][j]["unavailability"].size(); ++k){
+                    if(schedules[i].room == data["rooms"][j]["unavailability"][k]){
+                        finalValue += softWeigth;
+                    }
+                }
+            }
+        }
+    }
         
     return finalValue;
 }
