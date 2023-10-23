@@ -165,6 +165,8 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
 
     //Evitar aulas de eixos parecidos de forma consecutiva para uma mesma turma (sem dados suficientes para esse)
 
+
+
     //Evitar dias sem aulas para determinadas turmas
     /*
     for(size_t i = 0; i < schedules.size(); ++i){
@@ -309,7 +311,7 @@ std::vector<EventSchedule> SA::solve(const Problem& problem, const std::string& 
     time_t t = time(NULL);
     srand(t);
 
-    while(temperature>0.1 || OF(schedules, raw_data) != 0){
+    while(temperature>0.1 && OF(schedules, raw_data) != 0){
         while(iterT < SAmax){
             iterT++;
             auxSchedules = shuffleSchedule(schedules, problem);
@@ -325,12 +327,14 @@ std::vector<EventSchedule> SA::solve(const Problem& problem, const std::string& 
                     schedules = auxSchedules;
                 }
             }
-            std::cout<<"OF: "<<OF(schedules, raw_data)<<std::endl;
+            //std::cout<<"OF: "<<OF(schedules, raw_data)<<std::endl;
+            std::cout<<temperature<<std::endl;
         }
         temperature = alfa * temperature;   //muda temperatura por taxa
         iterT = 0;                          //zera contador de iterações
     }
     
-
+    std::cout<<"OF:" <<OF(schedules, raw_data)<<std::endl;
+    
     return bestSchedules;
 }
