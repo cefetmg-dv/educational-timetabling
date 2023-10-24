@@ -328,6 +328,7 @@
                "rooms": [
                   1
                ],
+               "antiSubjects": [],
                "teachers": [
                   4
                ]
@@ -342,6 +343,7 @@
                "rooms": [
                   0
                ],
+               "antiSubjects": [],
                "teachers": [
                   0,
                   1,
@@ -358,6 +360,7 @@
                "rooms": [
                   0
                ],
+               "antiSubjects": [],
                "teachers": [
                   0,
                   1
@@ -374,6 +377,7 @@
                   0,
                   1
                ],
+               "antiSubjects": [],
                "teachers": [
                   2,
                   2
@@ -389,6 +393,7 @@
                "rooms": [
                   0
                ],
+               "antiSubjects": [],
                "teachers": [
                   0,
                   1
@@ -404,6 +409,7 @@
                "rooms": [
                   0
                ],
+               "antiSubjects": [],
                "teachers": [
                   0,
                   0
@@ -419,6 +425,7 @@
                "rooms": [
                   0
                ],
+               "antiSubjects": [],
                "teachers": [
                   0,
                   1
@@ -432,37 +439,6 @@
          "subjects": [
             {
                "id": 0,
-               "name": "asdasds",
-               "acronym": "sadas",
-               "events": 2,
-               "divided": true,
-               "subgroups": 2,
-               "rooms": [
-                  0
-               ],
-               "teachers": [
-                  0,
-                  0
-               ]
-            },
-            {
-               "id": 1,
-               "name": "asdasdsadasdsadsa",
-               "acronym": "ssd",
-               "events": 3,
-               "divided": true,
-               "subgroups": 2,
-               "rooms": [
-                  0
-               ],
-               "teachers": [
-                  0,
-                  0,
-                  0
-               ]
-            },
-            {
-               "id": 2,
                "name": "Programação I",
                "acronym": "PROG1",
                "events": 2,
@@ -471,10 +447,67 @@
                "rooms": [
                   1
                ],
+               "antiSubjects": [],
                "teachers": [
                   2,
                   2
                ]
+            },
+            {
+               "id": 1,
+               "name": "Controle Digital I",
+               "acronym": "CSD I ",
+               "events": 3,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  0
+               ],
+               "antiSubjects": [],
+               "teachers": []
+            },
+            {
+               "id": 2,
+               "name": "Mecanica dos Fluidos",
+               "acronym": "MECFLU",
+               "events": 2,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  1
+               ],
+               "antiSubjects": [],
+               "teachers": []
+            },
+            {
+               "id": 3,
+               "name": "Programação 2",
+               "acronym": "PROG2",
+               "events": 2,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  1
+               ],
+               "antiSubjects": [],
+               "teachers": []
+            },
+            {
+               "id": 4,
+               "name": "teste",
+               "acronym": "asdas",
+               "events": 2,
+               "divided": true,
+               "subgroups": 2,
+               "rooms": [
+                  0
+               ],
+               "antiSubjects": [
+                  0,
+                  2,
+                  3
+               ],
+               "teachers": []
             }
          ]
       },
@@ -492,6 +525,7 @@
                "rooms": [
                   0
                ],
+               "antiSubjects": [],
                "teachers": [
                   0
                ]
@@ -517,6 +551,7 @@
                "rooms": [
                   1
                ],
+               "antiSubjects": [],
                "teachers": [
                   2,
                   0,

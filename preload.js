@@ -224,6 +224,7 @@ const updateSubjects = (dataFromApp, idClass) =>{
           instance.classes[i].subjects[j].divided = JSON.parse(dataFromApp).divided;
           instance.classes[i].subjects[j].subgroups = JSON.parse(dataFromApp).subgroups;
           instance.classes[i].subjects[j].rooms = JSON.parse(dataFromApp).rooms;
+          instance.classes[i].subjects[j].antiSubjects = JSON.parse(dataFromApp).antiSubjects;
 
           //diminui tamanho de array de professores
 
@@ -458,12 +459,26 @@ const removeSubjects = (idSubject, idClass)=>{
   instance.classes[idClass].subjects = instance.classes[idClass].subjects.filter(obj => obj.id != idSubject)
 
   //reorganiza ids das matérias
-
   for(var i = 0; i < instance.classes[idClass].subjects.length; ++i){
     if(instance.classes[idClass].subjects[i].id > idSubject){
       instance.classes[idClass].subjects[i].id --
     }
   }
+
+  
+  //remove e atualiza associações
+  for(var i = 0; i < instance.classes[idClass].subjects.length; ++i){
+
+      instance.classes[idClass].subjects[i].antiSubjects = instance.classes[idClass].subjects[i].antiSubjects.filter(obj => obj != idSubject)
+      for(var k = 0; k < instance.classes[idClass].subjects[i].antiSubjects.length; ++k){
+        if(instance.classes[idClass].subjects[i].antiSubjects[k] > idSubject){
+          instance.classes[idClass].subjects[i].antiSubjects[k] --
+        }
+      }
+    }
+  
+
+
 
   fs.writeFileSync('./packages/app/src/dataexample.json', JSON.stringify(instance, null, 3), 'utf-8')
 

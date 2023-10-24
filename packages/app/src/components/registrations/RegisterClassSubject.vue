@@ -6,19 +6,37 @@
 
 
         mounted(){
-            const selectBtn2 = document.querySelector(".multiselect-rooms-btn");
+            const selectBtn2 = document.querySelector(".multiselect-rooms-btn")
 
             selectBtn2.addEventListener("click", ()=>{
                 selectBtn2.classList.toggle("open")
             })
 
+            const selectBtn = document.querySelector(".multiselect-subjects-btn")
+
+            selectBtn.addEventListener("click", ()=>{
+                selectBtn.classList.toggle("open")
+            })
+
             this.options = JSON.parse(window.searchFile()).rooms
+            for(var i = 0; i < JSON.parse(window.searchFile()).classes.length; ++i){
+                if(JSON.parse(window.searchFile()).classes[i].id == this.classID){
+                    this.subjects = JSON.parse(window.searchFile()).classes[i].subjects
+                }
+            }
+            console.log("MATERIAS")
+            console.log(this.subjects)
+            console.log("SALAS")
+            console.log(this.options)
         },
 
         data() {
             return {
                 subjectsInstance : [],
                 options: [],
+                subjects: [],
+                optionsChosenSubjects: [],
+                chosenSubjects: [],
                 chosenRooms : [],
                 optionsChosenRooms: [],
                 isRegistered : false
@@ -48,6 +66,12 @@
                         }
                     }
 
+                    for(var i = 0; i < this.optionsChosenSubjects.length; ++i){
+                        if(this.optionsChosenSubjects[i] == true){
+                            this.chosenSubjects.push(i)
+                        }
+                    }
+
                     var id;
                     if(this.subjectsInstance.length>0){
                         var id = this.subjectsInstance[parseInt(this.subjectsInstance.length)-1]['id']+1
@@ -64,6 +88,7 @@
                         divided: JSON.parse(this.divided),
                         subgroups: parseInt(this.subgroups),
                         rooms: this.chosenRooms,
+                        antiSubjects: this.chosenSubjects,
                         teachers: []
                     }
 
@@ -150,8 +175,24 @@
                     </li>
                 </ul>
             </div>
+            <br>
 
-        
+            <div class="mb-3">
+                <label class="form-label">Prefiro que não seja no mesmo dia que</label>
+            </div>
+
+            <div class="multiselect-container">
+                <div class="multiselect-subjects-btn">
+                    <img src="../../assets/down-arrow.png">
+                </div>
+
+                <ul class="multiselect-list-items">
+                    <li class="multiselect-item" v-for="item in this.subjects" :key="item.id">
+                        <input v-model = optionsChosenSubjects[item.id] value={{item.id}} type="checkbox"/>
+                        <span class="multiselect-item-text">{{item.name}}</span>
+                    </li>
+                </ul>
+            </div>
 
             <br>
             
@@ -180,6 +221,12 @@
 
     }
 
+    .multiselect-subjects-btn>img{
+        width: 20px;
+        margin-left: auto; 
+
+    }
+
     .multiselect-list-items{
         position: relative;
         background-color: #fff;
@@ -189,6 +236,27 @@
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         display: none;
         text-align: left;
+    }
+
+    .multiselect-subjects-btn.open ~ .multiselect-list-items{
+        display: block;
+    }
+
+    .multiselect-subjects-btn{
+        width: 100%;
+        display: flex;
+        height: 40px;
+        align-items: center;
+        padding: 0 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1.4px solid #dfe3e7;
+    }
+
+    .multiselect-subjects-btn .multiselect-btn-text{
+        font-size: 17px;
+        font-weight: 400;
+        color: #333;
     }
 
 
