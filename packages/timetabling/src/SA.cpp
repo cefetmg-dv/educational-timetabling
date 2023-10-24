@@ -164,7 +164,30 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
     }
 
     //Evitar aulas de eixos parecidos de forma consecutiva para uma mesma turma (sem dados suficientes para esse)
-
+    for(size_t i = 0; i < schedules.size(); ++i){
+        for(size_t j = 0; j < data["events"].size(); ++j){
+            if(data["events"][j]["id"] == i){
+                for(size_t k = 0; k < data["classes"].size(); ++k){
+                    if(data["classes"][k]["id"] == data["events"][j]["class"]){
+                        for(size_t l = 0; l < data["classes"][k]["subjects"].size(); ++l){
+                            if(data["classes"][k]["subjects"][l] == data["events"][j]["subject"]){
+                                for(size_t m = 0; m < data["classes"][k]["subjects"][l]["antiSubjects"].size(); ++m){
+                                    //a partir daqui falta verificar se para aqueles antiSubjects tenho um depois dessa aula
+                                    for(size_t n = 0; n < data["events"].size(); ++n){
+                                        if(data["events"][n]["id"] == i+1 && i+1 != schedules.size()){
+                                            if(data["events"][n]["subject"] == data["classes"][k]["subjects"][l]["antiSubjects"][m]){
+                                                finalValue += softWeigth;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 
     //Evitar dias sem aulas para determinadas turmas

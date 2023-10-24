@@ -464,7 +464,11 @@
                   0
                ],
                "antiSubjects": [],
-               "teachers": []
+               "teachers": [
+                  1,
+                  1,
+                  1
+               ]
             },
             {
                "id": 2,
@@ -477,7 +481,10 @@
                   1
                ],
                "antiSubjects": [],
-               "teachers": []
+               "teachers": [
+                  4,
+                  4
+               ]
             },
             {
                "id": 3,
@@ -490,7 +497,10 @@
                   1
                ],
                "antiSubjects": [],
-               "teachers": []
+               "teachers": [
+                  0,
+                  2
+               ]
             },
             {
                "id": 4,
@@ -507,7 +517,10 @@
                   2,
                   3
                ],
-               "teachers": []
+               "teachers": [
+                  2,
+                  1
+               ]
             }
          ]
       },
@@ -665,73 +678,101 @@
          "class": 1,
          "subject": 0,
          "subgroup": 2,
-         "teacher": 0
+         "teacher": 2
       },
       {
          "id": 15,
          "class": 1,
          "subject": 0,
          "subgroup": 2,
-         "teacher": 0
+         "teacher": 2
       },
       {
          "id": 16,
          "class": 1,
          "subject": 1,
          "subgroup": 2,
-         "teacher": 0
+         "teacher": 1
       },
       {
          "id": 17,
          "class": 1,
          "subject": 1,
          "subgroup": 2,
-         "teacher": 0
+         "teacher": 1
       },
       {
          "id": 18,
          "class": 1,
          "subject": 1,
          "subgroup": 2,
-         "teacher": 0
+         "teacher": 1
       },
       {
          "id": 19,
          "class": 1,
          "subject": 2,
          "subgroup": 2,
-         "teacher": 2
+         "teacher": 4
       },
       {
          "id": 20,
          "class": 1,
          "subject": 2,
          "subgroup": 2,
-         "teacher": 2
+         "teacher": 4
       },
       {
          "id": 21,
+         "class": 1,
+         "subject": 3,
+         "subgroup": 2,
+         "teacher": 0
+      },
+      {
+         "id": 22,
+         "class": 1,
+         "subject": 3,
+         "subgroup": 2,
+         "teacher": 2
+      },
+      {
+         "id": 23,
+         "class": 1,
+         "subject": 4,
+         "subgroup": 2,
+         "teacher": 2
+      },
+      {
+         "id": 24,
+         "class": 1,
+         "subject": 4,
+         "subgroup": 2,
+         "teacher": 1
+      },
+      {
+         "id": 25,
          "class": 2,
          "subject": 0,
          "subgroup": 2,
          "teacher": 0
       },
       {
-         "id": 22,
+         "id": 26,
          "class": 4,
          "subject": 0,
          "subgroup": 2,
          "teacher": 2
       },
       {
-         "id": 23,
+         "id": 27,
          "class": 4,
          "subject": 0,
          "subgroup": 2,
          "teacher": 0
       },
       {
-         "id": 24,
+         "id": 28,
          "class": 4,
          "subject": 0,
          "subgroup": 2,
