@@ -30,6 +30,9 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
     int professor2 = 0;
     int timeslot1 = 0;
     int timeslot2 = 0;
+    int classesQuantity = 0;
+    std::vector<bool> daysWithEventPerClass(7);
+    int contDaysWithEventPerClass = 0 ;
 
     //RESTRIÇÕES RÍGIDAS
 
@@ -191,30 +194,58 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
 
 
     //Evitar dias sem aulas para determinadas turmas
-    /*
-    for(size_t i = 0; i < schedules.size(); ++i){
-        //pega id da class1
-        for(size_t k = 0; k < data["events"].size(); ++k){
-            if(data["events"][k]["id"] == i){
-                class1 = data["events"][k]["class"];
-            }
-        }
-        for(size_t j = 0; j < schedules.size(); ++j){
-            //pega id da class2
-            for(size_t k = 0; k < data["events"].size(); ++k){
-                if(data["events"][k]["id"] == j){
-                    class2 = data["events"][k]["class"];
-                }
-            }
-            if(class1 == class2 && i != j){
-                for(size_t k = 0; k < data["timeslots"].size(); ++k){
-                    if(data["timeslots"][k]["day"] == 0){
 
-                    }    
+    for(size_t i = 0; i < schedules.size(); ++i){
+        for(size_t j = 0; j < data["events"].size(); ++j){
+            if(data["events"][j]["id"] == i){
+                if(data["events"][j]["class"] > classesQuantity){
+                    classesQuantity = data["events"][j]["class"];
                 }
             }
         }
-    }*/
+    }
+    for(size_t i = 0; i < classesQuantity; ++i){
+        for(size_t j = 0; j < daysWithEventPerClass.size(); ++j){
+            daysWithEventPerClass[j] = false;
+        }
+        contDaysWithEventPerClass = 0;
+        for(size_t j = 0; j < schedules.size(); ++j){
+            for(size_t k = 0; k < data["events"].size(); ++k){
+                if(data["events"][k]["id"] == j && data["events"][k]["class"] == i){
+                    for(size_t l = 0; l < data["timeslots"].size(); ++l){
+                        if(data["timeslots"][l]["id"] == data["events"][k]["timeslots"]){
+                            if(data["timeslots"][l]["day"] == 0){
+                                daysWithEventPerClass[0] = true;
+                            }else if(data["timeslots"][l]["day"] == 1){
+                                daysWithEventPerClass[1] = true;
+                            }else if(data["timeslots"][l]["day"] == 2){
+                                daysWithEventPerClass[2] = true;
+                            }else if(data["timeslots"][l]["day"] == 3){
+                                daysWithEventPerClass[3] = true;
+                            }else if(data["timeslots"][l]["day"] == 4){
+                                daysWithEventPerClass[4] = true;
+                            }else if(data["timeslots"][l]["day"] == 5){
+                                daysWithEventPerClass[5] = true;
+                            }else if(data["timeslots"][l]["day"] == 6){
+                                daysWithEventPerClass[6] = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        for(size_t j = 0; j < daysWithEventPerClass.size(); ++j){
+            if(daysWithEventPerClass[j] == true){
+                contDaysWithEventPerClass ++;
+            }
+        }
+        if(contDaysWithEventPerClass < 6){
+            finalValue += softWeigth;
+        }
+    }
+       
+    
+  
 
     //preferencias de professores (olhar esse peso)
     for(size_t i = 0; i < schedules.size(); ++i){
