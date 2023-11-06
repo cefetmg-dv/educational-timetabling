@@ -461,6 +461,24 @@
             "name": "316",
             "category": "Laboratório",
             "unavailability": []
+        },
+        {
+            "id": 34,
+            "name": "323",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 35,
+            "name": "305",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 36,
+            "name": "309",
+            "category": "Laboratório",
+            "unavailability": []
         }
     ],
     "teachers": [
@@ -1656,7 +1674,7 @@
         },
         {
             "id": 6,
-            "name": "Eng. Computação FLEX",
+            "name": "FLEX",
             "subjects": [
                 {
                     "id": 0,
@@ -1696,7 +1714,7 @@
                     "id": 2,
                     "name": "Cálculo com funções de Variáveis Reais",
                     "acronym": "CFVR",
-                    "events": 2,
+                    "events": 3,
                     "divided": false,
                     "subgroups": 1,
                     "rooms": [
@@ -1705,6 +1723,7 @@
                     ],
                     "antiSubjects": [],
                     "teachers": [
+                        4,
                         4,
                         4
                     ]
@@ -2322,9 +2341,912 @@
                         24
                     ]
                 }
-
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Design de Moda OPT-2",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Modelagem e Confecção de Acessórios",
+                    "acronym": "MCAM-OPT",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        50,
+                        50
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "name": "Eng. Mecatrônica 2",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Programação de Computadores 2",
+                    "acronym": "PROGCOMP2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        1
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Laboratório de Programação de Computadores 2",
+                    "acronym": "LABPROGCOMP2",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      7,
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        70,
+                        70
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Fundamentos de Mecânica",
+                    "acronym": "FM",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0,
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                       9,
+                       9 
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Metodologia Científica",
+                    "acronym": "MEC",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        27
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Filosofia da Tecnologia",
+                    "acronym": "FT",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      18
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        0
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Laboratório de Sistemas Digitais 2",
+                    "acronym": "LABSD2",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        20,
+                        20
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Cálculo com funções de Várias Variáveis",
+                    "acronym": "CFVV",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        4,
+                        4
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Sistemas Digitais 2",
+                    "acronym": "SD2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        22
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Planejamento e Prática de V.",
+                    "acronym": "PPExp",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      2,
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        30,
+                        30
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Integração de Séries",
+                    "acronym": "EdS",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      31
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        7,
+                        7
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "name": "Eng. Mecatrônica 4",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Microprocessadores e Microcontroladores",
+                    "acronym": "MicroprMcon",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Laboratório de Microprocessadores e Microcontroladores",
+                    "acronym": "LabMicroprMcon",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Circuitos 1",
+                    "acronym": "CIRC1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13,
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        29,
+                        29
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Mecânica dos Sólidos 1",
+                    "acronym": "MECSOL1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        26,
+                        26
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Álgebra Linear",
+                    "acronym": "AlgeLin",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      18
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        2,
+                        2
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Cálculo IV",
+                    "acronym": "CALCIV",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15,
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        2,
+                        2
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Física 3",
+                    "acronym": "FIS3",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6,
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        11,
+                        11
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Laboratório de Circuitos Elétricos 1",
+                    "acronym": "LABCIRCE1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        42,
+                        42
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Física Experimental 2",
+                    "acronym": "FISEXP2",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        9,
+                        9
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "name": "Eng. Mecatrônica 6",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Cinemática e Dinâmica de Maq.",
+                    "acronym": "CinDinMaq",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        18,
+                        18
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Laboratório de Materiais Construção M.",
+                    "acronym": "LabMCM",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      30
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        34
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Elementos de Máquinas",
+                    "acronym": "ElemMaq",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        26,
+                        26
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Laboratório Eletrônica 1",
+                    "acronym": "LabElet1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      17
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        30,
+                        30
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Eletrônica 1",
+                    "acronym": "Elet1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13,
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        30,
+                        30
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Análise Sistemas Lineares",
+                    "acronym": "ASistLin",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        33,
+                        33
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Laboratório de Análise de Sistemas Lineares",
+                    "acronym": "LASL",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      21
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        37
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Fenômenos dos Transportes",
+                    "acronym": "FenTra",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                        1,
+                        0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        32,
+                        32
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Laboratório de Fenômenos dos Transportes",
+                    "acronym": "LabFenTran",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      34
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        75,
+                        75
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Materiais de Construção Mecânica",
+                    "acronym": "MCM",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        34
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "name": "Eng. Mecatrônica 8",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Conv. Eletromec. Energia",
+                    "acronym": "CEE",
+                    "events": 3,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        35,
+                        35,
+                        35
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Instrumentação Industrial",
+                    "acronym": "Inst.Ind",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      18
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        42
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Laboratório de Controle Digital",
+                    "acronym": "Lab.CD",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      21
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Controle Digital",
+                    "acronym": "ContDig",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        39,
+                        39
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Laboratório de Robótica Industrial",
+                    "acronym": "Lab.Rob.Ind",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      35
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        30
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Laboratório Conversão El.",
+                    "acronym": "LabConv",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      32
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        35
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Robótica Industrial",
+                    "acronym": "ROBIND",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      31
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        30
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Laboratório de Instrumentação Industrial",
+                    "acronym": "Lab.Inst.Ind",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      20
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        33
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "name": "Eng. Mecatrônica 10",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Estágio Supervisionado",
+                    "acronym": "ESTSUP",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        38
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Gestão Ambiental",
+                    "acronym": "GestAmb",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      11
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        75
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Trabalho de Conclusão de Curso 2",
+                    "acronym": "TCC2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        37
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Organização Empresarial",
+                    "acronym": "Org.Emp",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      12
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        17
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "name": "Eng. Mecatrônica OPT",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Inglês IV",
+                    "acronym": "IngIV",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        44
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Cogeração",
+                    "acronym": "Cogera-OPT",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        32
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Controle Moderno",
+                    "acronym": "OPT-CONT.MOD",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      0,
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        39,
+                        39
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Robótica Móvel",
+                    "acronym": "RM",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      2,
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        33,
+                        22
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Projeto Microcontroladores",
+                    "acronym": "PMicro",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      7
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        20,
+                        20
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Manutenção, Gestão e Segurança",
+                    "acronym": "MGSOpt",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        18
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Vibrações",
+                    "acronym": "Vib",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        18
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Int. Inteligência Artificial",
+                    "acronym": "IA",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        19,
+                        19
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Prototipagem Rápida",
+                    "acronym": "PR",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      36
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Inglês 2",
+                    "acronym": "ING2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2 
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        43
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "Educação Corporal",
+                    "acronym": "EeFH",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      27
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        76
+                    ]
+                },
+                {
+                    "id": 11,
+                    "name": "Tópicos Especiais DV",
+                    "acronym": "DV",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        18,
+                        18
+                    ]
+                }
+            
             ]
         }
+
+        
+
 
     ],
     "events":[],
