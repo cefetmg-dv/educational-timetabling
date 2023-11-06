@@ -913,7 +913,7 @@
             "name": "Leonardo",
             "unavailability": [],
             "preferences": []
-        },
+        }
     ],
     "classes":[
         {
@@ -1033,7 +1033,189 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 1,
+            "name": "Eng. Computação 3",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Métodos Numéricos Computacionais",
+                    "acronym": "MNC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      9 
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      7,
+                      7
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Arquitetura e Organização de Computadores 1",
+                    "acronym": "AOC1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      8,
+                      8
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Fisíca 2",
+                    "acronym": "FIS2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      9,
+                      9
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Algoritmos e Estruturas de Dados 1",
+                    "acronym": "AED1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0,
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      10,
+                      10
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Laboratório de Algoritmos e Estruturas de Dados 1",
+                    "acronym": "LAED1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      7,
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      10,
+                      10
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Laboratório de Arquitetura e Organização de Computadores 1",
+                    "acronym": "AOC1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      7,
+                      7
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      8,
+                      8
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Cálculo 3",
+                    "acronym": "AOC1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      4,
+                      4
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Física Experimental 1",
+                    "acronym": "FISEXP1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      8,
+                      8
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      11,
+                      11
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Eng. Computação 5",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Banco de Dados 1",
+                    "acronym": "BD1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0,
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      12,
+                      12
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Princípios de Comunicação de Dados",
+                    "acronym": "PCD",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0,
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      12,
+                      12
+                    ]
+                }
+            ]
         }
+
     ],
     "events":[],
     "alreadyGeneratedEvents":[]
