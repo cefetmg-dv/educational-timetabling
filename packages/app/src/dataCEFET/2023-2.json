@@ -1,0 +1,1713 @@
+{
+    "timeslots": [
+        {
+            "id": 0,
+            "day": 1,
+            "shift": 0,
+            "slot": 0,
+            "description": "07h00 - 08h40"
+        },
+        {
+            "id": 1,
+            "day": 1,
+            "shift": 0,
+            "slot": 1,
+            "description": "08h55 - 10h35"
+        },
+        {
+            "id": 2,
+            "day": 1,
+            "shift": 0,
+            "slot": 2,
+            "description": "10h50 - 12h30"
+        },
+        
+        {
+            "id": 3,
+            "day": 1,
+            "shift": 1,
+            "slot": 0,
+            "description": "13h50 - 15h30"
+        },
+        {
+            "id": 4,
+            "day": 1,
+            "shift": 1,
+            "slot": 1,
+            "description": "15h50 - 17h30"
+        },
+        {
+            "id": 5,
+            "day": 1,
+            "shift": 2,
+            "slot": 0,
+            "description": "19h00 - 20h40"
+        },
+        {
+            "id": 6,
+            "day": 1,
+            "shift": 2,
+            "slot": 1,
+            "description": "20h55 - 22h35"
+        },
+        {
+            "id": 7,
+            "day": 2,
+            "shift": 0,
+            "slot": 0,
+            "description": "07h00 - 08h40"
+        },
+        {
+            "id": 8,
+            "day": 2,
+            "shift": 0,
+            "slot": 1,
+            "description": "08h55 - 10h35"
+        },
+        {
+            "id": 9,
+            "day": 2,
+            "shift": 0,
+            "slot": 2,
+            "description": "10h50 - 12h30"
+        },
+        {
+            "id": 10,
+            "day": 2,
+            "shift": 1,
+            "slot": 0,
+            "description": "13h50 - 15h30"
+        },
+        {
+            "id": 11,
+            "day": 2,
+            "shift": 1,
+            "slot": 1,
+            "description": "15h50 - 17h30"
+        },
+        {
+            "id": 12,
+            "day": 2,
+            "shift": 2,
+            "slot": 0,
+            "description": "19h00 - 20h40"
+        },
+        {
+            "id": 13,
+            "day": 2,
+            "shift": 2,
+            "slot": 1,
+            "description": "20h55 - 22h35"
+        },
+        {
+            "id": 14,
+            "day": 3,
+            "shift": 0,
+            "slot": 0,
+            "description": "07h00 - 08h40"
+        },
+        {
+            "id": 15,
+            "day": 3,
+            "shift": 0,
+            "slot": 1,
+            "description": "08h55 - 10h35"
+        },
+        {
+            "id": 16,
+            "day": 3,
+            "shift": 0,
+            "slot": 2,
+            "description": "10h50 - 12h30"
+        },
+        {
+            "id": 17,
+            "day": 3,
+            "shift": 1,
+            "slot": 0,
+            "description": "13h50 - 15h30"
+        },
+        {
+            "id": 18,
+            "day": 3,
+            "shift": 1,
+            "slot": 1,
+            "description": "15h50 - 17h30"
+        },
+        {
+            "id": 19,
+            "day": 3,
+            "shift": 2,
+            "slot": 0,
+            "description": "19h00 - 20h40"
+        },
+        {
+            "id": 20,
+            "day": 3,
+            "shift": 2,
+            "slot": 1,
+            "description": "20h55 - 22h35"
+        },
+        {
+            "id": 21,
+            "day": 4,
+            "shift": 0,
+            "slot": 0,
+            "description": "07h00 - 08h40"
+        },
+        {
+            "id": 22,
+            "day": 4,
+            "shift": 0,
+            "slot": 1,
+            "description": "08h55 - 10h35"
+        },
+        {
+            "id": 23,
+            "day": 4,
+            "shift": 0,
+            "slot": 2,
+            "description": "10h50 - 12h30"
+        },
+        {
+            "id": 24,
+            "day": 4,
+            "shift": 1,
+            "slot": 0,
+            "description": "13h50 - 15h30"
+        },
+        {
+            "id": 25,
+            "day": 4,
+            "shift": 1,
+            "slot": 1,
+            "description": "15h50 - 17h30"
+        },
+        {
+            "id": 26,
+            "day": 4,
+            "shift": 2,
+            "slot": 0,
+            "description": "19h00 - 20h40"
+        },
+        {
+            "id": 27,
+            "day": 4,
+            "shift": 2,
+            "slot": 1,
+            "description": "20h55 - 22h35"
+        },
+        {
+            "id": 28,
+            "day": 5,
+            "shift": 0,
+            "slot": 0,
+            "description": "07h00 - 08h40"
+        },
+        {
+            "id": 29,
+            "day": 5,
+            "shift": 0,
+            "slot": 1,
+            "description": "08h55 - 10h35"
+        },
+        {
+            "id": 30,
+            "day": 5,
+            "shift": 0,
+            "slot": 2,
+            "description": "10h50 - 12h30"
+        },
+        {
+            "id": 31,
+            "day": 5,
+            "shift": 1,
+            "slot": 0,
+            "description": "13h50 - 15h30"
+        },
+        {
+            "id": 32,
+            "day": 5,
+            "shift": 1,
+            "slot": 1,
+            "description": "15h50 - 17h30"
+        },
+        {
+            "id": 33,
+            "day": 5,
+            "shift": 2,
+            "slot": 0,
+            "description": "19h00 - 20h40"
+        },
+        {
+            "id": 34,
+            "day": 5,
+            "shift": 2,
+            "slot": 1,
+            "description": "20h55 - 22h35"
+        }
+    ],
+    "rooms_category": [
+        "Sala de Aula",
+        "Laboratório"
+    ],
+    "rooms": [
+        {
+           "id": 0,
+           "name": "Sala 306",
+           "category": "Sala de Aula",
+           "unavailability": []
+        },
+        {
+           "id": 1,
+           "name": "Sala 301",
+           "category": "Sala de Aula",
+           "unavailability": []
+        },
+        {
+            "id": 2,
+            "name": "Sala 303",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 4,
+            "name": "Sala 604",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 5,
+            "name": "Sala 602",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 6,
+            "name": "Sala 314",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 7,
+            "name": "Sala 304",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 8,
+            "name": "Sala 612",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 9,
+            "name": "Sala 617",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 10,
+            "name": "Sala 606",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 11,
+            "name": "Sala 618",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 12,
+            "name": "Sala 616",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 13,
+            "name": "Sala 312",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 14,
+            "name": "Sala 619",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 15,
+            "name": "Sala 621",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 16,
+            "name": "Sala 317",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 17,
+            "name": "Sala 310",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 18,
+            "name": "Sala 620",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 18,
+            "name": "Sala 620",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 19,
+            "name": "GM",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 19,
+            "name": "GM",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 20,
+            "name": "Sala 321",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 21,
+            "name": "Sala 313",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 22,
+            "name": "Sala 322",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 23,
+            "name": "Sala 320B",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 24,
+            "name": "Sala 608",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 25,
+            "name": "Sala 324",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 26,
+            "name": "Sala 624",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 27,
+            "name": "QP",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 28,
+            "name": "609",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 29,
+            "name": "622",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 30,
+            "name": "319",
+            "category": "Sala de Aula",
+            "unavailability": []
+        },
+        {
+            "id": 31,
+            "name": "626",
+            "category": "Laboratório",
+            "unavailability": []
+        },
+        {
+            "id": 32,
+            "name": "302",
+            "category": "Laboratório",
+            "unavailability": []
+        }
+    ],
+    "teachers": [
+        {
+            "id": 0,
+            "name": "José Geraldo",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 1,
+            "name": "Eduardo",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 2,
+            "name": "Bruno",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 3,
+            "name": "Marcelo",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 4,
+            "name": "Tamara",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 5,
+            "name": "Charlene",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 6,
+            "name": "Charlene",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 7,
+            "name": "Guilherme",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 8,
+            "name": "Christian",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 9,
+            "name": "Erildo",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 10,
+            "name": "Michel",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 11,
+            "name": "Rafael",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 12,
+            "name": "André M.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 13,
+            "name": "Willyan",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 14,
+            "name": "Thabbatta",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 15,
+            "name": "Edilson",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 16,
+            "name": "Alisson",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 17,
+            "name": "Antônio",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 18,
+            "name": "Lúcio",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 19,
+            "name": "Luiz C.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 20,
+            "name": "Alan",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 21,
+            "name": "Michel",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 22,
+            "name": "Adriano",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 23,
+            "name": "Alberto",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 24,
+            "name": "Rodrigo Castro",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 25,
+            "name": "Rodrigo A.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 26,
+            "name": "Juliano",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 27,
+            "name": "Fernando",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 28,
+            "name": "Fábio",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 29,
+            "name": "André",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 30,
+            "name": "Renato",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 31,
+            "name": "Emerson",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 32,
+            "name": "Evandro",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 33,
+            "name": "Jean",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 34,
+            "name": "Marlon P.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 35,
+            "name": "Cláudio S.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 36,
+            "name": "Cláudio L.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 37,
+            "name": "Lucas",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 38,
+            "name": "Márcio",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 39,
+            "name": "Valter",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 40,
+            "name": "Wagner",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 41,
+            "name": "Marlon T.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 42,
+            "name": "Luis F.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 43,
+            "name": "Natália",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 44,
+            "name": "Maria Isabel",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 45,
+            "name": "Lucilia",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 46,
+            "name": "Joanice",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 47,
+            "name": "Bú",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 48,
+            "name": "Clícia",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 49,
+            "name": "Rodrigo",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 50,
+            "name": "Hemilly",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 51,
+            "name": "Tumati",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 52,
+            "name": "Maria dos Anjos",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 53,
+            "name": "Patrícia",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 54,
+            "name": "Dênis",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 55,
+            "name": "Wanderson",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 56,
+            "name": "Thiago",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 57,
+            "name": "Andrea",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 58,
+            "name": "Nádia",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 59,
+            "name": "Daniel",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 60,
+            "name": "Luis Carlos",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 62,
+            "name": "Fernanda",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 63,
+            "name": "Ricardo",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 64,
+            "name": "Wesley",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 65,
+            "name": "Flávio",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 66,
+            "name": "Alba",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 67,
+            "name": "Iza",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 68,
+            "name": "Higor",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 69,
+            "name": "Rabelo",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 70,
+            "name": "Douglas",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 71,
+            "name": "Weslley",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 72,
+            "name": "Diego",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 73,
+            "name": "",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 74,
+            "name": "Luís F.",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 75,
+            "name": "Ralney",
+            "unavailability": [],
+            "preferences": []
+        },
+        {
+            "id": 76,
+            "name": "Leonardo",
+            "unavailability": [],
+            "preferences": []
+        }
+    ],
+    "classes":[
+        {
+            "id": 0,
+            "name": "Eng. Computação 2",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Integração e Séries",
+                    "acronym": "IntS",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      7,
+                      7
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Programação Orientada a Objetos",
+                    "acronym": "POO",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      1
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Fundamentos de Mecânica",
+                    "acronym": "FM",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6,
+                      13 
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      28,
+                      28
+                    ]
+                }, 
+                {
+                    "id": 3,
+                    "name": "Metodologia Científica",
+                    "acronym": "MC",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      17
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Sistemas Digitais para Computação",
+                    "acronym": "SDC",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      22
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Cálculo com funções de Várias Variáveis I",
+                    "acronym": "CFVVI",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13,
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      4,
+                      4
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Laboratório de Sistemas Digitais para Computação",
+                    "acronym": "POO",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      20,
+                      20
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Laboratório de Programação Orientada a Objetos",
+                    "acronym": "POO",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      1,
+                      1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Eng. Computação 4",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Algoritmos e Estruturas de Dados 2",
+                    "acronym": "AEDS2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      10,
+                      10
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Laboratório de Algoritmos e Estruturas de Dados 2",
+                    "acronym": "LAEDS2",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      12,
+                      12
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Linguagens de Programação",
+                    "acronym": "LP",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6                     
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      72
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Laboratório de Linguagens de Programação",
+                    "acronym": "LLP",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      72,
+                      72
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Física Experimental 2",
+                    "acronym": "FE2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      8
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      9,
+                      9
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Cálculo IV",
+                    "acronym": "CALC4",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      2,
+                      2
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Arquitetura e Organização de Computadores 2",
+                    "acronym": "AOCI2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      8,
+                      8
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Laboratório de Arquitetura e Organização de Computadores 2",
+                    "acronym": "LAOCI2",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      7
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        8,
+                        8
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Física 3",
+                    "acronym": "FIS3",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        11,
+                        11
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Eng. Computação 6",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Engenharia de Software 1",
+                    "acronym": "ES1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        68,
+                        68
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Laboratório de Engenharia de Software 1",
+                    "acronym": "LES1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      5,
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        68,
+                        68
+                    ]
+                },
+                {
+                    "id": 2 ,
+                    "name": "Controle de Sistemas Dinâmicos",
+                    "acronym": "CSD",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6,
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        14,
+                        14
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Laboratório de Controle de Sistemas Dinâmicos",
+                    "acronym": "LCSD",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        14,
+                        14
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Sistemas Operacionais",
+                    "acronym": "SO",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        10,
+                        10
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Laboratório de Sistemas Operacionais",
+                    "acronym": "LSO",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      24,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        69,
+                        69
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Redes de Computadores 1",
+                    "acronym": "RC1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6,
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Laboratório de Redes de Computadores 1",
+                    "acronym": "LRC1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      28
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Eng. Computação 8",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Computação Gráfica",
+                    "acronym": "CG",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        68,
+                        68
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Otimização 2",
+                    "acronym": "O2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6,
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        12,
+                        12
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Inteligência Computacional",
+                    "acronym": "IC",
+                    "events": 3,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        16,
+                        16,
+                        16
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Interação Humano Computador",
+                    "acronym": "IHC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5,
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        23,
+                        23
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Sistemas Distribuídos",
+                    "acronym": "SD",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5,
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Introdução à Administração",
+                    "acronym": "ADM",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        17
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Eng. Computação 10",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Introdução à Sociologia",
+                    "acronym": "SOC",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        0
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Contexto Social e Profissional da Engenharia de Computação",
+                    "acronym": "Contexto",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        72
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Trabalho De Conclusão de Curso 2",
+                    "acronym": "TCC2",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        10
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Estágio Supervisionado",
+                    "acronym": "ES",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        23
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Eng. Computação OPT",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Análise de Circuitos Elétricos",
+                    "acronym": "CIRC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1,
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        72,
+                        72
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Inteligência Computacional para Otimização",
+                    "acronym": "ICO",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        12,
+                        12
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Robótica Móvel",
+                    "acronym": "RM",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      2,
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        33,
+                        22
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Inglês Instrumental 1",
+                    "acronym": "ING.I1",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        44
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Python",
+                    "acronym": "PYTHON",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        70,
+                        70
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Programação Web 1",
+                    "acronym": "PW1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      5,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        69,
+                        69
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Leitura e Produção de Texto",
+                    "acronym": "LPTA",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      22
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        66
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Técnica Assistiva",
+                    "acronym": "TASS-TEHCSA",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        58
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Eng. Computação FLEX",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Geometria Analítica e Álgebra Linear",
+                    "acronym": "GAAL",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      12,
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        7,
+                        7
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Cálculo 3",
+                    "acronym": "CALC3",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2,
+                      11
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        31,
+                        31
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Cálculo com funções de Variáveis Reais",
+                    "acronym": "CFVR",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      12,
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        4,
+                        4
+                    ]
+                }
+            ]
+        }
+    ],
+    "events":[],
+    "alreadyGeneratedEvents":[]
+}
+
+        
