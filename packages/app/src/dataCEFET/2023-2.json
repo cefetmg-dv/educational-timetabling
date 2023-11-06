@@ -455,6 +455,12 @@
             "name": "302",
             "category": "Laboratório",
             "unavailability": []
+        },
+        {
+            "id": 33,
+            "name": "316",
+            "category": "Laboratório",
+            "unavailability": []
         }
     ],
     "teachers": [
@@ -730,7 +736,7 @@
         },
         {
             "id": 45,
-            "name": "Lucilia",
+            "name": "Lucília",
             "unavailability": [],
             "preferences": []
         },
@@ -1704,7 +1710,622 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 7,
+            "name": "Design de Moda 2",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Tecnologia de Beneficiar",
+                    "acronym": "TBEN",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        47
+                        
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Modelagem Industrial 1 - G1",
+                    "acronym": "MOD1-G2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      25
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        46,
+                        46
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Modelagem Industrial 1 - G2",
+                    "acronym": "MOD1-G2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      23
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        46,
+                        46
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Desenho Técnico de Moda - G1",
+                    "acronym": "DTM - G1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      22
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        45,
+                        45
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Desenho Técnico de Moda - G2",
+                    "acronym": "DTM - G2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      22
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        45,
+                        45
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Computação Gráfica Aplicada à Moda",
+                    "acronym": "CGAM",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        51,
+                        51
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Laboratório de Criatividade",
+                    "acronym": "LC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      22
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        24,
+                        24
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Tecnologia da Produção 1 - G1",
+                    "acronym": "TP1 - G1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      23
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        52,
+                        52
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Tecnologia da Produção 1 - G2",
+                    "acronym": "TP1 - G2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      23
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        52,
+                        52
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "História da Indumentária",
+                    "acronym": "HIM",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        50       
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Design de Moda 4",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Moda, Semiótica e Comunicação",
+                    "acronym": "MSC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        48,
+                        48
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Projeto e Desenvolvimento de Coleções",
+                    "acronym": "PDCC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        24,
+                        24  
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "CAD Aplicado à Modelagem - G1",
+                    "acronym": "CAD - G1",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        54,
+                        54     
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "CAD Aplicado à Modelagem - G2",
+                    "acronym": "CAD - G2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        54,
+                        54     
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Design de Moda 6",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Estágio Supervisionado",
+                    "acronym": "ESUP",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                      46
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Modelagem e Conf. Mas",
+                    "acronym": "MCM",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      23
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        53,
+                        53     
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Gestão da Produção e Custo",
+                    "acronym": "GPC",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        15
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Vitrinismo e Visual Merc.",
+                    "acronym": "VITRI",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        48      
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Filosofia da Tecnologia",
+                    "acronym": "Fil",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      13
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        0    
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Projeto de Design Susten.",
+                    "acronym": "PDS",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      2
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        53,
+                        53   
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Design de Moda 8",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Trabalho De Conclusão de Curso 2",
+                    "acronym": "TCC2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        50
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Produção, Editorial e Desfile de Moda",
+                    "acronym": "PEDM",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        51
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Portfólio de Moda",
+                    "acronym": "PORT",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        51
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Modelagem e Protótipo",
+                    "acronym": "MPTCC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      33
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        53,
+                        53   
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Design de Moda EXTRA",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Prática de Protótipo 1",
+                    "acronym": "PPI1",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      23
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        53
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Prática de Protótipo 2",
+                    "acronym": "PPI2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      23
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        53
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Tecnologia da Produção 2",
+                    "acronym": "TP2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        52,
+                        52
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Design de Moda OPT-1",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Introdução à Economia",
+                    "acronym": "ECON-TECSA",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      12
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        15
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Startups",
+                    "acronym": "STARTUP-TEHCSA",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      12
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        17
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Criação de Acessórios",
+                    "acronym": "CAM-OPT",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      25
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        46,
+                        46
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Modelagem e Confecção de Acessórios",
+                    "acronym": "MCAM-OPT",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        50,
+                        50
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Técnicas Avançadas de Ilustração para Moda",
+                    "acronym": "TAIM-TEDM",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      22
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        45,
+                        45
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Fotografia e Vídeo",
+                    "acronym": "FVID-TEDM",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        24,
+                        24
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Consultoria de Moda e Es.",
+                    "acronym": "CME-OPT",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      0
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        48,
+                        48
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Computação Gráfica",
+                    "acronym": "CGRAF-TEDM",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        24
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Zero Waste X Consumo",
+                    "acronym": "ZWC-TEDM",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        54
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Design de Interiores",
+                    "acronym": "DINT-TEDM",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        24
+                    ]
+                }
+
+            ]
         }
+
     ],
     "events":[],
     "alreadyGeneratedEvents":[]
