@@ -937,6 +937,12 @@
             "name": "Leonardo",
             "unavailability": [],
             "preferences": []
+        },
+        {
+            "id": 77,
+            "name": "Miguel",
+            "unavailability": [],
+            "preferences": []
         }
     ],
     "classes":[
@@ -3241,7 +3247,794 @@
                         18
                     ]
                 }
-            
+            ]
+        },
+        {
+            "id": 19,
+            "name": "T. Int. Informática 1",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Artes",
+                    "acronym": "ART",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        48
+                    ]
+                },  
+                {
+                    "id": 1,
+                    "name": "Biologia",
+                    "acronym": "BIO",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        55,
+                        55
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Educação Física",
+                    "acronym": "EF",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      27
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        57,
+                        57
+                    ]
+                },  
+                {
+                    "id": 3,
+                    "name": "Filosofia",
+                    "acronym": "FIL",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        63
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Física",
+                    "acronym": "FIS",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        28,
+                        28
+                    ]
+                },  
+                {
+                    "id": 5,
+                    "name": "Geografia",
+                    "acronym": "GEO",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        58
+                    ]
+                }, 
+                {
+                    "id": 6,
+                    "name": "História",
+                    "acronym": "HIST",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        62
+                    ]
+                }, 
+                {
+                    "id": 7,
+                    "name": "Língua Estrangeira - Inglês",
+                    "acronym": "ING",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        44,
+                        44
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Língua Portuguesa",
+                    "acronym": "PORT",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        25
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Matemática",
+                    "acronym": "MAT",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        77,
+                        77
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "Química",
+                    "acronym": "QUI",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        24
+                    ]
+                },  
+                {
+                    "id": 11,
+                    "name": "Redação",
+                    "acronym": "RED",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      26
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        19
+                    ]
+                },   
+                {
+                    "id": 12,
+                    "name": "Fundamentos de Programação - G1",
+                    "acronym": "FP",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      24,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        56,
+                        56
+                    ]
+                }, 
+                {
+                    "id": 13,
+                    "name": "Fundamentos de Programação - G2",
+                    "acronym": "FP",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        56,
+                        56
+                    ]
+                }, 
+                {
+                    "id": 14,
+                    "name": "Fundamentos de Informática",
+                    "acronym": "FP",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      5,
+                      7
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        23,
+                        23
+                    ]
+                }, 
+                {
+                    "id": 15,
+                    "name": "Linguagens de Programação",
+                    "acronym": "LP",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      24
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "name": "T. Int. Informática 2",
+            "subjects": [
+        
+                {
+                    "id": 0,
+                    "name": "Biologia",
+                    "acronym": "BIO",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        55
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Educação Física",
+                    "acronym": "EF",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      27
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        76,
+                        76
+                    ]
+                },  
+                {
+                    "id": 2,
+                    "name": "Filosofia",
+                    "acronym": "FIL",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        63
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Física",
+                    "acronym": "FIS",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        11,
+                        11
+                    ]
+                },  
+                {
+                    "id": 4,
+                    "name": "Geografia",
+                    "acronym": "GEO",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        58,
+                        58
+                    ]
+                }, 
+                {
+                    "id": 5,
+                    "name": "História",
+                    "acronym": "HIST",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        65
+                    ]
+                }, 
+                {
+                    "id": 6,
+                    "name": "Língua Estrangeira - Inglês",
+                    "acronym": "ING",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        43
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Língua Portuguesa",
+                    "acronym": "PORT",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        27
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Matemática",
+                    "acronym": "MAT",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        64,
+                        64
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Química",
+                    "acronym": "QUI",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        67
+                    ]
+                },  
+                {
+                    "id": 10,
+                    "name": "Redação",
+                    "acronym": "RED",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        66
+                    ]
+                },
+                {
+                    "id": 11,
+                    "name": "Arquitetura e Manutenção de Computadores",
+                    "acronym": "AQC",
+                    "events": 3,
+                    "divided": true,
+                    "subgroups": 3,
+                    "rooms": [
+                      28
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        8,
+                        8,
+                        8
+                    ]
+                },
+                {
+                    "id": 12,
+                    "name": "Banco de Dados",
+                    "acronym": "BD",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      24,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        69,
+                        69
+                    ]
+                },  
+                {
+                    "id": 13,
+                    "name": "Empreendedorismo",
+                    "acronym": "EMP",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        17
+                    ]
+                },
+                {
+                    "id": 14,
+                    "name": "Linguagens de Programação",
+                    "acronym": "LP",
+                    "events": 3,
+                    "divided": true,
+                    "subgroups": 3,
+                    "rooms": [
+                      24,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59,
+                        59
+                    ]
+                },
+                {
+                    "id": 15,
+                    "name": "Programação Web 2",
+                    "acronym": "PW2",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        68,
+                        68
+                    ]
+                }
+            ] 
+        },
+        {
+            "id": 1,
+            "name": "T. Int. Informática 3",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Física",
+                    "acronym": "FIS",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        9
+                    ]
+                },  
+                {
+                    "id": 1,
+                    "name": "História",
+                    "acronym": "HIST",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        65
+                    ]
+                }, 
+                {
+                    "id": 2,
+                    "name": "Língua Estrangeira - Inglês",
+                    "acronym": "ING",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      6
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        43
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Língua Portuguesa",
+                    "acronym": "PORT",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        27
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Matemática",
+                    "acronym": "MAT",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        64
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Química",
+                    "acronym": "QUI",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        67
+                    ]
+                },  
+                {
+                    "id": 7,
+                    "name": "Redação",
+                    "acronym": "RED",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        19
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Sociologia",
+                    "acronym": "SOC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        62,
+                        62
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Redação",
+                    "acronym": "RED",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      15
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        19
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "Projeto Interdisciplinar",
+                    "acronym": "PID",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4,
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        3,
+                        13 
+                    ]
+                },
+                {
+                    "id": 11,
+                    "name": "Sistemas Operacionais - G1",
+                    "acronym": "SO",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        3,
+                        3 
+                    ]
+                },
+                {
+                    "id": 12,
+                    "name": "Sistemas Operacionais - G2",
+                    "acronym": "SO",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      10,
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        3,
+                        3 
+                    ]
+                },
+                {
+                    "id": 13,
+                    "name": "Tópicos Especiais em Informática",
+                    "acronym": "TEI",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        23,
+                        23 
+                    ]
+                },
+                {
+                    "id": 14,
+                    "name": "Redes de Computadores - G1",
+                    "acronym": "RC",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        28,
+                        28 
+                    ]
+                },
+                {
+                    "id": 15,
+                    "name": "Redes de Computadores - G2",
+                    "acronym": "RC",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      10
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        28,
+                        28 
+                    ]
+                },
+                {
+                    "id": 16,
+                    "name": "Progração para Dispositivos Móveis",
+                    "acronym": "PDM",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        69,
+                        69 
+                    ]
+                },
+                {
+                    "id": 17,
+                    "name": "Projeto de Sistemas",
+                    "acronym": "PSI",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        70,
+                        70 
+                    ]
+                }
             ]
         }
 
