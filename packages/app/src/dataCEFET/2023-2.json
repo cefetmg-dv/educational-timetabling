@@ -3766,7 +3766,7 @@
             ] 
         },
         {
-            "id": 1,
+            "id": 21,
             "name": "T. Int. Informática 3",
             "subjects": [
                 {
@@ -4036,10 +4036,257 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 22,
+            "name": "T. Not. Informática 1",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Programação para Web 1 - G1",
+                    "acronym": "PW1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4,
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        72,
+                        72
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Programação para Web 1 - G2",
+                    "acronym": "PW1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      4,
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        72,
+                        72
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Fundamentos de Informática",
+                    "acronym": "FUI",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      7
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        23,
+                        23
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Programação de Computadores 1",
+                    "acronym": "PC1",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      12
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        13
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Arquitetura e Manutenção de Computadores",
+                    "acronym": "AQC",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        8
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Sistemas Operacionais",
+                    "acronym": "SO",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      10,
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        3,
+                        3
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Empreendedorismo",
+                    "acronym": "EMP",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      12
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        17
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Redes de Computadores",
+                    "acronym": "RC",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      28
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        3,
+                        3
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Laboratório de Programação de Computadores 1",
+                    "acronym": "LPC1",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      10,
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        70,
+                        70
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "name": "T. Not. Informática 2",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Banco de Dados",
+                    "acronym": "BD",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        12,
+                        12
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Projeto de Sistemas",
+                    "acronym": "PSI",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        14
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Programação para Web 2",
+                    "acronym": "PW2",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        68,
+                        68
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Programação de Computadores 2",
+                    "acronym": "PC2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      14
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        70
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Projeto Interdisciplinar",
+                    "acronym": "PID",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        69,
+                        69
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Laboratório de Programação de Computadores 2",
+                    "acronym": "LPC2",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      5
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        68
+                    ]
+                }
+            ]
         }
-
-        
-
 
     ],
     "events":[],
