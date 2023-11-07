@@ -4286,7 +4286,398 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 24,
+            "name": "T. Not. Eletromecânica 1S",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Matemática Aplicada",
+                    "acronym": "MAP",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        32,
+                        32
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Mecânica Técnica",
+                    "acronym": "MEC",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        72,
+                        72
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Circuitos Elétricos",
+                    "acronym": "CEL",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        59,
+                        59
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Manutenção, Segurança",
+                    "acronym": "MSG",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        38,
+                        38
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Laboratório de Metrologia",
+                    "acronym": "LMET",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      20
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        38
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Laboratório de Circuitos Elétricos",
+                    "acronym": "LCEL",
+                    "events": 1,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      17
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        42
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "name": "T. Not. Eletromecânica 2S",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Resistência dos Materiais",
+                    "acronym": "REM",
+                    "events": 3,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      26
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        26,
+                        26,
+                        26
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Eletrônica Analógica e de Potência",
+                    "acronym": "EAP",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      26
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        35,
+                        35
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Laboratório de Eletrônica Analógica e de Potência",
+                    "acronym": "LEAP",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      26
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        35
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Laboratório de Desenho Técnico",
+                    "acronym": "LCEL",
+                    "events": 3,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      10,
+                      4
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        75,
+                        75,
+                        75
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Lab de Ensaios de Materiais",
+                    "acronym": "LEMA",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 1,
+                    "rooms": [
+                      26
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        40,
+                        40
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "name": "T. Not. Eletromecânica 3S",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Conversão de Energia",
+                    "acronym": "CEN",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      31
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        29,
+                        29
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Laboratório de Conversão de Energia",
+                    "acronym": "LEMA",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      32
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        29
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Laboratório Eletrohidráulico",
+                    "acronym": "LEHP",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      20
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        19
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Eletropneumática",
+                    "acronym": "EHP",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      31
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        19,
+                        19
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Instrumentação Industrial",
+                    "acronym": "INS",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      31
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        20,
+                        20
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Processos de Fabricação",
+                    "acronym": "PRF",
+                    "events": 3,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      31
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        40,
+                        40,
+                        40
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "name": "T. Not. Eletromecânica 4S",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Eletrotécnica",
+                    "acronym": "ELE",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        29,
+                        29
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Usinagem",
+                    "acronym": "USI",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        36,
+                        36
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Automação Industrial",
+                    "acronym": "AIN",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        41,
+                        41
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Máquinas Térmicas Flux.",
+                    "acronym": "MTF",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        32,
+                        32
+                    ]
+                },{
+                    "id": 4,
+                    "name": "Laboratório de Automação Industrial",
+                    "acronym": "LAIN",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        41,
+                        41
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Laboratório de Usinagem",
+                    "acronym": "LUSI",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      1
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        36,
+                        36
+                    ]
+                }
+            ]
         }
+
 
     ],
     "events":[],
