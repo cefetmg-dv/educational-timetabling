@@ -485,37 +485,122 @@
         {
             "id": 0,
             "name": "José Geraldo",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 1,
             "name": "Eduardo",
-            "unavailability": [],
+            "unavailability": [
+                7,
+                8,
+                9,
+                17,
+                18,
+                21,
+                22,
+                23
+            ],
             "preferences": []
         },
         {
             "id": 2,
             "name": "Bruno",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                14,
+                15,
+                16,
+                17,
+                18,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 3,
             "name": "Marcelo",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 4,
             "name": "Tamara",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
             "preferences": []
         },
         {
             "id": 5,
             "name": "Charlene",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
@@ -527,85 +612,259 @@
         {
             "id": 7,
             "name": "Guilherme",
-            "unavailability": [],
+            "unavailability": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                17,
+                18,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+            ],
             "preferences": []
         },
         {
             "id": 8,
             "name": "Christian",
-            "unavailability": [],
+            "unavailability": [
+                2,
+                9,
+                16,
+                17,
+                18,
+                23,
+                30
+            ],
             "preferences": []
         },
         {
             "id": 9,
             "name": "Erildo",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                22
+            ],
             "preferences": []
         },
         {
             "id": 10,
             "name": "Michel",
-            "unavailability": [],
+            "unavailability": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                10,
+                11,
+                17,
+                18,
+                31,
+                32
+            ],
             "preferences": []
         },
         {
             "id": 11,
             "name": "Rafael",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 12,
             "name": "André M.",
-            "unavailability": [],
+            "unavailability": [
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 13,
             "name": "Willyan",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 14,
             "name": "Thabbatta",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                8,
+                9,
+                17,
+                18,
+                28,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 15,
             "name": "Edilson",
-            "unavailability": [],
+            "unavailability": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 16,
             "name": "Alisson",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                12,
+                13,
+                17,
+                18,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 17,
             "name": "Antônio",
-            "unavailability": [],
+            "unavailability": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                17,
+                18,
+                21,
+                22,
+                23,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 18,
             "name": "Lúcio",
-            "unavailability": [],
+            "unavailability": [
+                2,
+                9,
+                16,
+                17,
+                18,
+                23,
+                30
+            ],
             "preferences": []
         },
         {
             "id": 19,
             "name": "Luiz C.",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 20,
             "name": "Alan",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
@@ -617,19 +876,51 @@
         {
             "id": 22,
             "name": "Adriano",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                17,
+                18,
+                32,
+                33,
+                34  
+            ],
             "preferences": []
         },
         {
             "id": 23,
             "name": "Alberto",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 24,
             "name": "Rodrigo Castro",
-            "unavailability": [],
+            "unavailability": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                21,
+                22,
+                23
+            ],
             "preferences": []
         },
         {
@@ -641,49 +932,137 @@
         {
             "id": 26,
             "name": "Juliano",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 27,
             "name": "Fernando",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 28,
             "name": "Fábio",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 29,
             "name": "André",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 30,
             "name": "Renato",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                7,
+                14,
+                17,
+                18,
+                21,
+                28
+            ],
             "preferences": []
         },
         {
             "id": 31,
             "name": "Emerson",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 32,
             "name": "Evandro",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                4,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 33,
             "name": "Jean",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
@@ -695,73 +1074,193 @@
         {
             "id": 35,
             "name": "Cláudio S.",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                31,
+                32
+            ],
             "preferences": []
         },
         {
             "id": 36,
             "name": "Cláudio L.",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                28,
+                29,
+                30
+            ],
             "preferences": []
         },
         {
             "id": 37,
             "name": "Lucas",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 38,
             "name": "Márcio",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                17,
+                18,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 39,
             "name": "Valter",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                14,
+                15,
+                16,
+                17,
+                18,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 40,
             "name": "Wagner",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 41,
             "name": "Marlon T.",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 42,
             "name": "Luis F.",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                7,
+                14,
+                17,
+                18,
+                21,
+                28,
+                29,
+                30,
+                31,
+                32
+            ],
             "preferences": []
         },
         {
             "id": 43,
             "name": "Natália",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                7,
+                14,
+                17,
+                18,
+                21,
+                28
+            ],
             "preferences": []
         },
         {
             "id": 44,
             "name": "Maria Isabel",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 45,
             "name": "Lucília",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 46,
             "name": "Joanice",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
@@ -773,49 +1272,141 @@
         {
             "id": 48,
             "name": "Clícia",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                7,
+                8,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                28,
+                29
+            ],
             "preferences": []
         },
         {
             "id": 49,
             "name": "Rodrigo",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                10,
+                11,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 50,
             "name": "Hemilly",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 51,
             "name": "Tumati",
-            "unavailability": [],
+            "unavailability": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 52,
             "name": "Maria dos Anjos",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18,
+                28,
+                29,
+                30
+            ],
             "preferences": []
         },
         {
             "id": 53,
             "name": "Patrícia",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 54,
             "name": "Dênis",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                8,
+                9,
+                17,
+                18,
+                31,
+                32
+            ],
             "preferences": []
         },
         {
             "id": 55,
             "name": "Wanderson",
-            "unavailability": [],
+            "unavailability": [
+                7,
+                8,
+                9,
+                17,
+                18,
+                21,
+                22,
+                23
+            ],
             "preferences": []
         },
         {
@@ -827,19 +1418,69 @@
         {
             "id": 57,
             "name": "Andrea",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                8,
+                9,
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 58,
             "name": "Nádia",
-            "unavailability": [],
+            "unavailability": [
+                3,
+                4,
+                10,
+                11,
+                17,
+                18,
+                24,
+                25,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 59,
             "name": "Daniel",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
@@ -851,49 +1492,155 @@
         {
             "id": 62,
             "name": "Fernanda",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 63,
             "name": "Ricardo",
-            "unavailability": [],
+            "unavailability": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 64,
             "name": "Wesley",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 65,
             "name": "Flávio",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                10,
+                11,
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32
+            ],
             "preferences": []
         },
         {
             "id": 66,
             "name": "Alba",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                17,
+                18,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 67,
             "name": "Iza",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+            ],
             "preferences": []
         },
         {
             "id": 68,
             "name": "Higor",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 69,
             "name": "Rabelo",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                24,
+                25,
+                26,
+                27
+            ],
             "preferences": []
         },
         {
@@ -911,13 +1658,35 @@
         {
             "id": 72,
             "name": "Diego",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18
+            ],
             "preferences": []
         },
         {
             "id": 73,
-            "name": "",
-            "unavailability": [],
+            "name": "Diego Cruz",
+            "unavailability": [
+                0,
+                1,
+                2,
+                8,
+                9,
+                17,
+                18,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
@@ -929,21 +1698,171 @@
         {
             "id": 75,
             "name": "Ralney",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         },
         {
             "id": 76,
             "name": "Leonardo",
-            "unavailability": [],
+            "unavailability": [
+                17,
+                18,
+                21,
+                22,
+                23,
+                28,
+                29,
+                30
+            ],
             "preferences": []
         },
         {
             "id": 77,
             "name": "Miguel",
-            "unavailability": [],
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18
+            ],
+            "preferences": []
+        },
+        {
+            "id": 78,
+            "name": "Rodrigo Santos",
+            "unavailability": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
+            "preferences": []
+        },
+        {
+            "id": 79,
+            "name": "Rodrigo Silva",
+            "unavailability": [
+                17,
+                18
+            ],
+            "preferences": []
+        },
+        {
+            "id": 80,
+            "name": "Raulivan Silva",
+            "unavailability": [
+                0,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                17,
+                18
+            ],
+            "preferences": []
+        },
+        {
+            "id": 81,
+            "name": "Tiago Oliveira",
+            "unavailability": [
+                17,
+                18
+            ],
+            "preferences": []
+        },
+        {
+            "id": 82,
+            "name": "Tiago Magela",
+            "unavailability": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
+            "preferences": []
+        },
+        {
+            "id": 83,
+            "name": "Maria de Lourdes",
+            "unavailability": [
+                17,
+                18,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+            ],
+            "preferences": []
+        },
+        {
+            "id": 84,
+            "name": "Daniel Costa",
+            "unavailability": [
+                17,
+                18,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+            ],
             "preferences": []
         }
+
     ],
     "classes":[
         {
@@ -4673,6 +5592,196 @@
                     "teachers": [
                         36,
                         36
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "name": "T. Int. Mecatrônica 1",
+            "subjects": [
+                {
+                    "id": 0,
+                    "name": "Artes",
+                    "acronym": "ART",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        48
+                    ]
+                },  
+                {
+                    "id": 1,
+                    "name": "Biologia",
+                    "acronym": "BIO",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        55,
+                        55
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Educação Física/Inglês",
+                    "acronym": "ING/EF",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      27
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        57
+                    ]
+                },  
+                {
+                    "id": 3,
+                    "name": "Filosofia",
+                    "acronym": "FIL",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        63
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Física",
+                    "acronym": "FIS",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        28,
+                        28
+                    ]
+                },  
+                {
+                    "id": 5,
+                    "name": "Geografia",
+                    "acronym": "GEO",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        58
+                    ]
+                }, 
+                {
+                    "id": 6,
+                    "name": "História",
+                    "acronym": "HIST",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      9
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        62
+                    ]
+                }, 
+                {
+                    "id": 7,
+                    "name": "Língua Estrangeira - Inglês",
+                    "acronym": "ING",
+                    "events": 2,
+                    "divided": true,
+                    "subgroups": 2,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        44,
+                        44
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Língua Portuguesa",
+                    "acronym": "PORT",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        25
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Matemática",
+                    "acronym": "MAT",
+                    "events": 2,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        77,
+                        77
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "Química",
+                    "acronym": "QUI",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        24
+                    ]
+                },  
+                {
+                    "id": 11,
+                    "name": "Redação",
+                    "acronym": "RED",
+                    "events": 1,
+                    "divided": false,
+                    "subgroups": 1,
+                    "rooms": [
+                      29
+                    ],
+                    "antiSubjects": [],
+                    "teachers": [
+                        19
                     ]
                 }
             ]
