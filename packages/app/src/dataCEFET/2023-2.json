@@ -1868,6 +1868,7 @@
         {
             "id": 0,
             "name": "Eng. Computação 2",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -2002,6 +2003,7 @@
         {
             "id": 1,
             "name": "Eng. Computação 4",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -2155,6 +2157,7 @@
         {
             "id": 2,
             "name": "Eng. Computação 6",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -2295,6 +2298,7 @@
         {
             "id": 3,
             "name": "Eng. Computação 8",
+            "shifts":[0, 1, 2],
             "subjects": [
                 {
                     "id": 0,
@@ -2400,6 +2404,7 @@
         {
             "id": 4,
             "name": "Eng. Computação 10",
+            "shifts":[1, 2],
             "subjects": [
                 {
                     "id": 0,
@@ -2466,6 +2471,7 @@
         {
             "id": 5,
             "name": "Eng. Computação OPT",
+            "shifts":[0, 1, 2],
             "subjects": [
                 {
                     "id": 0,
@@ -2600,6 +2606,7 @@
         {
             "id": 6,
             "name": "FLEX",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -2658,6 +2665,7 @@
         {
             "id": 7,
             "name": "Design de Moda 2",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -2823,6 +2831,7 @@
         {
             "id": 8,
             "name": "Design de Moda 4",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -2893,6 +2902,7 @@
         {
             "id": 9,
             "name": "Design de Moda 6",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -2991,6 +3001,7 @@
         {
             "id": 10,
             "name": "Design de Moda 8",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -3058,6 +3069,7 @@
         {
             "id": 11,
             "name": "Design de Moda EXTRA",
+            "shifts":[1, 2],
             "subjects": [
                 {
                     "id": 0,
@@ -3110,6 +3122,7 @@
         {
             "id": 12,
             "name": "Design de Moda OPT-1",
+            "shifts":[1, 2],
             "subjects": [
                 {
                     "id": 0,
@@ -3271,6 +3284,7 @@
         {
             "id": 13,
             "name": "Design de Moda OPT-2",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -3293,6 +3307,7 @@
         {
             "id": 14,
             "name": "Eng. Mecatrônica 2",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -3458,6 +3473,7 @@
         {
             "id": 15,
             "name": "Eng. Mecatrônica 4",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -3613,6 +3629,7 @@
         {
             "id": 16,
             "name": "Eng. Mecatrônica 6",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -3779,6 +3796,7 @@
         {
             "id": 17,
             "name": "Eng. Mecatrônica 8",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -3910,6 +3928,7 @@
         {
             "id": 18,
             "name": "Eng. Mecatrônica 10",
+            "shifts":[1, 2],
             "subjects": [
                 {
                     "id": 0,
@@ -3976,6 +3995,7 @@
         {
             "id": 18,
             "name": "Eng. Mecatrônica OPT",
+            "shifts":[0, 1, 2],
             "subjects": [
                 {
                     "id": 0,
@@ -4162,7 +4182,6 @@
                     ],
                     "antiSubjects": [],
                     "teachers": [
-                        18,
                         18
                     ]
                 }
@@ -4171,6 +4190,7 @@
         {
             "id": 19,
             "name": "T. Int. Informática 1",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -4428,6 +4448,7 @@
         {
             "id": 20,
             "name": "T. Int. Informática 2",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -4686,6 +4707,7 @@
         {
             "id": 21,
             "name": "T. Int. Informática 3",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -4943,6 +4965,7 @@
         {
             "id": 22,
             "name": "T. Not. Informática 1",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -5094,6 +5117,7 @@
         {
             "id": 23,
             "name": "T. Not. Informática 2",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -5193,6 +5217,7 @@
         {
             "id": 24,
             "name": "T. Not. Eletromecânica 1S",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -5293,6 +5318,7 @@
         {
             "id": 25,
             "name": "T. Not. Eletromecânica 2S",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -5381,6 +5407,7 @@
         {
             "id": 26,
             "name": "T. Not. Eletromecânica 3S",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -5482,6 +5509,7 @@
         {
             "id": 27,
             "name": "T. Not. Eletromecânica 4S",
+            "shifts":[2],
             "subjects": [
                 {
                     "id": 0,
@@ -5583,6 +5611,7 @@
         {
             "id": 27,
             "name": "T. Int. Mecatrônica 1",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -5836,6 +5865,7 @@
         {
             "id": 28,
             "name": "T. Int. Mecatrônica 2",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -6049,6 +6079,7 @@
                     ],
                     "antiSubjects": [],
                     "teachers": [
+                        40,
                         40
                     ]
                 },
@@ -6099,7 +6130,6 @@
                     ],
                     "antiSubjects": [],
                     "teachers": [
-                        30,
                         30
                     ]
                 }
@@ -6108,6 +6138,7 @@
         {
             "id": 29,
             "name": "T. Int. Mecatrônica 3",
+            "shifts":[0, 1],
             "subjects": [   
                 {
                     "id": 0,
@@ -6376,6 +6407,7 @@
         {
             "id": 29,
             "name": "T. Int. Prod. Moda 1",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -6614,6 +6646,7 @@
         {
             "id": 30,
             "name": "T. Int. Prod. Moda 2",
+            "shifts":[0, 1],
             "subjects": [
                 {
                     "id": 0,
@@ -6869,6 +6902,7 @@
         {
             "id": 31,
             "name": "T. Int. Prod. Moda 3",
+            "shifts":[0],
             "subjects": [
                 {
                     "id": 0,
@@ -7069,7 +7103,7 @@
                         46,
                         46
                     ]
-                },
+                }
             ]
         }
 

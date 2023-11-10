@@ -26,15 +26,53 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
     int finalValue = 0;
     int class1 = 0;
     int class2 = 0;
+    int class3 = 0;
+    int subject1 = 0;
+    int subject2 = 0;
+    bool isDivided1 = false;
+    bool isDivided2 = false;
     int professor1 = 0;
     int professor2 = 0;
     int timeslot1 = 0;
     int timeslot2 = 0;
     int classesQuantity = 0;
     std::vector<bool> daysWithEventPerClass(7);
-    int contDaysWithEventPerClass = 0 ;
+    int contDaysWithEventPerClass = 0;
+    bool rightShift = true;
 
     //RESTRIÇÕES RÍGIDAS
+
+    //Respeitar turnos de determinadas disciplinas
+    for(size_t i = 0; i < schedules.size(); ++i){
+        rightShift = true;
+        for(size_t j = 0; j < data["timeslots"].size(); ++j){
+            if(schedules[i].timeslot == data["timeslots"][j]["id"]){
+                //se for aquele timeslot, tenho que verificar se aquele shift está contido nos permitidos
+                for(size_t k = 0; k < data["events"].size; ++k){
+                    if(schedules[i].event == data["events"][k]["id"]){
+                        for(size_t l = 0; l < data["classes"].size(); ++l){
+                            if(data["events"][k]["class"] == data["classes"][l]){
+                                for(size_t m = 0; m < data["classes"][l]["subjects"].size(); ++m){
+                                    if(data["classes"][l]["subjects"][m]["id"] == data["events"][k]["subject"]){
+                                        for(size_t n = 0; n < data["classes"][l]["subjects"][m]["shifts"].size; n++){
+                                            if(schedules[i].timeslot != data["classes"][l]["subjects"][m]["shifts"][n]){
+                                                rightShift == false;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if(rightShift == false){
+            finalValue += rigidWeigth;
+        }
+    }
+
+    //Se disciplina for divided = true pode numa mesma classe alocação no mesmo timeslot
 
     //Uma sala não pode ser usada por duas disciplinas em um mesmo horário (independente da classe) 
     for(size_t i = 0; i < schedules.size(); ++i){
@@ -44,32 +82,62 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
             }
         }
     }
-    
-    //Eventos de uma mesma classe devem estar em timeslots diferentes
 
+    //Eventos de uma mesma classe devem estar em timeslots diferentes
     for(size_t i = 0; i < schedules.size(); ++i){
-        //pega id da class1
+        //pega id da class1 e verifico se matéria é dividida
         for(size_t k = 0; k < data["events"].size(); ++k){
             if(data["events"][k]["id"] == i){
                 class1 = data["events"][k]["class"];
+                subject1 = data["events"][k]["subject"];
+                for(size_t l = 0; l < data["classes"].size(); ++l){
+                    if(data["classes"][l]["id"] == class1){
+                        for(size_t m = 0; m < data["classes"][l]["subjects"].size(); ++m){
+                            if(data["classes"][l]["subjects"][m]["id"] == subject1){
+                                isDivided1 = data["classes"][l]["subjects"][m]["divided"];
+                            }
+                        }
+                    }
+                }
             }
         }
         for(size_t j = 0; j < schedules.size(); ++j){
-            //pega id da class2
+            //pega id da class2 e verifico se matéria é dividida
             for(size_t k = 0; k < data["events"].size(); ++k){
                 if(data["events"][k]["id"] == j){
                     class2 = data["events"][k]["class"];
+                    subject2 = data["events"][k]["subject"];
+                    for(size_t l = 0; l < data["classes"].size(); ++l){
+                        if(data["classes"][l]["id"] == class2){
+                            for(size_t m = 0; m < data["classes"][l]["subjects"].size(); ++m){
+                                if(data["classes"][l]["subjects"][m]["id"] == subject2){
+                                    isDivided2 = data["classes"][l]["subjects"][m]["divided"];
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            if(schedules[i].timeslot == schedules[j].timeslot && i != j && class1 == class2){
+            if(schedules[i].timeslot == schedules[j].timeslot && i != j && class1 == class2 && !isDivided1 && !isDivided2){
                 //divide por 2, pois sempre contabiliza o dobro
                 finalValue += rigidWeigth/2;
+            }else if(schedules[i].timeslot == schedules[j].timeslot && i != j && class1 == class2 && isDivided1 && isDivided2){
+                //agora que sei que é a mesma turma e mesmo horário, verifico se são duas apenas 
+                for(size_t k = 0; k < schedules.size(); ++k){
+                    for(size_t l = 0; l < data["events"].size(); ++l){
+                        if(data["events"][l]["id"] == k){
+                            //significa que tem mais de 2 no mesmo horário
+                            if(data["events"][l]["class"] == class1 && schedules[k].timeslot == schedules[i].timeslot){
+                                finalValue += rigidWeigth;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 
     //Um professor deve ser alocado em uma única disciplina e em uma única sala em determinado horário
-
     for(size_t i = 0; i < schedules.size(); ++i){
         for(size_t j = 0; j < schedules.size(); ++j){
             //se o timeslot for igual e não tiver comparando com ele mesmo, verificar se o professor é o mesmo
@@ -360,20 +428,24 @@ std::vector<EventSchedule> SA::solve(const Problem& problem, const std::string& 
     float temperature = T0;     //define temperatura
     float alfa = 0.1;           //taxa de resfriamento
     int iterT = 0;              //número de iterações na temperatura T
+    int valueAux = 0;
+    int valueBestSchedule = OF(bestSchedules, raw_data);
     int delta = 0;             //variação do valor da função objetivo
     float x = 0;                //número aleatório entre 0 e 1
     time_t t = time(NULL);
     srand(t);
 
-    while(temperature>0.1 && OF(schedules, raw_data) != 0){
+    while(temperature>0.1){
         while(iterT < SAmax){
             iterT++;
             auxSchedules = shuffleSchedule(schedules, problem);
-            delta = OF(auxSchedules, raw_data) - OF(schedules, raw_data);
+            valueAux = OF(auxSchedules, raw_data);
+            delta = valueAux - OF(schedules, raw_data);
             if(delta <= 0){
                 schedules = auxSchedules;
-                if(OF(auxSchedules, raw_data) < OF(bestSchedules, raw_data)){
+                if(valueAux < valueBestSchedule){
                     bestSchedules = auxSchedules;
+                    valueBestSchedule = OF(bestSchedules, raw_data);
                 }
             }else{ 
                 x = static_cast<float>(rand()) / RAND_MAX;   //gera número aleatório de 0 a 1
