@@ -10,7 +10,7 @@ using json = nlohmann::json;
 #define SAmax 100               //número de iterações por temperatura
 #define e 2.718281828           //número de euler aproximado
 #define rigidWeigth 10          //peso das restrições rígidas
-#define softWeigth 1            //peso das restrições suaves
+#define softWeigth 1          //peso das restrições suaves
 
 float exp(float delta, float temperature){
     return pow(e,(-delta/temperature));
@@ -38,41 +38,35 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
     int classesQuantity = 0;
     std::vector<bool> daysWithEventPerClass(7);
     int contDaysWithEventPerClass = 0;
-    bool rightShift = true;
+    bool rightShift = false;
 
     //RESTRIÇÕES RÍGIDAS
 
     //Respeitar turnos de determinadas disciplinas
     for(size_t i = 0; i < schedules.size(); ++i){
-        rightShift = true;
         for(size_t j = 0; j < data["timeslots"].size(); ++j){
             if(schedules[i].timeslot == data["timeslots"][j]["id"]){
                 //se for aquele timeslot, tenho que verificar se aquele shift está contido nos permitidos
-                for(size_t k = 0; k < data["events"].size; ++k){
+                for(size_t k = 0; k < data["events"].size(); ++k){
                     if(schedules[i].event == data["events"][k]["id"]){
                         for(size_t l = 0; l < data["classes"].size(); ++l){
-                            if(data["events"][k]["class"] == data["classes"][l]){
-                                for(size_t m = 0; m < data["classes"][l]["subjects"].size(); ++m){
-                                    if(data["classes"][l]["subjects"][m]["id"] == data["events"][k]["subject"]){
-                                        for(size_t n = 0; n < data["classes"][l]["subjects"][m]["shifts"].size; n++){
-                                            if(schedules[i].timeslot != data["classes"][l]["subjects"][m]["shifts"][n]){
-                                                rightShift == false;
-                                            }
-                                        }
+                            if(data["events"][k]["class"] == data["classes"][l]["id"]){
+                                for(size_t n = 0; n < data["classes"][l]["shifts"].size(); ++n){
+                                    if(data["timeslots"][j]["shift"] == data["classes"][l]["shifts"][n]){
+                                        rightShift = true;
                                     }
                                 }
+                                if(!rightShift){
+                                    finalValue+=rigidWeigth;
+                                }
+                                rightShift = false;
                             }
                         }
                     }
                 }
             }
         }
-        if(rightShift == false){
-            finalValue += rigidWeigth;
-        }
     }
-
-    //Se disciplina for divided = true pode numa mesma classe alocação no mesmo timeslot
 
     //Uma sala não pode ser usada por duas disciplinas em um mesmo horário (independente da classe) 
     for(size_t i = 0; i < schedules.size(); ++i){
@@ -118,9 +112,8 @@ int OF(const std::vector<EventSchedule>& schedules, const std::string& raw_data)
                     }
                 }
             }
-            if(schedules[i].timeslot == schedules[j].timeslot && i != j && class1 == class2 && !isDivided1 && !isDivided2){
-                //divide por 2, pois sempre contabiliza o dobro
-                finalValue += rigidWeigth/2;
+            if(schedules[i].timeslot == schedules[j].timeslot && i != j && class1 == class2 && (!isDivided1 || !isDivided2)){
+                finalValue += rigidWeigth;
             }else if(schedules[i].timeslot == schedules[j].timeslot && i != j && class1 == class2 && isDivided1 && isDivided2){
                 //agora que sei que é a mesma turma e mesmo horário, verifico se são duas apenas 
                 for(size_t k = 0; k < schedules.size(); ++k){
@@ -426,7 +419,7 @@ std::vector<EventSchedule> SA::solve(const Problem& problem, const std::string& 
     std::vector<EventSchedule> auxSchedules;
     std::vector<EventSchedule> bestSchedules = schedules;
     float temperature = T0;     //define temperatura
-    float alfa = 0.1;           //taxa de resfriamento
+    float alfa = 0.25;           //taxa de resfriamento
     int iterT = 0;              //número de iterações na temperatura T
     int valueAux = 0;
     int valueBestSchedule = OF(bestSchedules, raw_data);

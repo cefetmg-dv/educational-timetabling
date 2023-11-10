@@ -78,6 +78,7 @@
                                             //sabendo qual evento, consigo colocar a cor de fundo
                                             for(var p = 0; p < tds[l].length; ++p){
                                                 tds[l][p].style.backgroundColor = 'lightBlue'
+                                                tds[l][p].innerHTML += "<br>"
                                             }
 
                                             //sabendo qual evento, consigo pegar os dados como professor
@@ -105,7 +106,7 @@
                                                     if(JSON.parse(window.searchFile()).classes[n].id == actualClass){
                                                         if(JSON.parse(window.searchFile()).classes[n].subjects[o].id == actualSubject){
                                                             for(var p = 0; p < tds[l].length; ++p){
-                                                                tds[l][p].innerText += JSON.parse(window.searchFile()).classes[n].subjects[o].name
+                                                                tds[l][p].innerText += JSON.parse(window.searchFile()).classes[n].subjects[o].acronym
                                                                 tds[l][p].innerHTML += "<br>"
                                                             }
                                                         }
@@ -119,6 +120,8 @@
                                                 if(JSON.parse(window.searchFile()).rooms[n].id == this.solution[k].room){
                                                     for(var p = 0; p < tds[l].length; ++p){
                                                         tds[l][p].innerText += JSON.parse(window.searchFile()).rooms[n].name
+                                                        tds[l][p].innerHTML += "<br>"
+                                                        tds[l][p].innerHTML += "<br>"
                                                     }
                                                 }
                                             }

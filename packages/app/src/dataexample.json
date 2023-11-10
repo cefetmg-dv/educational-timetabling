@@ -317,6 +317,11 @@
       {
          "id": 0,
          "name": "Engenharia da Computação - 1 Semestre",
+         "shifts": [
+            0,
+            1,
+            2
+         ],
          "subjects": [
             {
                "id": 1,
@@ -436,6 +441,11 @@
       {
          "id": 1,
          "name": "Eng Mec",
+         "shifts": [
+            0,
+            1,
+            2
+         ],
          "subjects": [
             {
                "id": 0,
@@ -527,6 +537,11 @@
       {
          "id": 2,
          "name": "Eng Mec 10º Período",
+         "shifts": [
+            0,
+            1,
+            2
+         ],
          "subjects": [
             {
                "id": 0,
@@ -548,11 +563,21 @@
       {
          "id": 3,
          "name": "Design De Moda 1 Semestre",
+         "shifts": [
+            0,
+            1,
+            2
+         ],
          "subjects": []
       },
       {
          "id": 4,
          "name": "Técnico em Informática 1 Semestre",
+         "shifts": [
+            0,
+            1,
+            2
+         ],
          "subjects": [
             {
                "id": 0,
@@ -569,6 +594,80 @@
                   2,
                   0,
                   2
+               ]
+            }
+         ]
+      },
+      {
+         "id": 5,
+         "name": "Design de Moda",
+         "shifts": [
+            2
+         ],
+         "subjects": [
+            {
+               "id": 0,
+               "name": "Costura 1",
+               "acronym": "COS1",
+               "events": 3,
+               "divided": false,
+               "subgroups": 1,
+               "rooms": [
+                  0
+               ],
+               "antiSubjects": [],
+               "teachers": [
+                  3,
+                  3,
+                  3
+               ]
+            },
+            {
+               "id": 1,
+               "name": "Lab Costura 1",
+               "acronym": "LABCOS1",
+               "events": 2,
+               "divided": true,
+               "subgroups": 2,
+               "rooms": [
+                  1
+               ],
+               "antiSubjects": [],
+               "teachers": [
+                  3,
+                  3
+               ]
+            },
+            {
+               "id": 2,
+               "name": "Lab Modelagem",
+               "acronym": "LABMOD",
+               "events": 2,
+               "divided": true,
+               "subgroups": 2,
+               "rooms": [
+                  0
+               ],
+               "antiSubjects": [],
+               "teachers": [
+                  3,
+                  3
+               ]
+            },
+            {
+               "id": 3,
+               "name": "Modelagem",
+               "acronym": "MOD",
+               "events": 2,
+               "divided": false,
+               "subgroups": 2,
+               "rooms": [
+                  0
+               ],
+               "antiSubjects": [],
+               "teachers": [
+                  3,
+                  3
                ]
             }
          ]
@@ -777,6 +876,69 @@
          "subject": 0,
          "subgroup": 2,
          "teacher": 2
+      },
+      {
+         "id": 29,
+         "class": 5,
+         "subject": 0,
+         "subgroup": 1,
+         "teacher": 3
+      },
+      {
+         "id": 30,
+         "class": 5,
+         "subject": 0,
+         "subgroup": 1,
+         "teacher": 3
+      },
+      {
+         "id": 31,
+         "class": 5,
+         "subject": 0,
+         "subgroup": 1,
+         "teacher": 3
+      },
+      {
+         "id": 32,
+         "class": 5,
+         "subject": 1,
+         "subgroup": 2,
+         "teacher": 3
+      },
+      {
+         "id": 33,
+         "class": 5,
+         "subject": 1,
+         "subgroup": 2,
+         "teacher": 3
+      },
+      {
+         "id": 34,
+         "class": 5,
+         "subject": 2,
+         "subgroup": 2,
+         "teacher": 3
+      },
+      {
+         "id": 35,
+         "class": 5,
+         "subject": 2,
+         "subgroup": 2,
+         "teacher": 3
+      },
+      {
+         "id": 36,
+         "class": 5,
+         "subject": 3,
+         "subgroup": 2,
+         "teacher": 3
+      },
+      {
+         "id": 37,
+         "class": 5,
+         "subject": 3,
+         "subgroup": 2,
+         "teacher": 3
       }
    ],
    "precedence_rules": [
